@@ -31,4 +31,11 @@
 
 }
 
+-(void) spawnMeteor:(CCTime) dt{
+    Meteor *meteor = [CCBReader load:@"Meteor"];
+    meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight);
+    [self addChild:meteor];
+    [meteor launch];
+}
+
 @end

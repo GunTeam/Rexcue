@@ -16,4 +16,6 @@
 
 @property double speed;
 
+-(void)launch;
+
 @end

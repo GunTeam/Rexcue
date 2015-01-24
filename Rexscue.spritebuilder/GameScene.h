@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Meteor.h"
 
 @interface GameScene : CCNode {
     CGFloat screenWidth,screenHeight;
