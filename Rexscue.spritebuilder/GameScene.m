@@ -72,7 +72,7 @@
     
     newDino.position = CGPointMake(positionX, positionY);
     
-    [self addChild:newDino];
+    [_physicsNode addChild:newDino];
 }
 
 -(void) spawnMeteor:(CCTime) dt{
@@ -88,6 +88,7 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
+    [meteor removeFromParent];
     [dinosaur removeFromParent];
 }
 
