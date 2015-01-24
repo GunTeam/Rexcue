@@ -606,16 +606,16 @@
 			children = (
 				BA5776771A744BDD00173263 /* dinosaur.h */,
 				BA5776721A744BDD00173263 /* dinosaur.m */,
-				BA5776731A744BDD00173263 /* Pterodactyl.m */,
-				BA5776741A744BDD00173263 /* Stegosaurus.m */,
-				BA5776751A744BDD00173263 /* TRex.m */,
-				BA5776761A744BDD00173263 /* Triceratops.m */,
-				BA5776781A744BDD00173263 /* Allosaurus.m */,
-				BA5776791A744BDD00173263 /* Allosaurus.h */,
-				BA57767A1A744BDD00173263 /* Stegosaurus.h */,
-				BA57767B1A744BDD00173263 /* TRex.h */,
 				BA57767C1A744BDD00173263 /* Pterodactyl.h */,
+				BA5776731A744BDD00173263 /* Pterodactyl.m */,
+				BA57767A1A744BDD00173263 /* Stegosaurus.h */,
+				BA5776741A744BDD00173263 /* Stegosaurus.m */,
+				BA57767B1A744BDD00173263 /* TRex.h */,
+				BA5776751A744BDD00173263 /* TRex.m */,
 				BA57767D1A744BDD00173263 /* Triceratops.h */,
+				BA5776761A744BDD00173263 /* Triceratops.m */,
+				BA5776791A744BDD00173263 /* Allosaurus.h */,
+				BA5776781A744BDD00173263 /* Allosaurus.m */,
 			);
 			name = Dinos;
 			sourceTree = "<group>";
