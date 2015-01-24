@@ -12,27 +12,33 @@
 @implementation Meteor
 
 -(void)didLoadFromCCB{
-    self.speed = 10;
+    self.speed = 100;
     self.userInteractionEnabled = true;
+    
+    self.physicsBody.collisionType = @"meteor";
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
-    
-}
+    self.scale = 0.2;
+    }
 
 -(void)launch{
     int destinationX = arc4random()%(int)screenWidth;
     int destinationY = 0;
     CGPoint destination = CGPointMake(destinationX, destinationY);
     
-    CGPoint velVector = CGPointMake(self.position.x - destinationX, self.position.y);
+    CGPoint velVector = CGPointMake(-self.position.x + destinationX, -self.position.y);
     double magnitude = sqrt(pow(velVector.x,2) + pow(velVector.y,2));
     CGPoint normalizedVel = CGPointMake(self.speed*velVector.x/magnitude, self.speed*velVector.y/magnitude);
     
-    self.rotation = (180/M_PI)*atan2(normalizedVel.y, normalizedVel.x)+180;
+    self.rotation = -(180/M_PI)*atan2(normalizedVel.y, normalizedVel.x);
     self.physicsBody.velocity = normalizedVel;
+}
+
+-(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    [self removeFromParent];
 }
 
 @end

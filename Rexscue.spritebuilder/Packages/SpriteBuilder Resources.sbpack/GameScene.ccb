@@ -157,7 +157,7 @@
 						<key>displayName</key>
 						<string>CCNodeColor</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_ground</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>physicsBody</key>
@@ -308,6 +308,8 @@
 								<real>1</real>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -471,8 +473,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
