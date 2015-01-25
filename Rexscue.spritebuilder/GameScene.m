@@ -46,15 +46,15 @@
 -(void) addRandomDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%5;
+    int randSpawnFlag = 4;//arc4random()%5;
     double positionX = arc4random()%(int)screenWidth;
-    double positionY = screenHeight/9;
+    double positionY = screenHeight/8;
     
     switch (randSpawnFlag)
     {
         case 0:
             newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
-            positionY = screenHeight/2;
+            positionY = screenHeight/4;
             break;
         case 1:
             newDino = (TRex*)[CCBReader load:@"TRex"];

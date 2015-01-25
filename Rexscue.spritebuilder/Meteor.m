@@ -16,11 +16,22 @@
     self.userInteractionEnabled = true;
     
     self.physicsBody.collisionType = @"meteor";
+    self.physicsBody.collisionGroup = @"meteors";
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
+    
+    
+    //adjust for ipad sizing:
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        screenWidth = screenWidth/2;
+        screenHeight = screenHeight/2;
+    }
+    
+    
     self.scale = 0.2;
     }
 
