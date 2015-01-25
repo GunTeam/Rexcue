@@ -33,7 +33,7 @@
     self.afterAttackDelay = 60;
     self.attackCounter = 0;
     self.price = 200;
-    self.killBonus = 10;
+    self.killBonus = 100;
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
@@ -159,6 +159,14 @@
     }
     
     
+}
+
+-(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    if(self.isEnemy){
+        GameScene *gameScene = (GameScene *)self.parent.parent;
+        [gameScene addPointsToScore: (int)(killBonus) ];
+        [self removeFromParent];
+    }
 }
 
 @end

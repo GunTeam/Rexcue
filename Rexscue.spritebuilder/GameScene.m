@@ -45,7 +45,7 @@
     
     meteorSpeed = 100;
     timeElapsed = 0;
-    numDinos = 0;
+    numDinos = NUM_STARTING_DINOS;
     level = 0;
     
     [self setTimeLabel];
@@ -151,8 +151,8 @@
     }
     newDino.physicsBody.collisionType = @"evilDino";
     newDino.physicsBody.collisionGroup = @"evilDinos";
+    [newDino setIsEnemy:true];
     [_physicsNode addChild:newDino];
-    numDinos += 1;
 }
 
 
@@ -185,6 +185,13 @@
     return NO;
 }
 
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor evilDino:(dinosaur *)evilDino{
+    [meteor removeFromParent];
+    [evilDino removeFromParent];
+    [self addPointsToScore:evilDino.killBonus];
+    return NO;
+}
+
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     [meteor removeFromParent];
     [dinosaur removeFromParent];
@@ -200,7 +207,7 @@
 
 -(void) update:(CCTime)delta{
     if(numDinos == 0){
-        
+        [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
     }
 }
 

@@ -26,7 +26,6 @@
     self.afterAttackDelay = 70;
     self.attackCounter = 0;
     self.price = 200;
-    self.killBonus = 10;
     
     [self setHealthLabel];
 
