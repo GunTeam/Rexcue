@@ -8,8 +8,10 @@
 
 #import "GameScene.h"
 
-
 @implementation GameScene
+
+@synthesize score;
+
 -(void) didLoadFromCCB {
     NUM_DINOS = 10;
     
@@ -34,6 +36,7 @@
     
     [self schedule:@selector(spawnMeteor:) interval:2];
     
+    self.score = 0;
     
     for(int i=0; i<NUM_DINOS; i++){
         [self addRandomDino];
@@ -44,10 +47,14 @@
     
     dinosaur *newDino;
     int randSpawnFlag = arc4random()%5;
+    double positionX = arc4random()%(int)screenWidth;
+    double positionY = screenHeight/9;
+    
     switch (randSpawnFlag)
     {
         case 0:
             newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
+            positionY = screenHeight/8;
             break;
         case 1:
             newDino = (TRex*)[CCBReader load:@"TRex"];
@@ -67,10 +74,20 @@
     }
     newDino.scale = 0.8;
     
-    int positionX = arc4random()%(int)screenWidth;
-    int positionY = screenHeight/10;
     
+    if(newDino.inAir){
+        positionY = (7./10)*screenHeight;
+    }
     newDino.position = CGPointMake(positionX, positionY);
+    
+    //point the dino in a random direction:
+    int directionFlag = arc4random()%2;
+    [newDino setDirection:directionFlag];
+    
+    if(directionFlag ==1){
+        newDino.scaleX *= -1;
+        [newDino reverseHealthLabel];
+    }
     
     [_physicsNode addChild:newDino];
 }
@@ -82,14 +99,21 @@
     [meteor launch];
 }
 
+-(void) addPointsToScore: (int) points{
+    self.score += points;
+    NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
+    [_scoreLabel setString:scoreString];
+}
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
     [meteor removeFromParent];
+    return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     [meteor removeFromParent];
     [dinosaur removeFromParent];
+    return NO;
 }
 
 

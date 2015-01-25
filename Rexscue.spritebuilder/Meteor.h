@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameScene.h"
 
 @interface Meteor : CCSprite {
     CGFloat screenWidth,screenHeight;

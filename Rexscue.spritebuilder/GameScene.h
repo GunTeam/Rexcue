@@ -22,6 +22,11 @@
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
     int NUM_DINOS;
+    CCLabelTTF *_scoreLabel;
 }
+
+-(void) addPointsToScore: (int) points;
+
+@property int score;
 
 @end

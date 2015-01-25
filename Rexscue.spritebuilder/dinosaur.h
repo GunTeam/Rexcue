@@ -40,5 +40,6 @@
 @property int afterAttackDelay; //how many frames the dino waits in between attacks
 @property int price;
 @property double levelMultiplier;
+@property int direction;
 
 @end

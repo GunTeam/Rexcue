@@ -10,12 +10,14 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
     self.physicsBody.collisionGroup = @"dinosaurs";
     self.userInteractionEnabled = true;
+    
+    self.direction = 0;
     
     self.levelMultiplier = 1;
     self.isEnemy = false;
@@ -49,7 +51,6 @@
 
 -(void) moveDinoForward{
     self.position = ccp( self.position.x + 100*self.speed, self.position.y );
-//    CCLOG(@"%i", self.position.x);
 }
 
 -(void) moveDinoBackward{
@@ -119,6 +120,15 @@
 
 -(void) reverseHealthLabel{
     _healthLabel.scaleX = -1;
+}
+
+-(void) update:(CCTime)delta{
+    if(self.direction == 1){
+        [self moveDinoForward];
+    }
+    else{
+        [self moveDinoBackward];
+    }
 }
 
 @end

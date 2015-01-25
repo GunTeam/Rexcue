@@ -38,6 +38,8 @@
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    GameScene *gameScene = (GameScene *)self.parent.parent;
+    [gameScene addPointsToScore: (int)(screenHeight-self.position.y) ];
     [self removeFromParent];
 }
 
