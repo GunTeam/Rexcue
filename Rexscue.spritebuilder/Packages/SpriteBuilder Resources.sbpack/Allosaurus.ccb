@@ -767,7 +767,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>365.65521240234375</real>
+						<real>359.49514770507812</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1583,7 +1583,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>87.362663269042969</real>
+						<real>47.791873931884766</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3148,8 +3148,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>25.734218597412109</real>
-									<real>24.848176956176758</real>
+									<real>28.283254623413086</real>
+									<real>29.647438049316406</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -3187,7 +3187,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>14.134332656860352</real>
+								<real>-3.8735811710357666</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -3513,7 +3513,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>10.232481956481934</real>
+						<real>3.4108269214630127</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4290,8 +4290,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>99.427734375</real>
-							<real>17.573431015014648</real>
+							<real>103.28507995605469</real>
+							<real>18.124477386474609</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4329,7 +4329,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>131.23698425292969</real>
+						<real>62.892513275146484</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5095,7 +5095,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-12.421599388122559</real>
+						<real>-9.1211376190185547</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5676,7 +5676,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.36666667461395264</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -5856,7 +5856,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.30000001192092896</real>
+			<real>0.80000001192092896</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
