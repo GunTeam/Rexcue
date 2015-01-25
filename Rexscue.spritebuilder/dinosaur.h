@@ -14,6 +14,7 @@
     int KNOCKBACK_THRESHOLD;
     int MAX_HEALTH; //maximum health
     CCLabelTTF *_healthLabel;
+    CGFloat screenWidth,screenHeight;
 }
 
 -(void) didLoadFromCCB;
@@ -28,6 +29,7 @@
 -(void) reverseHealthLabel;
 -(void) changeLevelMultiplier: (double) newMultiplier;
 -(void) setHealthLabel;
+-(void) reverseDinoDirection;
 
 @property float health;
 @property double speed;
@@ -41,5 +43,5 @@
 @property int price;
 @property double levelMultiplier;
 @property int direction;
-
+@property int turnWait;
 @end

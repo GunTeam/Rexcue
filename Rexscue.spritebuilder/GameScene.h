@@ -20,7 +20,7 @@
 @interface GameScene : CCNode {
     CGFloat screenWidth,screenHeight;
     CCPhysicsNode *_physicsNode;
-    CCNodeColor *_ground;
+    CCNodeColor *_ground,*_rightWall,*_leftWall;
     int NUM_DINOS;
     CCLabelTTF *_scoreLabel;
 }

@@ -13,7 +13,7 @@
 @synthesize score;
 
 -(void) didLoadFromCCB {
-    NUM_DINOS = 10;
+    NUM_DINOS = 2;
     
     self.userInteractionEnabled = true;
     
@@ -33,6 +33,8 @@
     _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
+    _leftWall.physicsBody.collisionType = @"wall";
+    _rightWall.physicsBody.collisionType = @"wall";
     
     [self schedule:@selector(spawnMeteor:) interval:2];
     
@@ -116,5 +118,9 @@
     return NO;
 }
 
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair wall:(CCNodeColor *)wall dinosaur:(dinosaur *)dinosaur{
+    [dinosaur reverseDinoDirection];
+    return NO;
+}
 
 @end

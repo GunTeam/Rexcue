@@ -10,7 +10,7 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
@@ -18,6 +18,8 @@
     self.userInteractionEnabled = true;
     
     self.direction = 0;
+    
+    self.turnWait = 0;
     
     self.levelMultiplier = 1;
     self.isEnemy = false;
@@ -33,6 +35,11 @@
     self.attackCounter = 0;
     self.price = 200;
     self.killBonus = 10;
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    screenWidth = screenSize.width;
+    screenHeight = screenSize.height;
 }
 
 -(void) setHealthLabel{
@@ -120,6 +127,12 @@
 
 -(void) reverseHealthLabel{
     _healthLabel.scaleX = -1;
+}
+
+-(void) reverseDinoDirection{
+    self.direction = (self.direction+1)%2;
+    self.scaleX *= -1;
+g    [self reverseHealthLabel];
 }
 
 -(void) update:(CCTime)delta{
