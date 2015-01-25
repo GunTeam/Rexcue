@@ -26,7 +26,7 @@
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     _healthLabel.string = [NSString stringWithFormat:@"%f", self.health];
-    self.attack = 10;
+    self.attack = 50;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
     self.readyToAttack = true;
@@ -52,6 +52,10 @@
 
 -(void) setHealthLabel{
     _healthLabel.string = [NSString stringWithFormat:@"%d", (int)(self.health+0.5)];
+}
+
+-(void) setHealthInvisible{
+    _healthLabel.visible = false;
 }
 
 -(void) changeLevelMultiplier: (double) newMultiplier{
@@ -96,6 +100,7 @@
 }
 
 -(void) die{
+    self.physicsBody.collisionMask = @[];
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
     [self runAction:mover];

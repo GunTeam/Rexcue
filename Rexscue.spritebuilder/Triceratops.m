@@ -19,7 +19,7 @@
     MAX_HEALTH = 1000;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
-    self.attack = 5;
+    self.attack = 10;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 5; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
     self.readyToAttack = true;

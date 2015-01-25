@@ -108,7 +108,7 @@
     
     dinosaur *newDino;
     int randSpawnFlag = arc4random()%5;
-    double positionX = arc4random()%(int)screenWidth;
+    double positionX = 0; //arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
     switch (randSpawnFlag)
@@ -142,7 +142,7 @@
     newDino.position = CGPointMake(positionX, positionY);
     
     //point the dino in a random direction:
-    int directionFlag = arc4random()%2;
+    int directionFlag = 1; //arc4random()%2;
     [newDino setDirection:directionFlag];
     
     if(directionFlag ==1){
@@ -152,6 +152,7 @@
     newDino.physicsBody.collisionType = @"evilDino";
     newDino.physicsBody.collisionGroup = @"evilDinos";
     [newDino setIsEnemy:true];
+    [newDino setHealthInvisible];
     [_physicsNode addChild:newDino];
 }
 
@@ -159,7 +160,7 @@
 -(void) spawnMeteor:(CCTime) dt{
     Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
     meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight);
-    [_physicsNode addChild:meteor];
+//    [_physicsNode addChild:meteor];
     [meteor setSpeed: meteorSpeed];
     [meteor launch];
 }
@@ -196,18 +197,16 @@
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     [meteor removeFromParent];
-    dinosaur.physicsBody.collisionMask = @[];
-    [dinosaur.animationManager runAnimationsForSequenceNamed:@"Dying"];
-    [dinosaur scheduleOnce:@selector(removeFromParent) delay:2];
+    [dinosaur die];
     numDinos -= 1;
     return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair dinosaur:(dinosaur *)dinosaur evilDino:(dinosaur *)evilDino{
-    dinosaur.physicsBody.collisionMask = @[];
-    [dinosaur.animationManager runAnimationsForSequenceNamed:@"Dying"];
-    [dinosaur scheduleOnce:@selector(removeFromParent) delay:2];
-    numDinos -= 1;
+    Boolean killed = [dinosaur attackedByDino:evilDino];
+    if(killed){
+        numDinos -= 1;
+    }
     return NO;
 }
 

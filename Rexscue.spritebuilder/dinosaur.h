@@ -30,6 +30,7 @@
 -(void) changeLevelMultiplier: (double) newMultiplier;
 -(void) setHealthLabel;
 -(void) reverseDinoDirection;
+-(void) setHealthInvisible;
 
 @property float health;
 @property double speed;
