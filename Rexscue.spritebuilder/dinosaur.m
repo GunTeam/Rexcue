@@ -18,7 +18,6 @@
     self.userInteractionEnabled = true;
     
     self.direction = 0;
-    
     self.turnWait = 0;
     
     self.levelMultiplier = 1;
@@ -40,6 +39,15 @@
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
+    
+    
+    //adjust for ipad sizing:
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        screenWidth = screenWidth/2;
+        screenHeight = screenHeight/2;
+    }
+    
 }
 
 -(void) setHealthLabel{
@@ -131,8 +139,8 @@
 
 -(void) reverseDinoDirection{
     self.direction = (self.direction+1)%2;
-    self.scaleX *= -1;
-g    [self reverseHealthLabel];
+//    self.scaleX *= -1;
+    [self reverseHealthLabel];
 }
 
 -(void) update:(CCTime)delta{
@@ -142,6 +150,15 @@ g    [self reverseHealthLabel];
     else{
         [self moveDinoBackward];
     }
+    
+    if(self.position.x > screenWidth){
+        self.position = ccp(0, self.position.y);
+    }
+    else if(self.position.x < 0){
+        self.position = ccp(screenWidth, self.position.y);
+    }
+    
+    
 }
 
 @end

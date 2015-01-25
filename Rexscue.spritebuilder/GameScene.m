@@ -13,7 +13,7 @@
 @synthesize score;
 
 -(void) didLoadFromCCB {
-    NUM_DINOS = 2;
+    NUM_DINOS = 10;
     
     self.userInteractionEnabled = true;
     
@@ -33,8 +33,6 @@
     _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
-    _leftWall.physicsBody.collisionType = @"wall";
-    _rightWall.physicsBody.collisionType = @"wall";
     
     [self schedule:@selector(spawnMeteor:) interval:2];
     
@@ -56,7 +54,7 @@
     {
         case 0:
             newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
-            positionY = screenHeight/8;
+            positionY = screenHeight/2;
             break;
         case 1:
             newDino = (TRex*)[CCBReader load:@"TRex"];
@@ -115,11 +113,6 @@
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     [meteor removeFromParent];
     [dinosaur removeFromParent];
-    return NO;
-}
-
--(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair wall:(CCNodeColor *)wall dinosaur:(dinosaur *)dinosaur{
-    [dinosaur reverseDinoDirection];
     return NO;
 }
 
