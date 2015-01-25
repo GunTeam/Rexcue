@@ -31,7 +31,7 @@
     }
     
     _physicsNode.collisionDelegate = self;
-    _physicsNode.debugDraw = true;
+//    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
@@ -187,20 +187,26 @@
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor evilDino:(dinosaur *)evilDino{
     [meteor removeFromParent];
-    [evilDino removeFromParent];
+    evilDino.physicsBody.collisionMask = @[];
+    [evilDino.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    [evilDino scheduleOnce:@selector(removeFromParent) delay:2];
     [self addPointsToScore:evilDino.killBonus];
     return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     [meteor removeFromParent];
-    [dinosaur removeFromParent];
+    dinosaur.physicsBody.collisionMask = @[];
+    [dinosaur.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    [dinosaur scheduleOnce:@selector(removeFromParent) delay:2];
     numDinos -= 1;
     return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair dinosaur:(dinosaur *)dinosaur evilDino:(dinosaur *)evilDino{
-    [dinosaur removeFromParent];
+    dinosaur.physicsBody.collisionMask = @[];
+    [dinosaur.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    [dinosaur scheduleOnce:@selector(removeFromParent) delay:2];
     numDinos -= 1;
     return NO;
 }

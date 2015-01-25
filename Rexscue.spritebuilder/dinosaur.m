@@ -163,8 +163,8 @@
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
     if(self.isEnemy){
-        GameScene *gameScene = (GameScene *)self.parent.parent;
-        [gameScene addPointsToScore: (int)(killBonus) ];
+//        GameScene *gameScene = (GameScene *)self.parent.parent;
+//        [gameScene addPointsToScore: (int)(killBonus) ];
         [self removeFromParent];
     }
 }
