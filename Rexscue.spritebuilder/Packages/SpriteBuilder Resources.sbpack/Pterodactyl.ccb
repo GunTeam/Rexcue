@@ -919,7 +919,7 @@
 						<key>value</key>
 						<array>
 							<real>68</real>
-							<real>-10.533332824707031</real>
+							<real>-14</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1868,7 +1868,7 @@
 						<key>value</key>
 						<array>
 							<real>156</real>
-							<real>-12.733333587646484</real>
+							<real>8</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2803,7 +2803,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>2.5715436935424805</real>
+						<real>-6.3724870681762695</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2906,8 +2906,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>131</real>
-										<real>86</real>
+										<real>130</real>
+										<real>87</real>
 									</array>
 								</dict>
 								<dict>
@@ -2924,8 +2924,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>115</real>
-										<real>88</real>
+										<real>105</real>
+										<real>87</real>
 									</array>
 								</dict>
 								<dict>
@@ -2942,8 +2942,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>100</real>
-										<real>88</real>
+										<real>90</real>
+										<real>87</real>
 									</array>
 								</dict>
 								<dict>
@@ -3506,8 +3506,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>111.93333435058594</real>
-							<real>86.733329772949219</real>
+							<real>90</real>
+							<real>87</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3602,6 +3602,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -4161,8 +4163,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>63.799999237060547</real>
-							<real>167.73333740234375</real>
+							<real>47</real>
+							<real>162</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4805,8 +4807,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>177.26666259765625</real>
-							<real>166.33332824707031</real>
+							<real>158</real>
+							<real>178</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5252,7 +5254,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.13333334028720856</real>
+			<real>1.5</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
