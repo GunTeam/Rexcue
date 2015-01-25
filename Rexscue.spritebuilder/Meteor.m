@@ -12,7 +12,7 @@
 @implementation Meteor
 
 -(void)didLoadFromCCB{
-    self.speed = 100;
+    self.speed = 0;
     self.userInteractionEnabled = true;
     
     self.physicsBody.collisionType = @"meteor";

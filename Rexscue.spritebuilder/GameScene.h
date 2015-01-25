@@ -21,12 +21,16 @@
     CGFloat screenWidth,screenHeight;
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
-    int NUM_DINOS;
-    CCLabelTTF *_scoreLabel;
+    int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE;
+    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
 }
 
 -(void) addPointsToScore: (int) points;
 
 @property int score;
+@property int meteorSpeed;
+@property int timeElapsed;
+@property int numDinos;
+@property int level;
 
 @end
