@@ -4344,6 +4344,97 @@
 		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>1</integer>
+		<key>physicsBody</key>
+		<dict>
+			<key>affectedByGravity</key>
+			<true/>
+			<key>allowsRotation</key>
+			<true/>
+			<key>bodyShape</key>
+			<integer>0</integer>
+			<key>collisionCategories</key>
+			<array/>
+			<key>collisionMask</key>
+			<array/>
+			<key>collisionType</key>
+			<string></string>
+			<key>cornerRadius</key>
+			<real>0.0</real>
+			<key>density</key>
+			<real>1</real>
+			<key>dynamic</key>
+			<true/>
+			<key>elasticity</key>
+			<real>0.30000001192092896</real>
+			<key>friction</key>
+			<real>0.30000001192092896</real>
+			<key>points</key>
+			<array>
+				<array>
+					<real>-53.699203491210938</real>
+					<real>-31.757797241210938</real>
+				</array>
+				<array>
+					<real>-48.582015991210938</real>
+					<real>116.61721801757812</real>
+				</array>
+				<array>
+					<real>6.273468017578125</real>
+					<real>104.38674926757812</real>
+				</array>
+				<array>
+					<real>27.472686767578125</real>
+					<real>53.468780517578125</real>
+				</array>
+				<array>
+					<real>142.12112426757812</real>
+					<real>48.953155517578125</real>
+				</array>
+				<array>
+					<real>159.91021728515625</real>
+					<real>-35.367172241210938</real>
+				</array>
+			</array>
+			<key>polygons</key>
+			<array>
+				<array>
+					<array>
+						<real>-53.699203491210938</real>
+						<real>-31.757797241210938</real>
+					</array>
+					<array>
+						<real>159.91021728515625</real>
+						<real>-35.367172241210938</real>
+					</array>
+					<array>
+						<real>142.12112426757812</real>
+						<real>48.953155517578125</real>
+					</array>
+					<array>
+						<real>27.472686767578125</real>
+						<real>53.468780517578125</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>27.472686767578125</real>
+						<real>53.468780517578125</real>
+					</array>
+					<array>
+						<real>6.273468017578125</real>
+						<real>104.38674926757812</real>
+					</array>
+					<array>
+						<real>-48.582015991210938</real>
+						<real>116.61721801757812</real>
+					</array>
+					<array>
+						<real>-53.699203491210938</real>
+						<real>-31.757797241210938</real>
+					</array>
+				</array>
+			</array>
+		</dict>
 		<key>properties</key>
 		<array>
 			<dict>
@@ -4444,6 +4535,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
