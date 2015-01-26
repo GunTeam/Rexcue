@@ -2436,8 +2436,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>41.400001525878906</real>
+							<real>41</real>
+							<real>39.599998474121094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2475,7 +2475,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-6.7537379264831543</real>
+						<real>-10.130606651306152</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3593,8 +3593,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>125.59999847412109</real>
-							<real>82.400001525878906</real>
+							<real>123.40000152587891</real>
+							<real>82.599998474121094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3632,7 +3632,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-4.2868456840515137</real>
+						<real>-6.4302682876586914</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4760,8 +4760,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>126.40000152587891</real>
-							<real>81.800003051757812</real>
+							<real>124.59999847412109</real>
+							<real>82.199996948242188</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4799,7 +4799,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-3.9168515205383301</real>
+						<real>-5.8752775192260742</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5663,8 +5663,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>191.60000610351562</real>
-							<real>48.599998474121094</real>
+							<real>191.39999389648438</real>
+							<real>51.400001525878906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5702,7 +5702,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-5.7701773643493652</real>
+						<real>-8.6552658081054688</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -6193,8 +6193,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>83</real>
-							<real>22.399999618530273</real>
+							<real>80</real>
+							<real>24.600000381469727</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6232,7 +6232,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>24.569738388061523</real>
+						<real>36.854606628417969</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -7077,13 +7077,13 @@
 			<key>chainedSequenceId</key>
 			<integer>5</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>1.3333333730697632</real>
 			<key>name</key>
 			<string>Waving</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.20000000298023224</real>
+			<real>0.69999998807907104</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

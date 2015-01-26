@@ -918,8 +918,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>75.400001525878906</real>
-							<real>-8.3999977111816406</real>
+							<real>77</real>
+							<real>-14</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -957,7 +957,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>5.6296987533569336</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1867,8 +1867,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>148.54666137695312</real>
-							<real>2.5466635227203369</real>
+							<real>151</real>
+							<real>-11</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1906,7 +1906,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-23.877508163452148</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2803,7 +2803,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-9.9260463714599609</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3506,8 +3506,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>99.199996948242188</real>
-							<real>89</real>
+							<real>112</real>
+							<real>93</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4161,8 +4161,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>42.200000762939453</real>
-							<real>156.80000305175781</real>
+							<real>59</real>
+							<real>164</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4805,8 +4805,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>151.39999389648438</real>
-							<real>179.39999389648438</real>
+							<real>173</real>
+							<real>169</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5324,13 +5324,13 @@
 			<key>chainedSequenceId</key>
 			<integer>5</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>1.1666666269302368</real>
 			<key>name</key>
 			<string>Waving</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.60000002384185791</real>
+			<real>1.0333333015441895</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

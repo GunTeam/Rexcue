@@ -2420,7 +2420,7 @@
 						<key>value</key>
 						<array>
 							<real>85</real>
-							<real>34</real>
+							<real>33.200000762939453</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2458,7 +2458,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>0.98643589019775391</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3970,8 +3970,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>33</real>
-							<real>3</real>
+							<real>31.799999237060547</real>
+							<real>3.933333158493042</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4009,7 +4009,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>8.0046424865722656</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4792,7 +4792,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-0.68637561798095703</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5280,13 +5280,13 @@
 			<key>chainedSequenceId</key>
 			<integer>5</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>1.2666666507720947</real>
 			<key>name</key>
 			<string>Waving</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.93333333730697632</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
