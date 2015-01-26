@@ -45,7 +45,7 @@
     CGPoint normalizedVel = CGPointMake(self.speed*velVector.x/magnitude, self.speed*velVector.y/magnitude);
     
     self.rotation = -(180/M_PI)*atan2(normalizedVel.y, normalizedVel.x);
-    self.physicsBody.velocity = normalgizedVel;
+    self.physicsBody.velocity = normalizedVel;
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
