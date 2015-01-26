@@ -1402,7 +1402,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>playGame</string>
 							<integer>1</integer>
 						</array>
 					</dict>

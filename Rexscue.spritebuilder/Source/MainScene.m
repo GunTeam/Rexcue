@@ -29,7 +29,7 @@
 -(void) spawnClouds{
     for(int i =1; i<4; i++){
         int upperBound = screenHeight;
-        int lowerBound = (5./6)*screenHeight;
+        int lowerBound = (3./4)*screenHeight;
         int positionY = lowerBound + arc4random() % (upperBound - lowerBound);
         
         int positionX = arc4random()%2;
@@ -42,13 +42,13 @@
         [cloud setPosition:ccp(positionX,positionY)];
         cloud.direction = direction;
         cloud.speed = (arc4random()%3+1)/150.0;
-        cloud.scale = 1.5;
-        [self addChild: cloud];
+        cloud.scale = 2;
+        [self addChild: cloud z:5];
     }
 
 }
 
--(void) playButton{
+-(void) playGame{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
 }
 
