@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>6</integer>
+	<integer>5</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -3556,8 +3556,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>9</real>
-									<real>35</real>
+									<real>7.8224835395812988</real>
+									<real>33.127967834472656</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -3595,7 +3595,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>0.0</real>
+								<real>-14.253446578979492</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -3675,8 +3675,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>66</real>
-							<real>39</real>
+							<real>69.666664123535156</real>
+							<real>33.866664886474609</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3714,7 +3714,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>4.6546630859375</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5489,8 +5489,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>21</real>
-							<real>8</real>
+							<real>12.199999809265137</real>
+							<real>14.600000381469727</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5528,7 +5528,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>61.629604339599609</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5777,8 +5777,6 @@
 				<array/>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -5970,7 +5968,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>5</integer>
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>

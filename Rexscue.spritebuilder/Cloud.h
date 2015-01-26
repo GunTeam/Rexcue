@@ -14,5 +14,5 @@
 }
 
 @property int direction;
-@property int speed;
+@property double speed;
 @end

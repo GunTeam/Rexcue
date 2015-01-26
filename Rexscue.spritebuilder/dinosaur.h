@@ -38,6 +38,7 @@
 @property Boolean inAir;
 @property Boolean readyToAttack;
 @property Boolean isEnemy;
+@property Boolean isStationary;
 @property int attackCounter;
 @property int killBonus;
 @property int afterAttackDelay; //how many frames the dino waits between attacks

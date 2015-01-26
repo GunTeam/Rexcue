@@ -14,12 +14,22 @@
         screenWidth = screenWidth/2;
         screenHeight = screenHeight/2;
     }
+    
+    NSMutableArray *dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
+    
+    for(dinosaur *dino in dinos){
+        [dino setHealthInvisible];
+        [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
+        [dino setIsStationary:true];
+    }
+    
+    [self spawnClouds];
 }
 
 -(void) spawnClouds{
     for(int i =1; i<4; i++){
         int upperBound = screenHeight;
-        int lowerBound = screenHeight/2;
+        int lowerBound = (5./6)*screenHeight;
         int positionY = lowerBound + arc4random() % (upperBound - lowerBound);
         
         int positionX = arc4random()%2;
@@ -30,9 +40,16 @@
         Cloud *cloud = (Cloud*)[CCBReader load:cloudFile];
         
         [cloud setPosition:ccp(positionX,positionY)];
+        cloud.direction = direction;
+        cloud.speed = (arc4random()%3+1)/150.0;
+        cloud.scale = 1.5;
         [self addChild: cloud];
     }
 
+}
+
+-(void) playButton{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
 }
 
 

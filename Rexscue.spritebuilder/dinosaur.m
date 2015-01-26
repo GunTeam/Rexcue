@@ -10,7 +10,7 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
@@ -34,6 +34,7 @@
     self.attackCounter = 0;
     self.price = 200;
     self.killBonus = 100;
+    self.isStationary = false;
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
@@ -145,25 +146,28 @@
 }
 
 -(void) update:(CCTime)delta{
-    if(self.direction == 1){
-        [self moveDinoForward];
+    if(!self.isStationary){
+        if(self.direction == 1){
+            [self moveDinoForward];
+        }
+        else{
+            [self moveDinoBackward];
+        }
+        
+        if(self.position.x > screenWidth){
+            self.position = ccp(0, self.position.y);
+        }
+        else if(self.position.x < 0){
+            self.position = ccp(screenWidth, self.position.y);
+        }
+        
+        self.attackCounter += 1;
+        if(self.attackCounter > self.afterAttackDelay){
+            self.readyToAttack = true;
+            self.attackCounter = 0;
+        }
     }
-    else{
-        [self moveDinoBackward];
-    }
-    
-    if(self.position.x > screenWidth){
-        self.position = ccp(0, self.position.y);
-    }
-    else if(self.position.x < 0){
-        self.position = ccp(screenWidth, self.position.y);
-    }
-    
-    self.attackCounter += 1;
-    if(self.attackCounter > self.afterAttackDelay){
-        self.readyToAttack = true;
-        self.attackCounter = 0;
-    }
+
     
 }
 

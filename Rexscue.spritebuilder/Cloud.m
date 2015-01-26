@@ -10,7 +10,7 @@
 
 
 @implementation Cloud
-@synthesize direction, speed;
+@synthesize speed;
 
 -(void) didLoadFromCCB{
     CGRect screenBound = [[UIScreen mainScreen] bounds];
@@ -26,6 +26,8 @@
         screenHeight = screenHeight/2;
     }
     
+    self.direction = 0;
+    self.speed = 0.01;
 }
 
 -(void) update:(CCTime)delta{
