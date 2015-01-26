@@ -51,9 +51,16 @@
     Explosion *explosion = (Explosion*)[CCBReader load:@"Explosion"];
     explosion.position = self.position;
     GameScene *gameScene = (GameScene *)self.parent.parent;
-    [gameScene addPointsToScore: (int)(screenHeight-self.position.y) ];
+    
+    int pointsEarned = (int)(screenHeight-self.position.y);
+    
+    [gameScene addPointsToScore: pointsEarned];
     [self removeFromParent];
     [gameScene addChild:explosion];
+    
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"Helvetica" fontSize:24];
+    label.position = explosion.position;
+    [gameScene addChild:label];
 }
 
 @end

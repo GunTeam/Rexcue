@@ -18,6 +18,9 @@
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     
+    _volcanoSmoke.duration = -1;
+    _volcanoSmoke.emissionRate = 20;
+
     self.userInteractionEnabled = true;
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
@@ -41,6 +44,8 @@
     
     self.score = 0;
     
+    [self spawnClouds];
+    
     for(int i=0; i<NUM_STARTING_DINOS; i++){
         [self addRandomDino];
     }
@@ -55,6 +60,31 @@
     
     [self schedule:@selector(updateBySecond) interval:1];
 }
+
+-(void) spawnClouds{
+    for(int i =1; i<4; i++){
+        int upperBound = screenHeight;
+        int lowerBound = (3./4)*screenHeight;
+        int positionY = lowerBound + arc4random() % (int)(upperBound - lowerBound);
+        
+        int positionX = arc4random()%2;
+        int direction = positionX;
+        positionX *= screenWidth;
+        
+        NSString *cloudFile = [NSString stringWithFormat:@"DarkCloud%i",i];
+        Cloud *cloud = (Cloud*)[CCBReader load:cloudFile];
+        
+        cloud.opacity = 0.2;
+        
+        [cloud setPosition:ccp(positionX,positionY)];
+        cloud.direction = direction;
+        cloud.speed = (arc4random()%3+1)/150.0;
+        cloud.scale = 2;
+        [_physicsNode addChild: cloud];
+    }
+    
+}
+
 
 -(void) addRandomDino{
     
@@ -185,10 +215,18 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
+    
     Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
     smoke.position = meteor.position;
     [meteor removeFromParent];
-    [self addPointsToScore:100];
+    [self addPointsToScore:meteorHittingGroundBonus];
+    
+    
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",meteorHittingGroundBonus]fontName:@"Helvetica" fontSize:24];
+    label.position = smoke.position;
+    [self addChild:label];
+    
+    
     [self addChild:smoke];
     return NO;
 }

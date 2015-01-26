@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "GameScene.h"
+#import "DisappearingLabel.h"
 
 @interface Meteor : CCSprite {
     CGFloat screenWidth,screenHeight;
