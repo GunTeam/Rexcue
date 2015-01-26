@@ -149,6 +149,10 @@
     _healthLabel.scaleX = -1;
 }
 
+-(void) panic{
+    [self.animationManager runAnimationsForSequenceNamed:@"Panic"];
+}
+
 -(void) reverseDinoDirection{
     self.direction = (self.direction+1)%2;
 //    self.scaleX *= -1;

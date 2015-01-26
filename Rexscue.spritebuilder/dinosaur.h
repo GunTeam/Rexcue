@@ -33,6 +33,7 @@
 -(void) setHealthInvisible;
 -(Boolean) hitByMeteor;
 -(void) knockforward;
+-(void) panic;
 
 @property float health;
 @property double speed;

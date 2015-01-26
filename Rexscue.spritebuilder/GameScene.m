@@ -18,6 +18,8 @@
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     
+    ourDinos = [[NSMutableArray alloc] init];
+    
     _volcanoSmoke.duration = -1;
     _volcanoSmoke.emissionRate = 20;
 
@@ -89,7 +91,7 @@
 -(void) addRandomDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = 2;//arc4random()%5;
+    int randSpawnFlag = arc4random()%5;
     double positionX = arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
@@ -135,6 +137,7 @@
     
     [_physicsNode addChild:newDino];
     numDinos += 1;
+    [ourDinos addObject:newDino];
 }
 
 -(void) spawnEnemyDino{
@@ -225,6 +228,11 @@
     [self addChild:label];
     
     [self addChild:smoke];
+    
+    for(dinosaur *dino in ourDinos) {
+        [dino panic];
+    }
+    
     return NO;
 }
 
@@ -252,6 +260,7 @@
     Boolean killed = [dinosaur hitByMeteor];
     if(killed){
         numDinos -= 1;
+        [ourDinos removeObject:dinosaur];
     }
 
     return NO;
@@ -265,6 +274,7 @@
     Boolean killed = [dinosaur attackedByDino:evilDino];
     if(killed){
         numDinos -= 1;
+        [ourDinos removeObject:dinosaur];
     }
     return NO;
 }
