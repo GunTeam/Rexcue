@@ -160,7 +160,6 @@
     [_physicsNode addChild:newDino];
 }
 
-
 -(void) spawnMeteor:(CCTime) dt{
     Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
     meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
@@ -223,7 +222,6 @@
         [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
     }
     
-    if(_cloud1.)
 }
 
 -(void) updateBySecond{

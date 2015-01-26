@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface MyCocos2DClass : CCSprite {
-    
+@interface Cloud : CCSprite {
+    CGFloat screenWidth,screenHeight;
 }
 
+@property int direction;
+@property int speed;
 @end

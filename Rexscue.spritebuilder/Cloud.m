@@ -9,6 +9,39 @@
 #import "Cloud.h"
 
 
-@implementation MyCocos2DClass
+@implementation Cloud
+@synthesize direction, speed;
+
+-(void) didLoadFromCCB{
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    screenWidth = screenSize.width;
+    screenHeight = screenSize.height;
+    
+    
+    //adjust for ipad sizing:
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        screenWidth = screenWidth/2;
+        screenHeight = screenHeight/2;
+    }
+    
+}
+
+-(void) update:(CCTime)delta{
+    if(self.direction == 1){
+        self.position = ccp( self.position.x + 100*self.speed, self.position.y );
+    }
+    else{
+        self.position = ccp( self.position.x - 100*self.speed, self.position.y );
+    }
+    
+    if(self.position.x > screenWidth){
+        self.position = ccp(0, self.position.y);
+    }
+    else if(self.position.x < 0){
+        self.position = ccp(screenWidth, self.position.y);
+    }
+}
 
 @end
