@@ -157,7 +157,7 @@
     newDino.physicsBody.collisionGroup = @"evilDinos";
     [newDino setIsEnemy:true];
     [newDino setHealthInvisible];
-    [_physicsNode addChild:newDino];
+    [_physicsNode addChild:newDino];g
 }
 
 

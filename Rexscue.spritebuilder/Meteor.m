@@ -38,7 +38,6 @@
 -(void)launch{
     int destinationX = arc4random()%(int)screenWidth;
     int destinationY = 0;
-    CGPoint destination = CGPointMake(destinationX, destinationY);
     
     CGPoint velVector = CGPointMake(-self.position.x + destinationX, -self.position.y);
     double magnitude = sqrt(pow(velVector.x,2) + pow(velVector.y,2));
