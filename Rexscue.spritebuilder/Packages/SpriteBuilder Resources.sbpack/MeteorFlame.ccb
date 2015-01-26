@@ -120,7 +120,7 @@
 				<key>type</key>
 				<string>Float</string>
 				<key>value</key>
-				<real>80</real>
+				<real>50</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -212,16 +212,16 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.75999999046325684</real>
-						<real>0.25</real>
-						<real>0.11999999731779099</real>
-						<real>255</real>
+						<real>0.98183685541152954</real>
+						<real>0.21264322102069855</real>
+						<real>0.0</real>
+						<real>1</real>
 					</array>
 					<array>
+						<real>1</real>
+						<real>0.40665727853775024</real>
 						<real>0.0</real>
-						<real>0.0</real>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>1</real>
 					</array>
 				</array>
 			</dict>
@@ -233,16 +233,16 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.0</real>
-						<real>0.0</real>
-						<real>0.0</real>
-						<real>255</real>
+						<real>1</real>
+						<real>0.64692389965057373</real>
+						<real>0.046866957098245621</real>
+						<real>1</real>
 					</array>
 					<array>
+						<real>0.98183685541152954</real>
 						<real>0.0</real>
-						<real>0.0</real>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>0.035363789647817612</real>
+						<real>1</real>
 					</array>
 				</array>
 			</dict>
@@ -315,7 +315,7 @@
 				<key>type</key>
 				<string>Texture</string>
 				<key>value</key>
-				<string>ccbResources/ccbParticleFire.png</string>
+				<string>art/sun.png</string>
 			</dict>
 		</array>
 		<key>selected</key>
