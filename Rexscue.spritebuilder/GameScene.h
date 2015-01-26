@@ -16,6 +16,8 @@
 #import "Allosaurus.h"
 #import "Pterodactyl.h"
 #import "MainScene.h"
+#import "Smoke.h"
+#import "Explosion.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;

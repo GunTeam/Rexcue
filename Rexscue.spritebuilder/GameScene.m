@@ -186,8 +186,11 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
+    Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
+    smoke.position = meteor.position;
     [meteor removeFromParent];
     [self addPointsToScore:100];
+    [self addChild:smoke];
     return NO;
 }
 
@@ -220,7 +223,6 @@
         [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
     }
 }
-
 
 -(void) updateBySecond{
     timeElapsed += 1;

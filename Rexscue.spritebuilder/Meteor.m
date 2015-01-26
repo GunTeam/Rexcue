@@ -45,13 +45,16 @@
     CGPoint normalizedVel = CGPointMake(self.speed*velVector.x/magnitude, self.speed*velVector.y/magnitude);
     
     self.rotation = -(180/M_PI)*atan2(normalizedVel.y, normalizedVel.x);
-    self.physicsBody.velocity = normalizedVel;
+    self.physicsBody.velocity = normalgizedVel;
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    Explosion *explosion = (Explosion*)[CCBReader load:@"Explosion"];
+    explosion.position = self.position;
     GameScene *gameScene = (GameScene *)self.parent.parent;
     [gameScene addPointsToScore: (int)(screenHeight-self.position.y) ];
     [self removeFromParent];
+    [gameScene addChild:explosion];
 }
 
 @end

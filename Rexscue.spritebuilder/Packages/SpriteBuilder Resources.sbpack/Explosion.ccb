@@ -40,7 +40,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Smoke</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCParticleSystem</string>
 		<key>memberVarAssignmentName</key>
@@ -111,7 +111,7 @@
 				<key>value</key>
 				<array>
 					<real>0.0</real>
-					<real>40</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -120,7 +120,7 @@
 				<key>type</key>
 				<string>Float</string>
 				<key>value</key>
-				<real>80</real>
+				<real>100000</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -128,7 +128,7 @@
 				<key>type</key>
 				<string>Float</string>
 				<key>value</key>
-				<real>2</real>
+				<real>0.0099999997764825821</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -145,8 +145,8 @@
 				<string>FloatVar</string>
 				<key>value</key>
 				<array>
-					<real>10</real>
 					<real>0.0</real>
+					<real>1</real>
 				</array>
 			</dict>
 			<dict>
@@ -156,8 +156,8 @@
 				<string>FloatVar</string>
 				<key>value</key>
 				<array>
-					<real>100</real>
-					<real>10</real>
+					<real>0.0</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -167,8 +167,8 @@
 				<string>FloatVar</string>
 				<key>value</key>
 				<array>
-					<real>100</real>
-					<real>10</real>
+					<real>20</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -179,7 +179,7 @@
 				<key>value</key>
 				<array>
 					<real>0.0</real>
-					<real>90</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -200,8 +200,8 @@
 				<string>FloatVar</string>
 				<key>value</key>
 				<array>
-					<real>90</real>
-					<real>30</real>
+					<real>0.0</real>
+					<real>360</real>
 				</array>
 			</dict>
 			<dict>
@@ -212,16 +212,16 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.99999600648880005</real>
+						<real>0.93907523155212402</real>
+						<real>0.73516947031021118</real>
+						<real>0.47483068704605103</real>
 						<real>1</real>
-						<real>1</real>
-						<real>0.18000000715255737</real>
 					</array>
 					<array>
-						<real>0.071372650563716888</real>
-						<real>0.10835220664739609</real>
-						<real>0.10929704457521439</real>
-						<real>0.25999999046325684</real>
+						<real>0.092235274612903595</real>
+						<real>0.09087032824754715</real>
+						<real>0.091442413628101349</real>
+						<real>0.5</real>
 					</array>
 				</array>
 			</dict>
@@ -233,16 +233,16 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.99999600648880005</real>
-						<real>1</real>
-						<real>1</real>
-						<real>0.30000001192092896</real>
+						<real>0.0</real>
+						<real>0.0</real>
+						<real>0.0</real>
+						<real>0.81999999284744263</real>
 					</array>
 					<array>
-						<real>0.066645599901676178</real>
-						<real>0.10375448316335678</real>
 						<real>0.0</real>
-						<real>0.25999999046325684</real>
+						<real>0.0</real>
+						<real>0.0</real>
+						<real>0.0</real>
 					</array>
 				</array>
 			</dict>
@@ -254,7 +254,7 @@
 				<key>value</key>
 				<array>
 					<integer>1</integer>
-					<integer>771</integer>
+					<integer>1</integer>
 				</array>
 			</dict>
 			<dict>
@@ -283,8 +283,8 @@
 				<string>FloatVar</string>
 				<key>value</key>
 				<array>
-					<real>300</real>
-					<real>300</real>
+					<real>72</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -295,7 +295,7 @@
 				<key>value</key>
 				<array>
 					<real>0.0</real>
-					<real>1</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -306,7 +306,7 @@
 				<key>value</key>
 				<array>
 					<real>0.0</real>
-					<real>20</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -315,7 +315,7 @@
 				<key>type</key>
 				<string>Texture</string>
 				<key>value</key>
-				<string>ccbResources/ccbParticleSmoke.png</string>
+				<string>ccbResources/ccbParticleFire.png</string>
 			</dict>
 		</array>
 		<key>selected</key>

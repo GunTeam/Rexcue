@@ -98,8 +98,10 @@
 		BA5776811A744BDD00173263 /* TRex.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776751A744BDD00173263 /* TRex.m */; };
 		BA5776821A744BDD00173263 /* Triceratops.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776761A744BDD00173263 /* Triceratops.m */; };
 		BA5776831A744BDD00173263 /* Allosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776781A744BDD00173263 /* Allosaurus.m */; };
+		BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5C28E71A7609BB0062AE0F /* Explosion.m */; };
 		BA724C611A742C6B00AECA48 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C601A742C6A00AECA48 /* GameScene.m */; };
 		BA724C871A74313100AECA48 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C861A74313100AECA48 /* Meteor.m */; };
+		BABC0B371A760240008FA3D2 /* Smoke.m in Sources */ = {isa = PBXBuildFile; fileRef = BABC0B361A760240008FA3D2 /* Smoke.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,10 +250,14 @@
 		BA57767B1A744BDD00173263 /* TRex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRex.h; sourceTree = "<group>"; };
 		BA57767C1A744BDD00173263 /* Pterodactyl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pterodactyl.h; sourceTree = "<group>"; };
 		BA57767D1A744BDD00173263 /* Triceratops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triceratops.h; sourceTree = "<group>"; };
+		BA5C28E61A7609BB0062AE0F /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
+		BA5C28E71A7609BB0062AE0F /* Explosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explosion.m; sourceTree = "<group>"; };
 		BA724C5F1A742C6A00AECA48 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA724C601A742C6A00AECA48 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		BA724C851A74313100AECA48 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
 		BA724C861A74313100AECA48 /* Meteor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteor.m; sourceTree = "<group>"; };
+		BABC0B351A760240008FA3D2 /* Smoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smoke.h; sourceTree = "<group>"; };
+		BABC0B361A760240008FA3D2 /* Smoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smoke.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -596,6 +602,10 @@
 			children = (
 				BA724C851A74313100AECA48 /* Meteor.h */,
 				BA724C861A74313100AECA48 /* Meteor.m */,
+				BABC0B351A760240008FA3D2 /* Smoke.h */,
+				BABC0B361A760240008FA3D2 /* Smoke.m */,
+				BA5C28E61A7609BB0062AE0F /* Explosion.h */,
+				BA5C28E71A7609BB0062AE0F /* Explosion.m */,
 				BA724C841A74310D00AECA48 /* Dinos */,
 			);
 			name = Sprites;
@@ -930,10 +940,12 @@
 				BA5776831A744BDD00173263 /* Allosaurus.m in Sources */,
 				BA57767F1A744BDD00173263 /* Pterodactyl.m in Sources */,
 				BA57767E1A744BDD00173263 /* dinosaur.m in Sources */,
+				BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */,
 				BA724C611A742C6B00AECA48 /* GameScene.m in Sources */,
 				BA5776801A744BDD00173263 /* Stegosaurus.m in Sources */,
 				BA5776821A744BDD00173263 /* Triceratops.m in Sources */,
 				BA724C871A74313100AECA48 /* Meteor.m in Sources */,
+				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,
 				BA5776811A744BDD00173263 /* TRex.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
