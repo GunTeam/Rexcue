@@ -23,8 +23,56 @@
     self.afterAttackDelay = 60;
     self.attackCounter = 0;
     self.price = 200;
+    self.hasSpikes = true;
     
     [self setHealthLabel];
+}
+
+-(void) loseSpikes{
+    [self.animationManager runAnimationsForSequenceNamed:@"SpikeOff"];
+    _darkSpikes.visible = false;
+    _brightSpikes.visible = false;
+    self.hasSpikes = false;
+    self.health -= MAX_HEALTH/2.;
+    [self setHealthLabel];
+}
+
+-(Boolean) hitByMeteor{
+    if(self.hasSpikes){
+        [self loseSpikes];
+        return false;
+    }
+    else{
+        [self die];
+        return true;
+    }
+}
+
+-(Boolean) attackedByDino:(dinosaur *)otherDino{
+    [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+    otherDino.readyToAttack = false;
+    
+    if(self.direction == 0 && otherDino.position.x > self.position.x){
+        [self knockback];
+    }
+    else if(self.direction == 0 && otherDino.position.x < self.position.x){
+        [self knockforward];
+    }
+    else if(self.direction == 1 && otherDino.position.x > self.position.x){
+        [self knockback];
+    }
+    else if(self.direction == 1 && otherDino.position.x < self.position.x){
+        [self knockforward];
+    }
+    
+    if(self.hasSpikes){
+        [self loseSpikes];
+    }
+    else{
+        [self die];
+        return true;
+    }
+    return false;
 }
 
 @end

@@ -89,7 +89,7 @@
 -(void) addRandomDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%5;
+    int randSpawnFlag = 2;//arc4random()%5;
     double positionX = arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
@@ -169,7 +169,6 @@
     }
     newDino.scale = 0.8;
     
-    
     if(newDino.inAir){
         positionY = (7./10)*screenHeight;
     }
@@ -221,11 +220,9 @@
     [meteor removeFromParent];
     [self addPointsToScore:meteorHittingGroundBonus];
     
-    
     DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",meteorHittingGroundBonus]fontName:@"Helvetica" fontSize:24];
     label.position = smoke.position;
     [self addChild:label];
-    
     
     [self addChild:smoke];
     return NO;
@@ -237,17 +234,34 @@
     [evilDino.animationManager runAnimationsForSequenceNamed:@"Dying"];
     [evilDino scheduleOnce:@selector(removeFromParent) delay:2];
     [self addPointsToScore:evilDino.killBonus];
+    
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BANG!"]fontName:@"Helvetica" fontSize:24];
+    label.position = evilDino.position;
+    [self addChild:label];
+    
     return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
+    
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BAM!"]fontName:@"Helvetica" fontSize:24];
+    label.position = meteor.position;
+    [self addChild:label];
+    
     [meteor removeFromParent];
-    [dinosaur die];
-    numDinos -= 1;
+    Boolean killed = [dinosaur hitByMeteor];
+    if(killed){
+        numDinos -= 1;
+    }
+
     return NO;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair dinosaur:(dinosaur *)dinosaur evilDino:(dinosaur *)evilDino{
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"POW!"]fontName:@"Helvetica" fontSize:24];
+    label.position = dinosaur.position;
+    [self addChild:label];
+    
     Boolean killed = [dinosaur attackedByDino:evilDino];
     if(killed){
         numDinos -= 1;
@@ -268,8 +282,8 @@
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
         meteorSpeed += 50;
-        if(level == 5){
-            [self spawnEnemyDino];
+        if(level == 1){
+//            [self spawnEnemyDino];
         }
         if(secondsBetweenMeteors > 0.1){
             secondsBetweenMeteors -= 0.1;

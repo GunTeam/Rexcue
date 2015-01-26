@@ -31,6 +31,8 @@
 -(void) setHealthLabel;
 -(void) reverseDinoDirection;
 -(void) setHealthInvisible;
+-(Boolean) hitByMeteor;
+-(void) knockforward;
 
 @property float health;
 @property double speed;

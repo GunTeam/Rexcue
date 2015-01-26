@@ -11,7 +11,9 @@
 #import "dinosaur.h"
 
 @interface Stegosaurus : dinosaur {
-    
+    CCNode *_darkSpikes, *_brightSpikes;
 }
+
+@property Boolean hasSpikes;
 
 @end

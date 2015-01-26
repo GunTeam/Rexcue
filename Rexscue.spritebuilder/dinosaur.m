@@ -90,12 +90,17 @@
 }
 
 -(void) knockback{
-    int knockbackAmount = (0.3)*self.contentSize.width;
-    if(self.isEnemy){ //we'll knock it backwards
-        knockbackAmount *= -1;
-    }
+    int knockbackAmount = self.contentSize.width;
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-knockbackAmount,0)];
+    [self runAction:mover];
+    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
+}
+
+-(void) knockforward{
+    int knockbackAmount = self.contentSize.width;
+    
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
@@ -109,26 +114,31 @@
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{
-    if(otherDino.readyToAttack){
-        [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
-        otherDino.readyToAttack = false;
-        self.health -= otherDino.attack;
-        [self setHealthLabel];
-        if(self.health+otherDino.attack >= KNOCKBACK_THRESHOLD && self.health < KNOCKBACK_THRESHOLD){
-            [self knockback];
-        }
-        
-        if(self.health <= 0){
-            [self die];
-            return true;
-        }
-        return false;
+    [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+    otherDino.readyToAttack = false;
+    self.health -= otherDino.attack;
+    [self setHealthLabel];
+    
+    
+    if(direction == 0 && otherDino.position.x > self.position.x){
+        [self knockback];
     }
-    else{
-
-        return false;
+    else if(direction == 0 && otherDino.position.x < self.position.x){
+        [self knockforward];
+    }
+    else if(direction == 1 && otherDino.position.x > self.position.x){
+        [self knockback];
+    }
+    else if(direction == 1 && otherDino.position.x < self.position.x){
+        [self knockforward];
     }
 
+    
+    if(self.health <= 0){
+        [self die];
+        return true;
+    }
+    return false;
 }
 
 -(Boolean) isEnemyNest{
@@ -143,6 +153,11 @@
     self.direction = (self.direction+1)%2;
 //    self.scaleX *= -1;
     [self reverseHealthLabel];
+}
+
+-(Boolean) hitByMeteor{
+    [self die];
+    return true;
 }
 
 -(void) update:(CCTime)delta{
