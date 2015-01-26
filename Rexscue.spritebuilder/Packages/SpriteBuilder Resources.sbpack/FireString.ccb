@@ -120,7 +120,7 @@
 				<key>type</key>
 				<string>Float</string>
 				<key>value</key>
-				<real>50</real>
+				<real>250</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -136,7 +136,7 @@
 				<key>type</key>
 				<string>Integer</string>
 				<key>value</key>
-				<integer>250</integer>
+				<integer>500</integer>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -212,9 +212,9 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.98183685541152954</real>
-						<real>0.32533687353134155</real>
-						<real>0.060349166393280029</real>
+						<real>1</real>
+						<real>0.62888407707214355</real>
+						<real>0.0</real>
 						<real>1</real>
 					</array>
 					<array>
@@ -233,9 +233,9 @@
 				<key>value</key>
 				<array>
 					<array>
-						<real>0.98183685541152954</real>
-						<real>0.0</real>
-						<real>0.035363789647817612</real>
+						<real>1</real>
+						<real>0.035666227340698242</real>
+						<real>0.0040945406071841717</real>
 						<real>1</real>
 					</array>
 					<array>
@@ -315,7 +315,7 @@
 				<key>type</key>
 				<string>Texture</string>
 				<key>value</key>
-				<string>art/sun.png</string>
+				<string>art/StringOfYarn.png</string>
 			</dict>
 		</array>
 		<key>selected</key>
