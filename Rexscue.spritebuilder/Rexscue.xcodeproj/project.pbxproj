@@ -99,6 +99,7 @@
 		BA5776821A744BDD00173263 /* Triceratops.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776761A744BDD00173263 /* Triceratops.m */; };
 		BA5776831A744BDD00173263 /* Allosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776781A744BDD00173263 /* Allosaurus.m */; };
 		BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5C28E71A7609BB0062AE0F /* Explosion.m */; };
+		BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5C28EB1A761A4A0062AE0F /* Cloud.m */; };
 		BA724C611A742C6B00AECA48 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C601A742C6A00AECA48 /* GameScene.m */; };
 		BA724C871A74313100AECA48 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C861A74313100AECA48 /* Meteor.m */; };
 		BABC0B371A760240008FA3D2 /* Smoke.m in Sources */ = {isa = PBXBuildFile; fileRef = BABC0B361A760240008FA3D2 /* Smoke.m */; };
@@ -252,6 +253,8 @@
 		BA57767D1A744BDD00173263 /* Triceratops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triceratops.h; sourceTree = "<group>"; };
 		BA5C28E61A7609BB0062AE0F /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
 		BA5C28E71A7609BB0062AE0F /* Explosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explosion.m; sourceTree = "<group>"; };
+		BA5C28EA1A761A4A0062AE0F /* Cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloud.h; sourceTree = "<group>"; };
+		BA5C28EB1A761A4A0062AE0F /* Cloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cloud.m; sourceTree = "<group>"; };
 		BA724C5F1A742C6A00AECA48 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA724C601A742C6A00AECA48 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		BA724C851A74313100AECA48 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 				BABC0B361A760240008FA3D2 /* Smoke.m */,
 				BA5C28E61A7609BB0062AE0F /* Explosion.h */,
 				BA5C28E71A7609BB0062AE0F /* Explosion.m */,
+				BA5C28EA1A761A4A0062AE0F /* Cloud.h */,
+				BA5C28EB1A761A4A0062AE0F /* Cloud.m */,
 				BA724C841A74310D00AECA48 /* Dinos */,
 			);
 			name = Sprites;
@@ -943,6 +948,7 @@
 				BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */,
 				BA724C611A742C6B00AECA48 /* GameScene.m in Sources */,
 				BA5776801A744BDD00173263 /* Stegosaurus.m in Sources */,
+				BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */,
 				BA5776821A744BDD00173263 /* Triceratops.m in Sources */,
 				BA724C871A74313100AECA48 /* Meteor.m in Sources */,
 				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,

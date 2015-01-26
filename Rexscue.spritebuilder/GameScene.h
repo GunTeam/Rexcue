@@ -25,6 +25,7 @@
     CCNodeColor *_ground;
     int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE;
     CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
+    CCNode *_cloud1, *_cloud2, *_cloud3;
 }
 
 -(void) addPointsToScore: (int) points;

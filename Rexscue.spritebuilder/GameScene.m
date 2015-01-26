@@ -222,6 +222,8 @@
     if(numDinos == 0){
         [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
     }
+    
+    if(_cloud1.)
 }
 
 -(void) updateBySecond{
