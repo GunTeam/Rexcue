@@ -124,11 +124,7 @@
         return false;
     }
     else{
-        otherDino.attackCounter += 1;
-        if(otherDino.attackCounter > otherDino.afterAttackDelay){
-            otherDino.readyToAttack = true;
-            otherDino.attackCounter = 0;
-        }
+
         return false;
     }
 
@@ -163,6 +159,11 @@
         self.position = ccp(screenWidth, self.position.y);
     }
     
+    self.attackCounter += 1;
+    if(self.attackCounter > self.afterAttackDelay){
+        self.readyToAttack = true;
+        self.attackCounter = 0;
+    }
     
 }
 

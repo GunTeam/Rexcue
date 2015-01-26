@@ -10,11 +10,13 @@
 
 @implementation GameScene
 
-@synthesize score, meteorSpeed, timeElapsed, numDinos, level;
+@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus;
 
 -(void) didLoadFromCCB {
-    NUM_STARTING_DINOS = 10;
+    NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
+    secondsBetweenMeteors = 2;
+    meteorHittingGroundBonus = 100;
     
     self.userInteractionEnabled = true;
     
@@ -35,7 +37,7 @@
     
     _ground.physicsBody.collisionType = @"ground";
     
-    [self schedule:@selector(spawnMeteor:) interval:2];
+    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
     
     self.score = 0;
     
@@ -72,6 +74,7 @@
             break;
         case 2:
             newDino = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
+            positionY = screenHeight/11;
             break;
         case 3:
             newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
@@ -83,7 +86,7 @@
             break;
             
     }
-    newDino.scale = 0.8;
+    newDino.scale = 0.6;
     
     
     if(newDino.inAir){
@@ -122,6 +125,7 @@
             break;
         case 2:
             newDino = (Stegosaurus*)[CCBReader load:@"EvilStegosaurus"];
+            positionY = screenHeight/9;
             break;
         case 3:
             newDino = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
@@ -160,7 +164,7 @@
 -(void) spawnMeteor:(CCTime) dt{
     Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
     meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight);
-//    [_physicsNode addChild:meteor];
+    [_physicsNode addChild:meteor];
     [meteor setSpeed: meteorSpeed];
     [meteor launch];
 }
@@ -183,6 +187,7 @@
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
     [meteor removeFromParent];
+    [self addPointsToScore:100];
     return NO;
 }
 
@@ -223,7 +228,17 @@
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
         meteorSpeed += 50;
-        [self spawnEnemyDino];
+        if(level == 5){
+            [self spawnEnemyDino];
+        }
+        if(secondsBetweenMeteors > 0.1){
+            secondsBetweenMeteors -= 0.1;
+        }
+        else if(secondsBetweenMeteors > 0.01){
+            secondsBetweenMeteors -= 0.01;
+        }
+        [self unschedule:@selector(spawnMeteor:)];
+        [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
     }
     
     [self setTimeLabel];

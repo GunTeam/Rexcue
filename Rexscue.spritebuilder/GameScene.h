@@ -32,5 +32,7 @@
 @property int timeElapsed;
 @property int numDinos;
 @property int level;
+@property int meteorHittingGroundBonus;
+@property double secondsBetweenMeteors;
 
 @end

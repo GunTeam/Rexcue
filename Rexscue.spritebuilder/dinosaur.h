@@ -40,7 +40,7 @@
 @property Boolean isEnemy;
 @property int attackCounter;
 @property int killBonus;
-@property int afterAttackDelay; //how many frames the dino waits in between attacks
+@property int afterAttackDelay; //how many frames the dino waits between attacks
 @property int price;
 @property double levelMultiplier;
 @property int direction;
