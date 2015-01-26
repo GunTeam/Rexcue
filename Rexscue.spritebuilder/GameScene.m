@@ -33,7 +33,7 @@
     }
     
     _physicsNode.collisionDelegate = self;
-    _physicsNode.debugDraw = true;
+//    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
