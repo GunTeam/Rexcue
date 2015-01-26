@@ -59,6 +59,7 @@
     
     [self setTimeLabel];
     [self setLevelLabel];
+    [self addPointsToScore:0];
     
     [self schedule:@selector(updateBySecond) interval:1];
 }

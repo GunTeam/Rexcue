@@ -478,8 +478,6 @@
 								<string>Smoke.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -891,8 +889,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>462.53057861328125</real>
-							<real>359.961669921875</real>
+							<real>429.35296630859375</real>
+							<real>357.8880615234375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -939,7 +937,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>ccbResources/PatrickHandSC-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -948,7 +946,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>12</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1098,8 +1096,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>255.99996948242188</real>
-							<real>359.961669921875</real>
+							<real>251.85276794433594</real>
+							<real>357.8880615234375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1146,7 +1144,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>ccbResources/PatrickHandSC-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1155,7 +1153,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>12</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1305,8 +1303,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>32.051132202148438</real>
-							<real>362.45001220703125</real>
+							<real>48.639934539794922</real>
+							<real>356.22921752929688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1353,7 +1351,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>ccbResources/PatrickHandSC-Regular.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1362,7 +1360,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>12</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>

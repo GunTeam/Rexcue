@@ -43,7 +43,7 @@
         cloud.direction = direction;
         cloud.speed = (arc4random()%3+1)/150.0;
         cloud.scale = 2;
-        [self addChild: cloud z:5];
+        [self addChild: cloud];
     }
 
 }
