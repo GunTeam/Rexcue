@@ -143,7 +143,7 @@
 -(void) spawnEnemyDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%5;
+    int randSpawnFlag = 4;//arc4random()%5;
     double positionX = 0; //arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
