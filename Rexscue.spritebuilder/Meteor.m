@@ -23,7 +23,6 @@
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
     
-    self.scale = 1.5;
     
     //adjust for ipad sizing:
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -33,7 +32,7 @@
     }
     
     
-    self.scale = 0.2;
+    self.scale = 0.5;
     audioPlayer =  [OALSimpleAudio sharedInstance];
 
     }

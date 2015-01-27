@@ -137,6 +137,8 @@
 		BADAB88E1A774F94008E7339 /* MeteorHit4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB86B1A774F94008E7339 /* MeteorHit4.mp3 */; };
 		BADAB88F1A774F94008E7339 /* MeteorHit2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB86C1A774F94008E7339 /* MeteorHit2.mp3 */; };
 		BADAB8901A774F94008E7339 /* MeteorHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB86D1A774F94008E7339 /* MeteorHit.mp3 */; };
+		BADAB8F81A784796008E7339 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8F71A784796008E7339 /* GameOver.m */; };
+		BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8FA1A784BC9008E7339 /* Menu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +333,10 @@
 		BADAB86B1A774F94008E7339 /* MeteorHit4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MeteorHit4.mp3; sourceTree = "<group>"; };
 		BADAB86C1A774F94008E7339 /* MeteorHit2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MeteorHit2.mp3; sourceTree = "<group>"; };
 		BADAB86D1A774F94008E7339 /* MeteorHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MeteorHit.mp3; sourceTree = "<group>"; };
+		BADAB8F61A784796008E7339 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		BADAB8F71A784796008E7339 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		BADAB8F91A784BC9008E7339 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		BADAB8FA1A784BC9008E7339 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -666,8 +672,12 @@
 			children = (
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				BADAB8F91A784BC9008E7339 /* Menu.h */,
+				BADAB8FA1A784BC9008E7339 /* Menu.m */,
 				BA724C5F1A742C6A00AECA48 /* GameScene.h */,
 				BA724C601A742C6A00AECA48 /* GameScene.m */,
+				BADAB8F61A784796008E7339 /* GameOver.h */,
+				BADAB8F71A784796008E7339 /* GameOver.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1145,6 +1155,7 @@
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
+				BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */,
 				BA5776831A744BDD00173263 /* Allosaurus.m in Sources */,
 				BA023D9E1A76C239002F718F /* DisappearingLabel.m in Sources */,
 				BA57767F1A744BDD00173263 /* Pterodactyl.m in Sources */,
@@ -1154,6 +1165,7 @@
 				BA5776801A744BDD00173263 /* Stegosaurus.m in Sources */,
 				BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */,
 				BA5776821A744BDD00173263 /* Triceratops.m in Sources */,
+				BADAB8F81A784796008E7339 /* GameOver.m in Sources */,
 				BA724C871A74313100AECA48 /* Meteor.m in Sources */,
 				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,
 				BA5776811A744BDD00173263 /* TRex.m in Sources */,

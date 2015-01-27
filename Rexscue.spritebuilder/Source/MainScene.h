@@ -15,7 +15,10 @@
     TRex *_trex;
     Triceratops *_trice;
     Allosaurus *_allosaurus;
-    CCButton *playButton;
+    CCButton *playButton, *_menuButton;
 }
+
+@property Boolean soundEffectsOn;
+@property Boolean musicOn;
 
 @end

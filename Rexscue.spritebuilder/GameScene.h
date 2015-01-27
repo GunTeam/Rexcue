@@ -39,5 +39,6 @@
 @property int level;
 @property int meteorHittingGroundBonus;
 @property double secondsBetweenMeteors;
+@property Boolean soundEffectsOn;
 
 @end

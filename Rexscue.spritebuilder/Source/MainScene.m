@@ -26,6 +26,11 @@
     [self spawnClouds];
 }
 
+-(void) menu{
+    CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:.1];
+    [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Menu"] withTransition:transition];
+}
+
 -(void) spawnClouds{
     for(int i =1; i<4; i++){
         int upperBound = screenHeight;

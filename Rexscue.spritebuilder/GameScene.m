@@ -49,7 +49,7 @@
     [self spawnClouds];
     
     for(int i=0; i<NUM_STARTING_DINOS; i++){
-//        [self addRandomDino];
+        [self addRandomDino];
     }
     
     meteorSpeed = 100;
@@ -60,7 +60,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-    [self spawnEnemyDino];
+//    [self spawnEnemyDino];
     
     [self schedule:@selector(updateBySecond) interval:1];
 }
@@ -144,7 +144,7 @@
 -(void) spawnEnemyDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = 4;//arc4random()%5;
+    int randSpawnFlag = arc4random()%4;
     double positionX = 0; //arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
@@ -294,14 +294,14 @@
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
         meteorSpeed += 50;
-        if(level == 1){
+        if(level%5 == 0){
             [self spawnEnemyDino];
         }
-        if(secondsBetweenMeteors > 0.1){
-            secondsBetweenMeteors -= 0.1;
+        if(secondsBetweenMeteors > 0.2){
+            secondsBetweenMeteors -= 0.2;
         }
-        else if(secondsBetweenMeteors > 0.01){
-            secondsBetweenMeteors -= 0.01;
+        else if(secondsBetweenMeteors > 0.02){
+            secondsBetweenMeteors -= 0.02;
         }
         [self unschedule:@selector(spawnMeteor:)];
         [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];

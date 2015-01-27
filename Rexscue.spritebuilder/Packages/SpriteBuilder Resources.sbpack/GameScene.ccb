@@ -14,7 +14,7 @@
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>docDimensionsType</key>
@@ -341,8 +341,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>256.58880615234375</real>
-									<real>194.7183837890625</real>
+									<real>0.0</real>
+									<real>0.0</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -355,8 +355,8 @@
 								<string>Point</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>0.0</real>
+									<real>0.0</real>
 								</array>
 							</dict>
 							<dict>
@@ -366,8 +366,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1.0123666524887085</real>
-									<real>1.0320495367050171</real>
+									<real>1.1095081567764282</real>
+									<real>1.0013829469680786</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -891,8 +891,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>429.35296630859375</real>
-							<real>357.8880615234375</real>
+							<real>462.53057861328125</real>
+							<real>337.15206909179688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1098,8 +1098,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>251.85276794433594</real>
-							<real>357.8880615234375</real>
+							<real>274.66238403320312</real>
+							<real>337.15206909179688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1305,8 +1305,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>48.639934539794922</real>
-							<real>356.22921752929688</real>
+							<real>73.523139953613281</real>
+							<real>339.64041137695312</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1560,43 +1560,15 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>320</integer>
-			<key>name</key>
-			<string>Phone Landscape</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>568</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
 			<integer>384</integer>
 			<key>name</key>
-			<string>Tablet Landscape</string>
+			<string>Fixed Landscape</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
-			<integer>512</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>320</integer>
-			<key>name</key>
-			<string>Phone Landscape (short)</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>480</integer>
+			<integer>568</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
