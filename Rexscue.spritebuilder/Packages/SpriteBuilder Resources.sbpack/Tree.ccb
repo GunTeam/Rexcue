@@ -334,7 +334,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Tree</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -413,6 +413,14 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>opacity</string>
+				<key>type</key>
+				<string>Float</string>
+				<key>value</key>
+				<real>0.0</real>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>color</string>
 				<key>type</key>
 				<string>Color3</string>
@@ -421,7 +429,7 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
-					<real>1</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -433,6 +441,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

@@ -292,7 +292,7 @@
 						<string>FloatXY</string>
 						<key>value</key>
 						<array>
-							<real>-9.3548383712768555</real>
+							<real>-2.9032254219055176</real>
 							<real>0.0</real>
 						</array>
 					</dict>
@@ -345,7 +345,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>LittleTree</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -424,6 +424,14 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>opacity</string>
+				<key>type</key>
+				<string>Float</string>
+				<key>value</key>
+				<real>0.0</real>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>color</string>
 				<key>type</key>
 				<string>Color3</string>
@@ -432,7 +440,7 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
-					<real>1</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -501,7 +509,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.033333335071802139</real>
+			<real>0.36666667461395264</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

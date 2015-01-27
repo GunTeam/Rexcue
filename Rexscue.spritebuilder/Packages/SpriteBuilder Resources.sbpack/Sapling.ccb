@@ -283,7 +283,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>29.008262634277344</real>
+						<real>-18.980716705322266</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -468,7 +468,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-30</real>
+						<real>11.379308700561523</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -653,7 +653,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>29.53125</real>
+						<real>-18.28125</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -783,6 +783,14 @@
 			</dict>
 			<dict>
 				<key>name</key>
+				<string>opacity</string>
+				<key>type</key>
+				<string>Float</string>
+				<key>value</key>
+				<real>0.0</real>
+			</dict>
+			<dict>
+				<key>name</key>
 				<string>color</string>
 				<key>type</key>
 				<string>Color3</string>
@@ -791,7 +799,7 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
-					<real>1</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -803,6 +811,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -858,7 +868,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.3333333432674408</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
