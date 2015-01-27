@@ -33,6 +33,8 @@
     
     
     self.scale = 0.2;
+    audioPlayer =  [OALSimpleAudio sharedInstance];
+
     }
 
 -(void)launch{
@@ -61,6 +63,16 @@
     DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = explosion.position;
     [gameScene addChild:label];
+    
+    int effect = arc4random() % 3;
+    if (effect == 0) {
+        [audioPlayer playEffect:@"grrrreat.mp3"];
+    } else if (effect == 1){
+        [audioPlayer playEffect:@"goodJob.mp3"];
+    } else if (effect == 2){
+        [audioPlayer playEffect:@"nice.mp3"];
+    }
+    
 }
 
 @end

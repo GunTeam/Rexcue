@@ -16,6 +16,9 @@
 
     self.levelMultiplier = 1;
     self.isEnemy = false;
+    
+    //last sound is the panicking sound
+    sounds = @[@"uhOh.mp3",@"ohhh.mp3", @"awMan.mp3",@"uhOhGuys.mp3"];
 
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     self.speed = 0.01; //default

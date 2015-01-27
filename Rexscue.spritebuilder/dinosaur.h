@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "ObjectAL.h"
 
 @interface dinosaur : CCSprite {
     int ATTACK_THRESHOLD;
@@ -15,6 +16,9 @@
     int MAX_HEALTH; //maximum health
     CCLabelTTF *_healthLabel;
     CGFloat screenWidth,screenHeight;
+    OALSimpleAudio *audioPlayer;
+    NSArray *sounds;
+    NSArray *evilSounds;
 }
 
 -(void) didLoadFromCCB;
@@ -34,6 +38,7 @@
 -(Boolean) hitByMeteor;
 -(void) knockforward;
 -(void) panic;
+-(void) playAttackSound;
 
 @property float health;
 @property double speed;
@@ -50,4 +55,5 @@
 @property double levelMultiplier;
 @property int direction;
 @property int turnWait;
+
 @end

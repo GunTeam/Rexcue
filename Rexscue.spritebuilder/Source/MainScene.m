@@ -15,7 +15,7 @@
         screenHeight = screenHeight/2;
     }
     
-    NSMutableArray *dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
+    NSArray *dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
     
     for(dinosaur *dino in dinos){
         [dino setHealthInvisible];

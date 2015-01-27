@@ -13,7 +13,10 @@
 
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
-
+    
+    //last sound is the panicking sound
+    sounds = @[@"help.mp3", @"owAndStuff.mp3",@"WhaOh.mp3",@"ImPanicking2.mp3"];
+    
     self.levelMultiplier = 1;
     self.isEnemy = false;
 

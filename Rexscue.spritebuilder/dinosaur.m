@@ -20,6 +20,8 @@
     self.direction = 0;
     self.turnWait = 0;
     
+    evilSounds = @[@"rawr2.mp3", @"grr.mp3",@"rawr.mp3", @"growl.mp3",@"grrAndStuff.mp3"];
+    
     self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 100;
@@ -49,6 +51,7 @@
         screenHeight = screenHeight/2;
     }
     
+    audioPlayer =  [OALSimpleAudio sharedInstance];
 }
 
 -(void) setHealthLabel{
@@ -91,6 +94,8 @@
 
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -99,6 +104,8 @@
 
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -108,6 +115,8 @@
 -(void) die{
     self.isDead = true;
     self.physicsBody.collisionMask = @[];
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
     [self runAction:mover];
@@ -151,6 +160,7 @@
 }
 
 -(void) panic{
+    [audioPlayer playEffect:[sounds objectAtIndex:sounds.count-1]];
     [self.animationManager runAnimationsForSequenceNamed:@"Panic"];
 }
 
@@ -198,5 +208,11 @@
         [self removeFromParent];
     }
 }
+
+-(void) playAttackSound{
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[evilSounds objectAtIndex:randomSound]];
+}
+
 
 @end

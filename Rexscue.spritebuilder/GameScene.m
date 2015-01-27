@@ -293,7 +293,7 @@
         level += 1;
         meteorSpeed += 50;
         if(level == 1){
-            [self spawnEnemyDino];
+//            [self spawnEnemyDino];
         }
         if(secondsBetweenMeteors > 0.1){
             secondsBetweenMeteors -= 0.1;

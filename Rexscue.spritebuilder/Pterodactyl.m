@@ -16,6 +16,9 @@
     
     self.levelMultiplier = 1;
     self.isEnemy = false;
+    
+    //last sound is the panicking sound
+    sounds = @[@"uhOh2.mp3", @"MeteorHit2.mp3",@"UhHahh.mp3", @"whyMe.mp3",@"run.mp3"];
 
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     self.speed = 0.01; //default
@@ -37,8 +40,13 @@
 
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-screenHeight+(1./2)*self.contentSize.height)];
     [self runAction:mover];
+    
+    int randomSound = arc4random()%(sounds.count-1);
+    
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
 
     [self scheduleOnce:@selector(removeFromParent) delay:2];
 }
+
 
 @end

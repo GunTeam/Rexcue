@@ -25,10 +25,16 @@
     self.price = 200;
     self.hasSpikes = true;
     
+    //last sound is the panicking sound
+    sounds = @[@"WhaOh2.mp3", @"MeteorHit.mp3",@"huh.mp3", @"whaaaat.mp3",@"ooooh.mp3"];
+    
     [self setHealthLabel];
 }
 
 -(void) loseSpikes{
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+    
     [self.animationManager runAnimationsForSequenceNamed:@"SpikeOff"];
     _darkSpikes.visible = false;
     _brightSpikes.visible = false;
@@ -39,6 +45,8 @@
 
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -47,6 +55,8 @@
 
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
+    int randomSound = arc4random()%(sounds.count-1);
+    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
