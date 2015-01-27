@@ -92,7 +92,7 @@
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
     
-    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-knockbackAmount,0)];
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
@@ -100,7 +100,7 @@
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
     
-    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(knockbackAmount,0)];
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }

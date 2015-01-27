@@ -92,7 +92,7 @@
 -(void) addRandomDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = 2;//arc4random()%5;
+    int randSpawnFlag = arc4random()%5;
     double positionX = arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
