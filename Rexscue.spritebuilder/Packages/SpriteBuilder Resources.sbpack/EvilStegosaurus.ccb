@@ -80,8 +80,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>114</real>
-							<real>43</real>
+							<real>108</real>
+							<real>28</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -105,8 +105,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>3</real>
-							<real>3</real>
+							<real>2</real>
+							<real>2</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -228,9 +228,9 @@
 						<key>value</key>
 						<array>
 							<array>
-								<real>0.0</real>
-								<real>1</real>
-								<real>0.94600498676300049</real>
+								<real>0.014038137160241604</real>
+								<real>0.47340857982635498</real>
+								<real>0.66204637289047241</real>
 								<real>1</real>
 							</array>
 							<array>
@@ -250,9 +250,9 @@
 						<array>
 							<array>
 								<real>0.0</real>
-								<real>0.0</real>
-								<real>0.0</real>
-								<real>255</real>
+								<real>0.89235305786132812</real>
+								<real>1</real>
+								<real>1</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -5830,7 +5830,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.066666670143604279</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -5959,6 +5959,6 @@
 	<key>stageBorder</key>
 	<integer>3</integer>
 	<key>stageColor</key>
-	<integer>3</integer>
+	<integer>2</integer>
 </dict>
 </plist>
