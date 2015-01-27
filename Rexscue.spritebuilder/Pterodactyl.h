@@ -11,7 +11,7 @@
 #import "dinosaur.h"
 
 @interface Pterodactyl : dinosaur {
-    
+    CCNode *_rightString, *_leftString;
 }
 
 @end

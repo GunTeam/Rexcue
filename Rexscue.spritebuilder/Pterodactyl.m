@@ -28,4 +28,17 @@
     [self setHealthLabel];
 }
 
+-(void) die{
+    self.physicsBody.collisionMask = @[];
+    [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    CCActionMoveBy *stringMover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,screenHeight-(1./2)*self.contentSize.height)];
+    [_leftString runAction:stringMover];
+    [_rightString runAction:stringMover];
+
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-screenHeight+(1./2)*self.contentSize.height)];
+    [self runAction:mover];
+
+    [self scheduleOnce:@selector(removeFromParent) delay:2];
+}
+
 @end

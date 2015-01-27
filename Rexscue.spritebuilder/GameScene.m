@@ -92,7 +92,7 @@
 -(void) addRandomDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%5;
+    int randSpawnFlag = 2;//arc4random()%5;
     double positionX = arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
@@ -107,7 +107,6 @@
             break;
         case 2:
             newDino = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
-            positionY = screenHeight/11;
             break;
         case 3:
             newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
@@ -171,7 +170,7 @@
             break;
             
     }
-    newDino.scale = 0.8;
+    newDino.scale = 0.6;
     
     if(newDino.inAir){
         positionY = (7./10)*screenHeight;
@@ -224,7 +223,7 @@
     [meteor removeFromParent];
     [self addPointsToScore:meteorHittingGroundBonus];
     
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",meteorHittingGroundBonus]fontName:@"Helvetica" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",meteorHittingGroundBonus]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = smoke.position;
     [self addChild:label];
     
@@ -244,7 +243,7 @@
     [evilDino scheduleOnce:@selector(removeFromParent) delay:2];
     [self addPointsToScore:evilDino.killBonus];
     
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BANG!"]fontName:@"Helvetica" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BANG!"]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = evilDino.position;
     [self addChild:label];
     
@@ -253,7 +252,7 @@
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
     
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BAM!"]fontName:@"Helvetica" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BAM!"]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = meteor.position;
     [self addChild:label];
     
@@ -268,7 +267,7 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair dinosaur:(dinosaur *)dinosaur evilDino:(dinosaur *)evilDino{
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"POW!"]fontName:@"Helvetica" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"POW!"]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = dinosaur.position;
     [self addChild:label];
     
@@ -294,7 +293,7 @@
         level += 1;
         meteorSpeed += 50;
         if(level == 1){
-//            [self spawnEnemyDino];
+            [self spawnEnemyDino];
         }
         if(secondsBetweenMeteors > 0.1){
             secondsBetweenMeteors -= 0.1;

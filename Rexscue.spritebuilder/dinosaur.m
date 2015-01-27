@@ -106,6 +106,7 @@
 }
 
 -(void) die{
+    self.isDead = true;
     self.physicsBody.collisionMask = @[];
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
@@ -165,7 +166,7 @@
 }
 
 -(void) update:(CCTime)delta{
-    if(!self.isStationary){
+    if(!self.isStationary && !self.isDead){
         if(self.direction == 1){
             [self moveDinoForward];
         }

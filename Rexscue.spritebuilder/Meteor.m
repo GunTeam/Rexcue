@@ -58,7 +58,7 @@
     [self removeFromParent];
     [gameScene addChild:explosion];
     
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"Helvetica" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = explosion.position;
     [gameScene addChild:label];
 }

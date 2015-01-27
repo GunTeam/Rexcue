@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>5</integer>
+	<integer>3</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -919,7 +919,7 @@
 						<key>value</key>
 						<array>
 							<real>77</real>
-							<real>-14</real>
+							<real>-19.166666030883789</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -957,7 +957,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>20</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1867,8 +1867,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>151</real>
-							<real>-11</real>
+							<real>152.66667175292969</real>
+							<real>-19.833332061767578</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1906,7 +1906,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-20</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2764,8 +2764,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>109</real>
-							<real>-27</real>
+							<real>109.5</real>
+							<real>-39</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3506,8 +3506,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>112</real>
-							<real>93</real>
+							<real>111.33333587646484</real>
+							<real>79.833335876464844</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3545,7 +3545,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-6.6666669845581055</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4136,7 +4136,7 @@
 				<key>displayName</key>
 				<string>String</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_leftString</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -4153,7 +4153,7 @@
 						<key>baseValue</key>
 						<array>
 							<real>59</real>
-							<real>164</real>
+							<real>169</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -4162,7 +4162,7 @@
 						<key>value</key>
 						<array>
 							<real>59</real>
-							<real>164</real>
+							<real>169</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4780,7 +4780,7 @@
 				<key>displayName</key>
 				<string>String</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_rightString</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -5131,6 +5131,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -5258,7 +5260,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.20000000298023224</real>
+			<real>0.1666666716337204</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
