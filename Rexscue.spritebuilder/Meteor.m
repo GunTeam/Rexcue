@@ -23,6 +23,7 @@
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
     
+    self.scale = 1.5;
     
     //adjust for ipad sizing:
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

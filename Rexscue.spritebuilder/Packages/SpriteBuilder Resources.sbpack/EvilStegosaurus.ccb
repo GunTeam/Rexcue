@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>4</integer>
+	<integer>2</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -716,7 +716,7 @@
 						<key>value</key>
 						<array>
 							<real>82</real>
-							<real>22</real>
+							<real>20</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1449,7 +1449,7 @@
 						<key>value</key>
 						<array>
 							<real>111</real>
-							<real>56</real>
+							<real>53</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1487,7 +1487,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-7.2396316528320312</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2062,8 +2062,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>38</real>
 							<real>45</real>
+							<real>30.333333969116211</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2101,7 +2101,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-18.4910888671875</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2900,8 +2900,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>130</real>
-							<real>82</real>
+							<real>123.5</real>
+							<real>80.333335876464844</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2939,7 +2939,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-11.629987716674805</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3748,8 +3748,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>130</real>
-							<real>81</real>
+							<real>124.5</real>
+							<real>79.666671752929688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3787,7 +3787,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-10.778761863708496</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4405,8 +4405,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>193</real>
-							<real>42</real>
+							<real>190</real>
+							<real>54.75</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4444,7 +4444,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-11.542547225952148</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5442,7 +5442,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>art/Stegosaurus/FullStego.png</string>
+					<string>art/Body.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -5543,7 +5543,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.066666670143604279</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -5579,7 +5579,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.80000001192092896</real>
+			<real>0.1666666716337204</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -5651,7 +5651,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.20000000298023224</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

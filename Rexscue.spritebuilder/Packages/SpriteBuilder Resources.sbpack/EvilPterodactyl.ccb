@@ -1852,7 +1852,7 @@
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string></string>
+				<string>Pterodactyl</string>
 				<key>displayName</key>
 				<string>Body</string>
 				<key>memberVarAssignmentName</key>
@@ -1873,7 +1873,7 @@
 						<key>baseValue</key>
 						<array>
 							<real>109</real>
-							<real>-27</real>
+							<real>-28</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -1882,7 +1882,7 @@
 						<key>value</key>
 						<array>
 							<real>109</real>
-							<real>-27</real>
+							<real>-28</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3538,7 +3538,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.80000001192092896</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

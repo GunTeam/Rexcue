@@ -94,8 +94,8 @@
 
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
-    int randomSound = arc4random()%(sounds.count-1);
-    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+//    int randomSound = arc4random()%(sounds.count-1);
+//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -104,9 +104,9 @@
 
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
-    int randomSound = arc4random()%(sounds.count-1);
-    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
-    
+//    int randomSound = arc4random()%(sounds.count-1);
+//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+//    
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];

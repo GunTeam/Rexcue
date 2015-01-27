@@ -49,7 +49,7 @@
     [self spawnClouds];
     
     for(int i=0; i<NUM_STARTING_DINOS; i++){
-        [self addRandomDino];
+//        [self addRandomDino];
     }
     
     meteorSpeed = 100;
@@ -60,6 +60,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
+    [self spawnEnemyDino];
     
     [self schedule:@selector(updateBySecond) interval:1];
 }
@@ -143,7 +144,7 @@
 -(void) spawnEnemyDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%5;
+    int randSpawnFlag = 4;//arc4random()%5;
     double positionX = 0; //arc4random()%(int)screenWidth;
     double positionY = screenHeight/8;
     
@@ -189,6 +190,7 @@
     newDino.physicsBody.collisionGroup = @"evilDinos";
     [newDino setIsEnemy:true];
     [newDino setHealthInvisible];
+    [newDino setSpeed:0.005];
     [_physicsNode addChild:newDino];
 }
 
