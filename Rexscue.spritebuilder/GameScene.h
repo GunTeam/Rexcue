@@ -18,7 +18,7 @@
 #import "MainScene.h"
 #import "Smoke.h"
 #import "Explosion.h"
-#import "GameKitHelper.h"
+#import "ObjectAL.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;
