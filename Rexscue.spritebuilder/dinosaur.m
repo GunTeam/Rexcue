@@ -124,6 +124,7 @@
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{
+    [otherDino playAttackSound];
     [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
     otherDino.readyToAttack = false;
     self.health -= otherDino.attack;

@@ -77,6 +77,7 @@
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{
     [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+    [otherDino playAttackSound];
     otherDino.readyToAttack = false;
     
     if(self.direction == 0 && otherDino.position.x > self.position.x){
