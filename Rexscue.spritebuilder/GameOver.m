@@ -19,6 +19,13 @@
     [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", (long)lastScore]];
     
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
+    
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"gameOverSong.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
 }
 
 

@@ -11,6 +11,8 @@
 
 @interface GameOver : CCNode {
     CCLabelTTF *_bestScoreLabel, *_yourScoreLabel;
+    OALAudioTrack *musicPlayer;
+
 }
 
 @end
