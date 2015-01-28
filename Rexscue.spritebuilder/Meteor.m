@@ -59,7 +59,10 @@
     int pointsEarned = (int)(screenHeight-self.position.y)+50;
     
     if(!isDemo){
+        int multiplier = [gameScene multiplier];
+        pointsEarned = multiplier*pointsEarned;
         [gameScene addPointsToScore: pointsEarned];
+        [gameScene setMultiplier:(multiplier+1)];
     }
     
     [self removeFromParent];

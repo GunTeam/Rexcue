@@ -19,7 +19,9 @@
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
     meteorsToSpawnAtOnce = 1;
-
+    
+    self.multiplier = 1;
+    
     ourDinos = [[NSMutableArray alloc] init];
     
     _volcanoSmoke.duration = -1;
@@ -234,6 +236,11 @@
     [_levelLabel setString:levelString];
 }
 
+-(void) setMultiplierLabel{
+    NSString *multiplierString = [NSString stringWithFormat:@"x%d", (self.multiplier)];
+    [_multiplierLabel setString:multiplierString];
+}
+
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
     
     Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
@@ -310,7 +317,7 @@
     if(numDinos == 0){
         [self loseLevel];
     }
-    
+    [self setMultiplierLabel];
 }
 
 -(void) increaseMeteorFrequency{
@@ -376,6 +383,10 @@
     [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[CCDirector sharedDirector] pause];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Paused"]];
+}
+
+-(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    self.multiplier = 1;
 }
 
 -(void) onEnter{

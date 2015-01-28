@@ -25,7 +25,7 @@
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
     int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE;
-    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
+    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel, *_multiplierLabel;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;
@@ -43,5 +43,6 @@
 @property double secondsBetweenMeteors;
 @property Boolean soundEffectsOn;
 @property double meteorScale;
+@property int multiplier;
 
 @end
