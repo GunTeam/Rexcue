@@ -70,6 +70,10 @@
 			<key>path</key>
 			<string>Packages/SpriteBuilder Resources.sbpack</string>
 		</dict>
+		<dict>
+			<key>path</key>
+			<string>Packages/Untitled Package.sbpack</string>
+		</dict>
 	</array>
 	<key>resourceProperties</key>
 	<dict>
