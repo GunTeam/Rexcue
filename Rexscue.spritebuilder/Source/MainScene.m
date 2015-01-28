@@ -25,10 +25,10 @@
     
     musicPlayer = [OALAudioTrack track];
     
-//    [musicPlayer preloadFile:@"song.mp3"];
-//    musicPlayer.numberOfLoops = -1;
+    [musicPlayer preloadFile:@"titleScreen.mp3"];
+    musicPlayer.numberOfLoops = -1;
     
-//    [musicPlayer play];
+    [musicPlayer play];
     
     [self spawnClouds];
 }

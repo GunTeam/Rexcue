@@ -39,7 +39,7 @@
     }
     
     _physicsNode.collisionDelegate = self;
-//    _physicsNode.debugDraw = true;
+    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
@@ -205,10 +205,10 @@
 
 -(void) spawnMeteor:(CCTime) dt{
     Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
+    meteor.scale = meteorScale;
     meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
     [_physicsNode addChild:meteor];
     [meteor setSpeed: meteorSpeed];
-    meteor.scale = meteorScale;
     [meteor launch];
 }
 

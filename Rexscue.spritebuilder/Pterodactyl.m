@@ -32,7 +32,6 @@
 }
 
 -(void) die{
-    CCLOG(@"Sup");
     self.physicsBody.collisionMask = @[];
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *stringMover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,screenHeight-(1./2)*self.contentSize.height)];

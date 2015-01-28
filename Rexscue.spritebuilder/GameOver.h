@@ -10,7 +10,6 @@
 #import "cocos2d.h"
 
 @interface GameOver : CCNode {
-    
 }
 
 @end
