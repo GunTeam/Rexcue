@@ -292,6 +292,11 @@
 }
 
 -(void) loseLevel{
+    int highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    if(self.score > highScore){
+        [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"HighScore"];
+    }
+    [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameOver"]];
 }
 

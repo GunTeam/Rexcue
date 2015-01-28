@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 @interface GameOver : CCNode {
+    CCLabelTTF *_highScoreLabel, *_yourScoreLabel;
 }
 
 @end

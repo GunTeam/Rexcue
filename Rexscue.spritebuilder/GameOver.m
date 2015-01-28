@@ -11,6 +11,15 @@
 
 @implementation GameOver
 
+-(void) didLoadFromCCB{
+    int highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    int lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
+    
+    [_highScoreLabel setString:[NSString stringWithFormat:@"Best: %i", highScore]];
+    [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %i", lastScore]];
+
+}
+
 
 -(void) replayGame{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];

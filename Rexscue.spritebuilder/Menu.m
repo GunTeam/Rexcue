@@ -13,8 +13,24 @@
 @synthesize soundEffectsOn, musicOn;
 
 -(void) didLoadFromCCB{
+    
+    
     self.soundEffectsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     self.musicOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
+    
+    if(!self.soundEffectsOn){
+        [_toggleSoundButton setTitle:@"Effects On"];
+    }
+    else{
+        [_toggleSoundButton setTitle:@"Effects Off"];
+    }
+    
+    if(!self.musicOn){
+        [_toggleMusicButton setTitle:@"Music On"];
+    }
+    else{
+        [_toggleMusicButton setTitle:@"Music Off"];
+    }
 }
 
 -(void) toggleSoundEffects{
