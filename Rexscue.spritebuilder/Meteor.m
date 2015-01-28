@@ -58,8 +58,11 @@
     
     int pointsEarned = (int)(screenHeight-self.position.y)+50;
     
+    CCColor *color = [CCColor colorWithRed:0.0 green: 0 blue:0];
+    
     if(!isDemo){
         int multiplier = [gameScene multiplier];
+        color = [CCColor colorWithRed:(multiplier/10.)-0.1 green: 0 blue:0];
         pointsEarned = multiplier*pointsEarned;
         [gameScene addPointsToScore: pointsEarned];
         [gameScene setMultiplier:(multiplier+1)];
@@ -69,6 +72,7 @@
     [gameScene addChild:explosion];
     
     DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"PatrickHandSC-Regular" fontSize:24];
+    label.color = color;
     label.position = explosion.position;
     [gameScene addChild:label];
     

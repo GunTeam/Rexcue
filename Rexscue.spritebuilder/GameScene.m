@@ -237,8 +237,11 @@
 }
 
 -(void) setMultiplierLabel{
+    CCColor *color = [CCColor colorWithRed:(self.multiplier/10.)-0.1 green: 0 blue:0];
+
     NSString *multiplierString = [NSString stringWithFormat:@"x%d", (self.multiplier)];
     [_multiplierLabel setString:multiplierString];
+    _multiplierLabel.color = color;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
