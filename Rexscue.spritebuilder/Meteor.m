@@ -36,7 +36,7 @@
     
     soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     audioPlayer =  [OALSimpleAudio sharedInstance];
-
+    MAX_LABEL_SIZE = 30;
     }
 
 -(void)launch{
@@ -60,9 +60,14 @@
     
     CCColor *color = [CCColor colorWithRed:0.0 green: 0 blue:0];
     
+    NSString *scoreLabel = [NSString stringWithFormat:@"%i",pointsEarned];
+    int labelSize = 24;
+    
     if(!isDemo){
         int multiplier = [gameScene multiplier];
+        labelSize = MIN(MAX_LABEL_SIZE, labelSize+multiplier);
         color = [CCColor colorWithRed:(multiplier/10.)-0.1 green: 0 blue:0];
+        scoreLabel = [NSString stringWithFormat:@"%i\rx%i",pointsEarned,multiplier];
         pointsEarned = multiplier*pointsEarned;
         [gameScene addPointsToScore: pointsEarned];
         [gameScene setMultiplier:(multiplier+1)];
@@ -71,7 +76,7 @@
     [self removeFromParent];
     [gameScene addChild:explosion];
     
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"%i",pointsEarned]fontName:@"PatrickHandSC-Regular" fontSize:24];
+    DisappearingLabel *label = [DisappearingLabel labelWithString:scoreLabel fontName:@"PatrickHandSC-Regular" fontSize:labelSize];
     label.color = color;
     label.position = explosion.position;
     [gameScene addChild:label];

@@ -237,11 +237,11 @@
 }
 
 -(void) setMultiplierLabel{
-    CCColor *color = [CCColor colorWithRed:(self.multiplier/10.)-0.1 green: 0 blue:0];
-
-    NSString *multiplierString = [NSString stringWithFormat:@"x%d", (self.multiplier)];
-    [_multiplierLabel setString:multiplierString];
-    _multiplierLabel.color = color;
+//    CCColor *color = [CCColor colorWithRed:(self.multiplier/10.)-0.1 green: 0 blue:0];
+//
+//    NSString *multiplierString = [NSString stringWithFormat:@"x%d", (self.multiplier)];
+//    [_multiplierLabel setString:multiplierString];
+//    _multiplierLabel.color = color;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
@@ -265,6 +265,7 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor evilDino:(dinosaur *)evilDino{
+    
     [meteor removeFromParent];
     evilDino.physicsBody.collisionMask = @[];
     [evilDino.animationManager runAnimationsForSequenceNamed:@"Dying"];
@@ -279,6 +280,8 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor dinosaur:(dinosaur *)dinosaur{
+    
+    self.multiplier = 1;
     
     DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"BAM!"]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = meteor.position;
@@ -295,6 +298,8 @@
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair dinosaur:(dinosaur *)dinosaur evilDino:(dinosaur *)evilDino{
+    self.multiplier = 1;
+    
     DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"POW!"]fontName:@"PatrickHandSC-Regular" fontSize:24];
     label.position = dinosaur.position;
     [self addChild:label];
@@ -320,7 +325,7 @@
     if(numDinos == 0){
         [self loseLevel];
     }
-    [self setMultiplierLabel];
+//    [self setMultiplierLabel];
 }
 
 -(void) increaseMeteorFrequency{

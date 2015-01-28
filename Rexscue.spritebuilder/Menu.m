@@ -35,7 +35,7 @@
         [_toggleMusicButton setTitle:@"Music Off"];
     }
     
-    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
+    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];

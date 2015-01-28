@@ -16,6 +16,7 @@
     CGFloat screenWidth,screenHeight;
     OALSimpleAudio *audioPlayer;
     Boolean soundsOn;
+    int MAX_LABEL_SIZE;
 }
 
 @property Boolean isDemo;
