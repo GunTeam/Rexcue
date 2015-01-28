@@ -63,13 +63,12 @@
     [self addPointsToScore:0];
 //    [self spawnEnemyDino];
     
-    musicPlayer = [OALAudioTrack track];
-    
-    [musicPlayer preloadFile:@"gamePlay.mp3"];
-    musicPlayer.numberOfLoops = -1;
-    
-    [musicPlayer play];
-    
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"GamePlay.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
     
     [self schedule:@selector(updateBySecond) interval:1];
 }

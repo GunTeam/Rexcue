@@ -12,12 +12,13 @@
 @implementation GameOver
 
 -(void) didLoadFromCCB{
-    int highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
-    int lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
+    NSInteger highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    NSInteger lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
     
-    [_highScoreLabel setString:[NSString stringWithFormat:@"Best: %i", highScore]];
-    [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %i", lastScore]];
-
+    [_highScoreLabel setString:[NSString stringWithFormat:@"Best: %li", (long)highScore]];
+    [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", (long)lastScore]];
+    
+    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
 }
 
 

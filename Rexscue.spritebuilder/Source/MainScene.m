@@ -3,7 +3,9 @@
 @implementation MainScene
 
 -(void) didLoadFromCCB{
-    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
+    if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
+        [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
+    }
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
@@ -25,12 +27,12 @@
         [dino setIsStationary:true];
     }
     
-    musicPlayer = [OALAudioTrack track];
-    
-    [musicPlayer preloadFile:@"titleScreen.mp3"];
-    musicPlayer.numberOfLoops = -1;
-    
-    [musicPlayer play];
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"titleScreen.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
     
     [self spawnClouds];
 }
