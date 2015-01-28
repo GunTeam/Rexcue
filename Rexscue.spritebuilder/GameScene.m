@@ -61,7 +61,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-    [self spawnEnemyDino];
+//    [self spawnEnemyDino];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];

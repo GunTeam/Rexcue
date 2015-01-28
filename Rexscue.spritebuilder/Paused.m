@@ -11,8 +11,17 @@
 
 @implementation Paused
 
+-(void) didLoadFromCCB{
+    
+}
+
 -(void) doResume{
     [[CCDirector sharedDirector] popScene];
+}
+
+
+-(void) backToMain{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
 
 @end
