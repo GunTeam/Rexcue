@@ -344,13 +344,18 @@
 }
 
 -(void) doPause{
+    [musicPlayer stop];
+    [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[CCDirector sharedDirector] pause];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Paused"]];
 }
 
 -(void) onEnter{
     [super onEnter];
-
+    
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        [musicPlayer play];
+    }
     [[CCDirector sharedDirector] resume];
 }
 

@@ -32,6 +32,12 @@
     [_demoTrex setIsStationary:true];
     [_demoTrex.animationManager runAnimationsForSequenceNamed:@"Waving"];
 
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"titleScreen.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
 }
 
 -(void) update:(CCTime)delta{

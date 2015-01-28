@@ -12,7 +12,15 @@
 @implementation Paused
 
 -(void) didLoadFromCCB{
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"pause.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
     
+    NSInteger lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
+    [_currentScore setString:[NSString stringWithFormat:@"Current Score: %li", (long)lastScore]];
 }
 
 -(void) doResume{

@@ -16,6 +16,8 @@
     CCButton *_playButton;
     CCLabelTTF *_evilInstructions, *_demoDone;
     CCParticleSystem *_flame, *_flame1;
+    OALAudioTrack *musicPlayer;
+
 }
 
 -(void) addPointsToScore: (int) points;

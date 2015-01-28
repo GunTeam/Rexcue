@@ -39,6 +39,8 @@
 
 -(void) menu{
     CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:.1];
+    
+    [musicPlayer stop];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Menu"] withTransition:transition];
 }
 
@@ -71,6 +73,14 @@
 
 -(void) playGame{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
+}
+
+-(void) onEnter{
+    [super onEnter];
+    
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        [musicPlayer play];
+    }
 }
 
 

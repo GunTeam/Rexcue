@@ -10,7 +10,8 @@
 #import "cocos2d.h"
 
 @interface Paused : CCNode {
-    
+    OALAudioTrack *musicPlayer;
+    CCLabelTTF *_currentScore;
 }
 
 @end

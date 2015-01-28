@@ -36,6 +36,14 @@
     }
     
     [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
+    
+    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+        musicPlayer = [OALAudioTrack track];
+        [musicPlayer preloadFile:@"titleScreen.mp3"];
+        musicPlayer.numberOfLoops = -1;
+        [musicPlayer play];
+    }
+    
 }
 
 -(void) toggleSoundEffects{
@@ -53,12 +61,14 @@
 
 -(void) toggleMusic{
     if(self.musicOn){
+        [musicPlayer stop];
         self.musicOn = false;
         [_toggleMusicButton setTitle:@"Music On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"MusicOn"];
 
     }
     else{
+        [musicPlayer play];
         self.musicOn = true;
         [_toggleMusicButton setTitle:@"Music Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];

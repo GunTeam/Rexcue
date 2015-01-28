@@ -12,6 +12,8 @@
 @interface Menu : CCNode {
     CCButton *_toggleMusicButton, *_toggleSoundButton;
     CCLabelTTF *_highScoreLabel;
+    OALAudioTrack *musicPlayer;
+
 }
 
 @property Boolean soundEffectsOn;
