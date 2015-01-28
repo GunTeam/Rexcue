@@ -142,6 +142,7 @@
 		BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8FA1A784BC9008E7339 /* Menu.m */; };
 		BADAB8FF1A787D86008E7339 /* titleScreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */; };
 		BAF136301A789B950030ECCB /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF1362F1A789B950030ECCB /* Tutorial.m */; };
+		BAF136341A78A3B80030ECCB /* Paused.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF136331A78A3B80030ECCB /* Paused.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,6 +345,8 @@
 		BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titleScreen.mp3; sourceTree = "<group>"; };
 		BAF1362E1A789B950030ECCB /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
 		BAF1362F1A789B950030ECCB /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tutorial.m; sourceTree = "<group>"; };
+		BAF136321A78A3B80030ECCB /* Paused.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paused.h; sourceTree = "<group>"; };
+		BAF136331A78A3B80030ECCB /* Paused.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paused.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -687,6 +690,8 @@
 				BADAB8F71A784796008E7339 /* GameOver.m */,
 				BAF1362E1A789B950030ECCB /* Tutorial.h */,
 				BAF1362F1A789B950030ECCB /* Tutorial.m */,
+				BAF136321A78A3B80030ECCB /* Paused.h */,
+				BAF136331A78A3B80030ECCB /* Paused.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1178,6 +1183,7 @@
 				BA5776801A744BDD00173263 /* Stegosaurus.m in Sources */,
 				BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */,
 				BA5776821A744BDD00173263 /* Triceratops.m in Sources */,
+				BAF136341A78A3B80030ECCB /* Paused.m in Sources */,
 				BADAB8F81A784796008E7339 /* GameOver.m in Sources */,
 				BA724C871A74313100AECA48 /* Meteor.m in Sources */,
 				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,

@@ -343,4 +343,15 @@
     [self setLevelLabel];
 }
 
+-(void) doPause{
+    [[CCDirector sharedDirector] pause];
+    [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Paused"]];
+}
+
+-(void) onEnter{
+    [super onEnter];
+
+    [[CCDirector sharedDirector] resume];
+}
+
 @end
