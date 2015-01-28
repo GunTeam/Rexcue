@@ -17,6 +17,7 @@
     Allosaurus *_allosaurus;
     CCButton *playButton, *_menuButton;
     OALAudioTrack *musicPlayer;
+    Cloud *_cloud1, *_cloud2, *_cloud3;
 }
 
 @property Boolean soundEffectsOn;

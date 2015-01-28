@@ -45,25 +45,17 @@
 }
 
 -(void) spawnClouds{
-    for(int i =1; i<4; i++){
-        int upperBound = screenHeight;
-        int lowerBound = (3./4)*screenHeight;
-        int positionY = lowerBound + arc4random() % (upperBound - lowerBound);
-        
-        int positionX = arc4random()%2;
-        int direction = positionX;
-        positionX *= screenWidth;
-        
-        NSString *cloudFile = [NSString stringWithFormat:@"Cloud%i",i];
-        Cloud *cloud = (Cloud*)[CCBReader load:cloudFile];
-        
-        [cloud setPosition:ccp(positionX,positionY)];
-        cloud.direction = direction;
-        cloud.speed = (arc4random()%3+1)/150.0;
-        cloud.scale = 2;
-        [self addChild: cloud];
-    }
-
+    _cloud1.direction = 1;
+    _cloud1.speed = (arc4random()%3+1)/150.0;
+    _cloud1.scale = 2;
+    
+    _cloud2.direction = 0;
+    _cloud2.speed = (arc4random()%3+1)/150.0;
+    _cloud2.scale = 2;
+    
+    _cloud3.direction = 0;
+    _cloud3.speed = (arc4random()%3+1)/150.0;
+    _cloud3.scale = 2;
 }
 
 -(void) runTutorial{

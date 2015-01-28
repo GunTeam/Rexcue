@@ -327,11 +327,11 @@
         }
         
         
-        if(meteorScale > 0.05){
-            meteorScale -= 0.05;
+        if(meteorScale > 0.04){
+            meteorScale -= 0.04;
         }
-        else if(meteorScale > 0.02){
-            meteorScale -= 0.02;
+        else if(meteorScale > 0.002){
+            meteorScale -= 0.002;
         }
         
         
