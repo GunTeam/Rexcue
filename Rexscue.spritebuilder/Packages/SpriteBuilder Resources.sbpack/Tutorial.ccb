@@ -304,7 +304,7 @@
 						<key>value</key>
 						<array>
 							<real>57.599998474121094</real>
-							<real>110.47782135009766</real>
+							<real>112.40000152587891</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -332,8 +332,6 @@
 						<string>TRex.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1960,7 +1958,7 @@
 						<key>value</key>
 						<array>
 							<real>193.19999694824219</real>
-							<real>111.12960052490234</real>
+							<real>112.40000152587891</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2084,7 +2082,7 @@
 						<key>value</key>
 						<array>
 							<real>193.17630004882812</real>
-							<real>204.44163513183594</real>
+							<real>202.89999389648438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2146,7 +2144,7 @@
 						<key>value</key>
 						<array>
 							<real>119.77084350585938</real>
-							<real>210.66242980957031</real>
+							<real>202.89999389648438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2208,7 +2206,7 @@
 						<key>value</key>
 						<array>
 							<real>57.562835693359375</real>
-							<real>215.63906860351562</real>
+							<real>202.89999389648438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2270,7 +2268,7 @@
 						<key>value</key>
 						<array>
 							<real>119.80000305175781</real>
-							<real>102.42047119140625</real>
+							<real>112.40000152587891</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2298,6 +2296,8 @@
 						<string>Stegosaurus.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
