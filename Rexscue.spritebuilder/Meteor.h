@@ -15,6 +15,7 @@
 @interface Meteor : CCSprite {
     CGFloat screenWidth,screenHeight;
     OALSimpleAudio *audioPlayer;
+    Boolean soundsOn;
 }
 
 @property double speed;

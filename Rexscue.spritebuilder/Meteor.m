@@ -31,8 +31,7 @@
         screenHeight = screenHeight/2;
     }
     
-    
-    self.scale = 0.5;
+    soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     audioPlayer =  [OALSimpleAudio sharedInstance];
 
     }
@@ -63,13 +62,15 @@
     label.position = explosion.position;
     [gameScene addChild:label];
     
-    int effect = arc4random() % 3;
-    if (effect == 0) {
-        [audioPlayer playEffect:@"grrrreat.mp3"];
-    } else if (effect == 1){
-        [audioPlayer playEffect:@"goodJob.mp3"];
-    } else if (effect == 2){
-        [audioPlayer playEffect:@"nice.mp3"];
+    if(soundsOn){
+        int effect = arc4random() % 3;
+        if (effect == 0) {
+            [audioPlayer playEffect:@"grrrreat.mp3"];
+        } else if (effect == 1){
+            [audioPlayer playEffect:@"goodJob.mp3"];
+        } else if (effect == 2){
+            [audioPlayer playEffect:@"nice.mp3"];
+        }
     }
     
 }

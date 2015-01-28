@@ -10,14 +10,15 @@
 
 @implementation GameScene
 
-@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus;
+@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale;
 
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
-    
+    meteorScale = 0.5;
+
     ourDinos = [[NSMutableArray alloc] init];
     
     _volcanoSmoke.duration = -1;
@@ -207,6 +208,7 @@
     meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
     [_physicsNode addChild:meteor];
     [meteor setSpeed: meteorSpeed];
+    meteor.scale = meteorScale;
     [meteor launch];
 }
 
@@ -315,6 +317,16 @@
         else if(secondsBetweenMeteors > 0.02){
             secondsBetweenMeteors -= 0.02;
         }
+        
+        
+        if(meteorScale > 0.05){
+            meteorScale -= 0.05;
+        }
+        else if(meteorScale > 0.02){
+            meteorScale -= 0.02;
+        }
+        
+        
         [self unschedule:@selector(spawnMeteor:)];
         [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
     }

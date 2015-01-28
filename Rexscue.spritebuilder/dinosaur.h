@@ -19,6 +19,7 @@
     OALSimpleAudio *audioPlayer;
     NSArray *sounds;
     NSArray *evilSounds;
+    Boolean soundsOn;
 }
 
 -(void) didLoadFromCCB;
@@ -39,6 +40,7 @@
 -(void) knockforward;
 -(void) panic;
 -(void) playAttackSound;
+-(void) playHurtSound;
 
 @property float health;
 @property double speed;

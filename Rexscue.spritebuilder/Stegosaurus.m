@@ -32,8 +32,7 @@
 }
 
 -(void) loseSpikes{
-    int randomSound = arc4random()%(sounds.count-1);
-    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+    [self playHurtSound];
     
     [self.animationManager runAnimationsForSequenceNamed:@"SpikeOff"];
     _darkSpikes.visible = false;

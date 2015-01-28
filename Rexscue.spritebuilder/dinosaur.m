@@ -20,6 +20,8 @@
     self.direction = 0;
     self.turnWait = 0;
     
+    soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
+    
     evilSounds = @[@"rawr2.mp3", @"grr.mp3",@"rawr.mp3", @"growl.mp3",@"grrAndStuff.mp3"];
     
     self.levelMultiplier = 1;
@@ -53,6 +55,13 @@
     }
     
     audioPlayer =  [OALSimpleAudio sharedInstance];
+}
+
+-(void) playHurtSound{
+    if(soundsOn){
+        int randomSound = arc4random()%(sounds.count-1);
+        [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+    }
 }
 
 -(void) setHealthLabel{
@@ -116,8 +125,9 @@
 -(void) die{
     self.isDead = true;
     self.physicsBody.collisionMask = @[];
-    int randomSound = arc4random()%(sounds.count-1);
-    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+
+    [self playHurtSound];
+    
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
     [self runAction:mover];
@@ -162,7 +172,9 @@
 }
 
 -(void) panic{
-    [audioPlayer playEffect:[sounds objectAtIndex:sounds.count-1]];
+    if(soundsOn){
+        [audioPlayer playEffect:[sounds objectAtIndex:sounds.count-1]];
+    }
     [self.animationManager runAnimationsForSequenceNamed:@"Panic"];
 }
 
@@ -212,8 +224,11 @@
 }
 
 -(void) playAttackSound{
-    int randomSound = arc4random()%(sounds.count-1);
-    [audioPlayer playEffect:[evilSounds objectAtIndex:randomSound]];
+    if(soundsOn){
+        int randomSound = arc4random()%(sounds.count-1);
+        [audioPlayer playEffect:[evilSounds objectAtIndex:randomSound]];
+    }
+
 }
 
 

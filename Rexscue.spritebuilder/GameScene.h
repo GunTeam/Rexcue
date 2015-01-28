@@ -41,5 +41,6 @@
 @property int meteorHittingGroundBonus;
 @property double secondsBetweenMeteors;
 @property Boolean soundEffectsOn;
+@property double meteorScale;
 
 @end

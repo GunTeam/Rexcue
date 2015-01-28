@@ -42,9 +42,7 @@
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-screenHeight+(1./2)*self.contentSize.height)];
     [self runAction:mover];
     
-    int randomSound = arc4random()%(sounds.count-1);
-    
-    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
+    [self playHurtSound];
 
     [self scheduleOnce:@selector(removeFromParent) delay:2];
 }
