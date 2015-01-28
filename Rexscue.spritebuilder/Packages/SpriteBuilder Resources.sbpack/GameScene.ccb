@@ -416,6 +416,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1655,8 +1657,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>277.77920532226562</real>
-							<real>43.944938659667969</real>
+							<real>280.26751708984375</real>
+							<real>247.98721313476562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1680,8 +1682,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.2829550504684448</real>
+							<real>1.3269668817520142</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1842,8 +1844,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
