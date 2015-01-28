@@ -3,6 +3,8 @@
 @implementation MainScene
 
 -(void) didLoadFromCCB{
+    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
+    
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;

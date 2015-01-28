@@ -13,7 +13,10 @@
 @synthesize soundEffectsOn, musicOn;
 
 -(void) didLoadFromCCB{
-    
+    if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
+    }
     
     self.soundEffectsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     self.musicOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
