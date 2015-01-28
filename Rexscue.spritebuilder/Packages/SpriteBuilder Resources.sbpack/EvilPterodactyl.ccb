@@ -895,8 +895,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>70.400001525878906</real>
-							<real>-7.3333330154418945</real>
+							<real>75.799995422363281</real>
+							<real>-19.19999885559082</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1550,8 +1550,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>154.5333251953125</real>
-							<real>-15.399999618530273</real>
+							<real>150.80000305175781</real>
+							<real>7.7999973297119141</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2139,7 +2139,7 @@
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string>Pterodactyl</string>
+				<string></string>
 				<key>displayName</key>
 				<string>Body</string>
 				<key>memberVarAssignmentName</key>
@@ -2207,7 +2207,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>5.3333334922790527</real>
+						<real>-17.333332061767578</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2631,8 +2631,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>113</real>
-							<real>85.133331298828125</real>
+							<real>75.533340454101562</real>
+							<real>77.466667175292969</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3007,8 +3007,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>68.866668701171875</real>
-							<real>168.80000305175781</real>
+							<real>29.533334732055664</real>
+							<real>147.53334045410156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3370,8 +3370,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>181.80000305175781</real>
-							<real>162.60000610351562</real>
+							<real>136.60000610351562</real>
+							<real>183.73333740234375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3692,6 +3692,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -3733,7 +3735,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.13333334028720856</real>
+			<real>1.5666667222976685</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

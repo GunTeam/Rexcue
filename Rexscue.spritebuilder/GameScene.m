@@ -310,33 +310,51 @@
     
 }
 
+-(void) increaseMeteorFrequency{
+
+    if(secondsBetweenMeteors > 0.2){
+        secondsBetweenMeteors -= 0.2;
+    }
+    else if(secondsBetweenMeteors > 0.02){
+        secondsBetweenMeteors -= 0.02;
+    }
+    
+    [self unschedule:@selector(spawnMeteor:)];
+    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
+}
+
+-(void) increaseMeteorSpeed{
+    meteorSpeed += 50;
+}
+
+-(void) decreaseMeteorSize{
+    if(meteorScale > 0.04){
+        meteorScale -= 0.04;
+    }
+    else if(meteorScale > 0.002){
+        meteorScale -= 0.002;
+    }
+}
+
 -(void) updateBySecond{
     timeElapsed += 1;
     
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
-        meteorSpeed += 50;
         if(level%5 == 0){
             [self spawnEnemyDino];
         }
-        if(secondsBetweenMeteors > 0.2){
-            secondsBetweenMeteors -= 0.2;
-        }
-        else if(secondsBetweenMeteors > 0.02){
-            secondsBetweenMeteors -= 0.02;
-        }
         
-        
-        if(meteorScale > 0.04){
-            meteorScale -= 0.04;
+        if(level%3 == 1){
+            [self decreaseMeteorSize];
         }
-        else if(meteorScale > 0.002){
-            meteorScale -= 0.002;
+        else if(level%3 == 2){
+            [self increaseMeteorSpeed];
+        }
+        else{
+            [self increaseMeteorFrequency];
         }
         
-        
-        [self unschedule:@selector(spawnMeteor:)];
-        [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
     }
     
     [self setTimeLabel];

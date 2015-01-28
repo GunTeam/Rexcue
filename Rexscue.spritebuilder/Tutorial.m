@@ -12,26 +12,32 @@
 @implementation Tutorial
 
 -(void) didLoadFromCCB{
-    _demoEnemy.visible = false;
-    _demoTrex.visible = false;
+    
+    ourDinos = @[_demoTrex, _demoStegosaurus, _demoTriceratops, _demoPterodactyl, _demoAllosaurus];
+    evilDinos = @[_demoEnemy1, _demoEnemy2, _demoEnemy3, _demoEnemy4, _demoEnemy5];
+    
+    for(dinosaur *dino in ourDinos){
+        dino.visible = false;
+        [dino setHealthInvisible];
+        [dino setIsStationary:true];
+        [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
+    }
+    for(dinosaur *evil in evilDinos){
+        evil.visible = false;
+        [evil.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+        [evil setHealthInvisible];
+        [evil setIsStationary:true];
+        [evil setIsEnemy:true];
+    }
+    
     _evilInstructions.visible = false;
     _demoDone.visible = false;
     _playButton.visible = false;
     _flame.visible = false;
     _flame1.visible = false;
     
-    [_demoEnemy setIsEnemy:true];
-    
     [_demoMeteor setIsDemo:true];
     
-    [_demoEnemy.animationManager runAnimationsForSequenceNamed:@"Attacking"];
-    [_demoEnemy setHealthInvisible];
-    [_demoEnemy setIsStationary:true];
-    
-    [_demoTrex setHealthInvisible];
-    [_demoTrex setIsStationary:true];
-    [_demoTrex.animationManager runAnimationsForSequenceNamed:@"Waving"];
-
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
         [musicPlayer preloadFile:@"titleScreen.mp3"];
@@ -42,13 +48,27 @@
 
 -(void) update:(CCTime)delta{
     NSArray *children = [self children];
-    if(![children containsObject:_demoMeteor] && _demoEnemy.visible == false){
-        _demoEnemy.visible = true;
-        _evilInstructions.visible = true;
-        [_demoEnemy.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+    
+    Boolean allEnemiesDead = true;
+    
+    for(dinosaur *evil in evilDinos){
+        if([children containsObject:evil]){
+            allEnemiesDead = false;
+            break;
+        }
     }
-    else if(![children containsObject:_demoEnemy] && _demoTrex.visible == false){
-        _demoTrex.visible = true;
+    
+    if(![children containsObject:_demoMeteor] && _demoEnemy1.visible == false){
+        for(dinosaur *evil in evilDinos){
+            evil.visible = true;
+            [evil.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+        }
+        _evilInstructions.visible = true;
+    }
+    if(allEnemiesDead && _demoTrex.visible == false){
+        for(dinosaur *dino in ourDinos){
+            dino.visible = true;
+        }
         _demoDone.visible = true;
         _playButton.visible = true;
         _flame.visible = true;
@@ -62,10 +82,6 @@
 
 -(void) back{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
-}
-
--(void) addPointsToScore: (int) points{
-    
 }
 
 @end

@@ -11,15 +11,15 @@
 #import "GameScene.h"
 
 @interface Tutorial : CCNode {
-    dinosaur *_demoTrex, *_demoEnemy;
+    dinosaur *_demoTrex, *_demoStegosaurus, *_demoTriceratops, *_demoPterodactyl, *_demoAllosaurus, *_demoEnemy1, *_demoEnemy2, *_demoEnemy3, *_demoEnemy4, *_demoEnemy5;
     Meteor *_demoMeteor;
     CCButton *_playButton;
     CCLabelTTF *_evilInstructions, *_demoDone;
     CCParticleSystem *_flame, *_flame1;
     OALAudioTrack *musicPlayer;
+    
+    NSArray *ourDinos, *evilDinos;
+    
 
 }
-
--(void) addPointsToScore: (int) points;
-
 @end
