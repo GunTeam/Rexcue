@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		381414601A78841600EF865D /* GamePlay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3814145F1A78841600EF865D /* GamePlay.mp3 */; };
+		38F37BF41A78AA90007C420C /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38F37BF31A78AA90007C420C /* pause.mp3 */; };
 		5B12100C19748281004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B121029197484DA004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B12102A197484DD004C1E1D /* RexscueActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* RexscueActivity.java */; };
@@ -220,6 +221,7 @@
 
 /* Begin PBXFileReference section */
 		3814145F1A78841600EF865D /* GamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GamePlay.mp3; sourceTree = "<group>"; };
+		38F37BF31A78AA90007C420C /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 		BADAB84A1A774F87008E7339 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				38F37BF31A78AA90007C420C /* pause.mp3 */,
 				3814145F1A78841600EF865D /* GamePlay.mp3 */,
 				BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */,
 				BADAB8EF1A776B38008E7339 /* Trex */,
@@ -1077,6 +1080,7 @@
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				BADAB8881A774F94008E7339 /* grr.mp3 in Resources */,
 				BADAB87F1A774F94008E7339 /* rawr2.mp3 in Resources */,
+				38F37BF41A78AA90007C420C /* pause.mp3 in Resources */,
 				BADAB8711A774F94008E7339 /* help.mp3 in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				BADAB8761A774F94008E7339 /* grrrreat.mp3 in Resources */,
