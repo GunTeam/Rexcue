@@ -29,6 +29,7 @@
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;
+    int meteorsToSpawnAtOnce;
 }
 
 -(void) addPointsToScore: (int) points;

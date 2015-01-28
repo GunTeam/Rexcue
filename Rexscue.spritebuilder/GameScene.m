@@ -18,6 +18,7 @@
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
+    meteorsToSpawnAtOnce = 1;
 
     ourDinos = [[NSMutableArray alloc] init];
     
@@ -207,12 +208,14 @@
 }
 
 -(void) spawnMeteor:(CCTime) dt{
-    Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
-    meteor.scale = meteorScale;
-    meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
-    [_physicsNode addChild:meteor];
-    [meteor setSpeed: meteorSpeed];
-    [meteor launch];
+    for(int i=0; i<meteorsToSpawnAtOnce; i++){
+        Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
+        meteor.scale = meteorScale;
+        meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
+        [_physicsNode addChild:meteor];
+        [meteor setSpeed: meteorSpeed];
+        [meteor launch];
+    }
 }
 
 -(void) addPointsToScore: (int) points{
@@ -336,6 +339,10 @@
     }
 }
 
+-(void) increaseMeteorsToSpawnAtOnce{
+    meteorsToSpawnAtOnce ++;
+}
+
 -(void) updateBySecond{
     timeElapsed += 1;
     
@@ -345,14 +352,17 @@
             [self spawnEnemyDino];
         }
         
-        if(level%3 == 1){
+        if(level%4 == 1){
             [self decreaseMeteorSize];
         }
-        else if(level%3 == 2){
+        else if(level%4 == 2){
             [self increaseMeteorSpeed];
         }
-        else{
+        else if(level%4 == 3){
             [self increaseMeteorFrequency];
+        }
+        else{
+            [self increaseMeteorsToSpawnAtOnce];
         }
         
     }

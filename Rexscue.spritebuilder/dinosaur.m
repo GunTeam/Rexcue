@@ -55,6 +55,7 @@
     }
     
     audioPlayer =  [OALSimpleAudio sharedInstance];
+    audioPlayer.effectsVolume = 1.5;
 }
 
 -(void) playHurtSound{
