@@ -456,8 +456,6 @@
 						<string>Cloud1.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1286,8 +1284,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>154.89053344726562</real>
-							<real>132.24273681640625</real>
+							<real>125.12835693359375</real>
+							<real>145.17076110839844</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1325,7 +1323,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>1.0000002384185791</real>
+						<real>3.6666667461395264</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1589,8 +1587,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1653,8 +1649,6 @@
 						<string>Sapling.ccb</string>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1751,7 +1745,7 @@
 						<key>value</key>
 						<array>
 							<real>35.161567687988281</real>
-							<real>324.71044921875</real>
+							<real>337.15206909179688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1779,6 +1773,8 @@
 						<string>Sun.ccb</string>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1985,8 +1981,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>157.6895751953125</real>
-							<real>176.6646728515625</real>
+							<real>128.60792541503906</real>
+							<real>189.21986389160156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2068,8 +2064,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2214,8 +2208,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>204.85835266113281</real>
-							<real>175.10928344726562</real>
+							<real>175.84956359863281</real>
+							<real>185.26338195800781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2308,8 +2302,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3519,7 +3511,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2.7999999523162842</real>
+			<real>2.2666666507720947</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

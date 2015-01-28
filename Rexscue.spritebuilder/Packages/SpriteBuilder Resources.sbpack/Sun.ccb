@@ -342,8 +342,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>101</real>
-							<real>63</real>
+							<real>97.543998718261719</real>
+							<real>57.815998077392578</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -356,8 +356,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>0.35021746158599854</real>
+							<real>0.59986627101898193</real>
 						</array>
 					</dict>
 					<dict>
@@ -381,7 +381,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>316.79998779296875</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -427,6 +427,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -578,9 +580,9 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>1.7984375953674316</real>
+			<real>0.70468759536743164</real>
 			<key>position</key>
-			<real>4.4000000953674316</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
