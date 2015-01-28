@@ -35,7 +35,7 @@
         [_toggleMusicButton setTitle:@"Music Off"];
     }
     
-    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];g
+    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
 }
 
 -(void) toggleSoundEffects{

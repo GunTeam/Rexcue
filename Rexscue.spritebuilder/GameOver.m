@@ -15,7 +15,7 @@
     NSInteger highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
     NSInteger lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
     
-    [_highScoreLabel setString:[NSString stringWithFormat:@"Best: %li", (long)highScore]];
+    [_bestScoreLabel setString:[NSString stringWithFormat:@"Best: %li", (long)highScore]];
     [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", (long)lastScore]];
     
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];

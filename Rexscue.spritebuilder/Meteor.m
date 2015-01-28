@@ -52,7 +52,7 @@
     explosion.position = self.position;
     GameScene *gameScene = (GameScene *)self.parent.parent;
     
-    int pointsEarned = (int)(screenHeight-self.position.y);
+    int pointsEarned = (int)(screenHeight-self.position.y)+50;
     
     [gameScene addPointsToScore: pointsEarned];
     [self removeFromParent];

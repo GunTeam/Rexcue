@@ -39,7 +39,7 @@
     }
     
     _physicsNode.collisionDelegate = self;
-    _physicsNode.debugDraw = true;
+//    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
@@ -61,7 +61,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-//    [self spawnEnemyDino];
+    [self spawnEnemyDino];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
@@ -154,20 +154,20 @@
     dinosaur *newDino;
     int randSpawnFlag = arc4random()%4;
     double positionX = 0; //arc4random()%(int)screenWidth;
-    double positionY = screenHeight/8;
+    double positionY = screenHeight;
     
     switch (randSpawnFlag)
     {
         case 0:
             newDino = (Allosaurus*)[CCBReader load:@"EvilAllosaurus"];
-            positionY = screenHeight/4;
+//            positionY = screenHeight/4;
             break;
         case 1:
             newDino = (TRex*)[CCBReader load:@"EvilTRex"];
             break;
         case 2:
             newDino = (Stegosaurus*)[CCBReader load:@"EvilStegosaurus"];
-            positionY = screenHeight/9;
+//            positionY = screenHeight/9;
             break;
         case 3:
             newDino = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
@@ -199,6 +199,10 @@
     [newDino setIsEnemy:true];
     [newDino setHealthInvisible];
     [newDino setSpeed:0.005];
+    
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-(7./8)*(screenHeight))];
+    [newDino runAction:mover];
+    
     [_physicsNode addChild:newDino];
 }
 
