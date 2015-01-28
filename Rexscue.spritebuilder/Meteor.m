@@ -10,10 +10,13 @@
 
 
 @implementation Meteor
+@synthesize isDemo;
 
 -(void)didLoadFromCCB{
     self.speed = 0;
     self.userInteractionEnabled = true;
+    
+    self.isDemo = false;
     
     self.physicsBody.collisionType = @"meteor";
     self.physicsBody.collisionGroup = @"meteors";
@@ -48,13 +51,17 @@
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    
     Explosion *explosion = (Explosion*)[CCBReader load:@"Explosion"];
     explosion.position = self.position;
     GameScene *gameScene = (GameScene *)self.parent.parent;
     
     int pointsEarned = (int)(screenHeight-self.position.y)+50;
     
-    [gameScene addPointsToScore: pointsEarned];
+    if(!isDemo){
+        [gameScene addPointsToScore: pointsEarned];
+    }
+    
     [self removeFromParent];
     [gameScene addChild:explosion];
     

@@ -141,6 +141,7 @@
 		BADAB8F81A784796008E7339 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8F71A784796008E7339 /* GameOver.m */; };
 		BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8FA1A784BC9008E7339 /* Menu.m */; };
 		BADAB8FF1A787D86008E7339 /* titleScreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */; };
+		BAF136301A789B950030ECCB /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF1362F1A789B950030ECCB /* Tutorial.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +342,8 @@
 		BADAB8F91A784BC9008E7339 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		BADAB8FA1A784BC9008E7339 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titleScreen.mp3; sourceTree = "<group>"; };
+		BAF1362E1A789B950030ECCB /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
+		BAF1362F1A789B950030ECCB /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tutorial.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -682,6 +685,8 @@
 				BA724C601A742C6A00AECA48 /* GameScene.m */,
 				BADAB8F61A784796008E7339 /* GameOver.h */,
 				BADAB8F71A784796008E7339 /* GameOver.m */,
+				BAF1362E1A789B950030ECCB /* Tutorial.h */,
+				BAF1362F1A789B950030ECCB /* Tutorial.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1178,6 +1183,7 @@
 				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,
 				BA5776811A744BDD00173263 /* TRex.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				BAF136301A789B950030ECCB /* Tutorial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

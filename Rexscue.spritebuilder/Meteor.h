@@ -18,6 +18,7 @@
     Boolean soundsOn;
 }
 
+@property Boolean isDemo;
 @property double speed;
 
 -(void)launch;

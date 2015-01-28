@@ -64,6 +64,9 @@
 
 }
 
+-(void) runTutorial{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Tutorial"]];
+}
 
 
 -(void) playGame{
