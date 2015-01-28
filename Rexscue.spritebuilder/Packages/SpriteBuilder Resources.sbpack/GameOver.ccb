@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -349,7 +347,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>art/yarnMeteor.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -373,7 +371,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/yarnMeteor.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -392,7 +390,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>art/yarnBall.png</string>
+							<string>art/yarnMeteor.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -536,6 +534,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -869,7 +869,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.86666667461395264</real>
+			<real>1.5666667222976685</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
