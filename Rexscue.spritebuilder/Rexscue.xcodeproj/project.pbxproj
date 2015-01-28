@@ -140,6 +140,7 @@
 		BADAB8F81A784796008E7339 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8F71A784796008E7339 /* GameOver.m */; };
 		BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8FA1A784BC9008E7339 /* Menu.m */; };
 		BADAB8FD1A785A45008E7339 /* gamePlay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB8FC1A785A45008E7339 /* gamePlay.mp3 */; };
+		BADAB8FF1A787D86008E7339 /* titleScreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +340,7 @@
 		BADAB8F91A784BC9008E7339 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		BADAB8FA1A784BC9008E7339 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		BADAB8FC1A785A45008E7339 /* gamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gamePlay.mp3; sourceTree = "<group>"; };
+		BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titleScreen.mp3; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -725,6 +727,7 @@
 			isa = PBXGroup;
 			children = (
 				BADAB8FC1A785A45008E7339 /* gamePlay.mp3 */,
+				BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */,
 				BADAB8EF1A776B38008E7339 /* Trex */,
 				BADAB8F31A776BB0008E7339 /* Evil */,
 				BADAB8F11A776B97008E7339 /* Allosaurus */,
@@ -1028,6 +1031,7 @@
 			files = (
 				BADAB8701A774F94008E7339 /* grrAndStuff.mp3 in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				BADAB8FF1A787D86008E7339 /* titleScreen.mp3 in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				BADAB88A1A774F94008E7339 /* ow.mp3 in Resources */,
 				BADAB8731A774F94008E7339 /* ImPanicking.mp3 in Resources */,
