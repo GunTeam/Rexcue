@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		381414601A78841600EF865D /* GamePlay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3814145F1A78841600EF865D /* GamePlay.mp3 */; };
+		388AA7BB1A794B4600385619 /* game over song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 388AA7BA1A794B4600385619 /* game over song.mp3 */; };
 		38F37BF41A78AA90007C420C /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38F37BF31A78AA90007C420C /* pause.mp3 */; };
 		5B12100C19748281004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B121029197484DA004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
@@ -221,6 +222,7 @@
 
 /* Begin PBXFileReference section */
 		3814145F1A78841600EF865D /* GamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GamePlay.mp3; sourceTree = "<group>"; };
+		388AA7BA1A794B4600385619 /* game over song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game over song.mp3"; sourceTree = "<group>"; };
 		38F37BF31A78AA90007C420C /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
@@ -738,6 +740,7 @@
 		BADAB84A1A774F87008E7339 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				388AA7BA1A794B4600385619 /* game over song.mp3 */,
 				38F37BF31A78AA90007C420C /* pause.mp3 */,
 				3814145F1A78841600EF865D /* GamePlay.mp3 */,
 				BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */,
@@ -1055,6 +1058,7 @@
 				BADAB8771A774F94008E7339 /* goodJob.mp3 in Resources */,
 				BADAB87C1A774F94008E7339 /* ooooh.mp3 in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
+				388AA7BB1A794B4600385619 /* game over song.mp3 in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				BADAB8871A774F94008E7339 /* awMan.mp3 in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
