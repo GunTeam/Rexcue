@@ -13,18 +13,20 @@
 @synthesize soundEffectsOn, musicOn;
 
 -(void) didLoadFromCCB{
-    self.soundEffectsOn = true;
-    self.musicOn = true;
+    self.soundEffectsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
+    self.musicOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
 }
 
 -(void) toggleSoundEffects{
     if(self.soundEffectsOn){
         self.soundEffectsOn = false;
         [_toggleSoundButton setTitle:@"Effects On"];
+        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"EffectsOn"];
     }
     else{
         self.soundEffectsOn = true;
         [_toggleSoundButton setTitle:@"Effects Off"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
     }
 }
 
@@ -32,10 +34,13 @@
     if(self.musicOn){
         self.musicOn = false;
         [_toggleMusicButton setTitle:@"Music On"];
+        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"MusicOn"];
+
     }
     else{
         self.musicOn = true;
         [_toggleMusicButton setTitle:@"Music Off"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
     }
 }
 

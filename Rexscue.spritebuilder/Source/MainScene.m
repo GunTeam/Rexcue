@@ -23,6 +23,13 @@
         [dino setIsStationary:true];
     }
     
+    musicPlayer = [OALAudioTrack track];
+    
+//    [musicPlayer preloadFile:@"song.mp3"];
+//    musicPlayer.numberOfLoops = -1;
+    
+//    [musicPlayer play];
+    
     [self spawnClouds];
 }
 

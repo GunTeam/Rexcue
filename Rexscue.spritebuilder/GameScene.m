@@ -62,6 +62,14 @@
     [self addPointsToScore:0];
 //    [self spawnEnemyDino];
     
+    musicPlayer = [OALAudioTrack track];
+    
+    [musicPlayer preloadFile:@"gamePlay.mp3"];
+    musicPlayer.numberOfLoops = -1;
+    
+    [musicPlayer play];
+    
+    
     [self schedule:@selector(updateBySecond) interval:1];
 }
 
@@ -281,9 +289,13 @@
     return NO;
 }
 
+-(void) loseLevel{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameOver"]];
+}
+
 -(void) update:(CCTime)delta{
     if(numDinos == 0){
-        [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
+        [self loseLevel];
     }
     
 }

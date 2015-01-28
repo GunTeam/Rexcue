@@ -16,6 +16,7 @@
     Triceratops *_trice;
     Allosaurus *_allosaurus;
     CCButton *playButton, *_menuButton;
+    OALAudioTrack *musicPlayer;
 }
 
 @property Boolean soundEffectsOn;

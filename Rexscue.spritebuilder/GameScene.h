@@ -28,6 +28,7 @@
     CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
+    OALAudioTrack *musicPlayer;
 }
 
 -(void) addPointsToScore: (int) points;
