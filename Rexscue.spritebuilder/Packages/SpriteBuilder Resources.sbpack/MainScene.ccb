@@ -1214,7 +1214,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>art/playSign.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1238,7 +1238,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/playSign.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1257,7 +1257,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/playSign.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1401,6 +1401,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -2892,8 +2894,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
