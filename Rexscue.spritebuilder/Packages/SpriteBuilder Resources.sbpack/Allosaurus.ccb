@@ -1773,7 +1773,7 @@
 						<key>displayName</key>
 						<string>pinkMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_backmitten</string>
+						<string>_backMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -5385,7 +5385,7 @@
 						<key>displayName</key>
 						<string>pinkMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_frontmitten</string>
+						<string>_frontMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>

@@ -1438,7 +1438,7 @@
 						<key>displayName</key>
 						<string>OrangeMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_backmitten</string>
+						<string>_backMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -3884,8 +3884,6 @@
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
@@ -8760,7 +8758,7 @@
 						<key>displayName</key>
 						<string>OrangeMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_frontmitten</string>
+						<string>_frontMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -8870,6 +8868,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
@@ -9880,7 +9880,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.86666667461395264</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

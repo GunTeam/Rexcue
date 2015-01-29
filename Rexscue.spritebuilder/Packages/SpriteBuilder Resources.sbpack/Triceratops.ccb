@@ -987,7 +987,7 @@
 						<key>displayName</key>
 						<string>greenMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_backmitten</string>
+						<string>_backMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -1132,7 +1132,7 @@
 						<key>value</key>
 						<array>
 							<real>22</real>
-							<real>10.933333396911621</real>
+							<real>4</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4144,8 +4144,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>116.30842590332031</real>
-											<real>96.63739013671875</real>
+											<real>165.899658203125</real>
+											<real>57.245876312255859</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -4183,7 +4183,7 @@
 										<key>type</key>
 										<string>Degrees</string>
 										<key>value</key>
-										<real>30.857110977172852</real>
+										<real>102.33558654785156</real>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -4302,7 +4302,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>8.6843881607055664</real>
+								<real>0.0</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -4628,7 +4628,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>12.10697078704834</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -6611,7 +6611,7 @@
 						<key>displayName</key>
 						<string>greenMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_frontmitten</string>
+						<string>_frontMitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -6721,6 +6721,10 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -6754,7 +6758,7 @@
 						<key>value</key>
 						<array>
 							<real>33</real>
-							<real>9.9333333969116211</real>
+							<real>3</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7380,7 +7384,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.56666666269302368</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
