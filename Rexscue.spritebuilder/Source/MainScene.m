@@ -51,12 +51,14 @@
     [musicPlayer stop];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Menu"] withTransition:transition];
 }
+
 -(void) upgrades{
     CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:.1];
     
     [musicPlayer stop];
-    [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Upgrades"] withTransition:transition];
+    [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"UpgradeScene"] withTransition:transition];
 }
+
 -(void) spawnClouds{
     _cloud1.direction = 1;
     _cloud1.speed = (arc4random()%3+1)/150.0;

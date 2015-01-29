@@ -68,7 +68,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-//    [self spawnEnemyDino];
+    [self spawnEnemyDino];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
@@ -159,15 +159,17 @@
 -(void) spawnEnemyDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = arc4random()%4;
+    int randSpawnFlag = 0;//arc4random()%4;
     double positionX = 0; //arc4random()%(int)screenWidth;
     double positionY = screenHeight;
+    
+    double destinationY = -(7./8)*(screenHeight);
     
     switch (randSpawnFlag)
     {
         case 0:
             newDino = (Allosaurus*)[CCBReader load:@"EvilAllosaurus"];
-//            positionY = screenHeight/4;
+            destinationY = -(6./8)*(screenHeight);
             break;
         case 1:
             newDino = (TRex*)[CCBReader load:@"EvilTRex"];
@@ -207,7 +209,7 @@
     [newDino setHealthInvisible];
     [newDino setSpeed:0.005];
     
-    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-(7./8)*(screenHeight))];
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,destinationY)];
     [newDino runAction:mover];
     
     [newDino playAttackSound];
@@ -227,7 +229,7 @@
         Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
         meteor.scale = meteorScale;
         meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
-        [_physicsNode addChild:meteor];
+//        [_physicsNode addChild:meteor];
         [meteor setSpeed: meteorSpeed];
         [meteor launch];
     }

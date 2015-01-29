@@ -14,14 +14,11 @@
     dinosaur *_triceratops, *_pterodactyl, *_allosaurus, *_trex, *_stegosaurus;
     NSArray *ourdinos;
     CCParticleSystem *_selector;
-    CCButton *mittenUpgrade;
-    CCButton *needleUpgrade;
-    CCButton *hatUpgrade;
-    CCButton *pteroUpgrade;
-    CCButton *tricUpgrade;
-    CCButton *trexUpgrade;
-    CCButton *alloUpgrade;
-    CCButton *stegoUpgrade;
+    CCButton *_mittenButton, *_hatButton, *_needleButton, *_trexButton, *_alloButton, *_stegoButton,*_tricButton, *_pteroButton;
+    OALAudioTrack *musicPlayer;
+    long numNeedles;
+    int mittenPrice, hatPrice, needleUpgradePrice;
+    CCLabelTTF *_numNeedleLabel, *_playMorePrompt;
 }
 
 @end

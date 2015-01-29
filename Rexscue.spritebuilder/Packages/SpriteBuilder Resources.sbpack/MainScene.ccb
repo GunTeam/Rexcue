@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -1160,8 +1160,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>241.070068359375</real>
-							<real>140.98944091796875</real>
+							<real>211.64503479003906</real>
+							<real>147.06277465820312</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1199,7 +1199,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-5</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1857,8 +1857,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>214.83648681640625</real>
-							<real>182.30145263671875</real>
+							<real>211.7564697265625</real>
+							<real>191.54145812988281</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2084,8 +2084,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>262.11456298828125</real>
-							<real>185.62310791015625</real>
+							<real>259.0345458984375</real>
+							<real>195.62310791015625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3161,7 +3161,7 @@
 				<key>displayName</key>
 				<string>CCButton</string>
 				<key>memberVarAssignmentName</key>
-				<string>_tutorial</string>
+				<string>_upgrade</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -3219,7 +3219,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>runTutorial</string>
+							<string>upgrades</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -3474,6 +3474,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3903,8 +3905,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-147.47479248046875</real>
-							<real>387.913818359375</real>
+							<real>-198.73419189453125</real>
+							<real>415.94888305664062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3931,7 +3933,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>37.289520263671875</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>

@@ -165,11 +165,9 @@
     else if(direction == 1 && otherDino.position.x < self.position.x){
         [self knockforward];
     }
-
     
     if(self.health <= 0){
-        [self die];
-        return true;
+        return [self hurt];
     }
     return false;
 }

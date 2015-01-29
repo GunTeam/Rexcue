@@ -7,6 +7,7 @@
 #import "Allosaurus.h"
 #import "Pterodactyl.h"
 #import "GameScene.h"
+#import "Upgrades.h"
 
 @interface MainScene : CCNode{
     CGFloat screenWidth,screenHeight;
