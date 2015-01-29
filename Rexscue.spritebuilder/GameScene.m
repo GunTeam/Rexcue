@@ -68,7 +68,7 @@
     [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-    [self spawnEnemyDino];
+//    [self spawnEnemyDino];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
@@ -229,7 +229,7 @@
         Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
         meteor.scale = meteorScale;
         meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
-//        [_physicsNode addChild:meteor];
+        [_physicsNode addChild:meteor];
         [meteor setSpeed: meteorSpeed];
         [meteor launch];
     }
