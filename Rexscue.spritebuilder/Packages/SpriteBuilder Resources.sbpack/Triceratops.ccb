@@ -638,8 +638,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.86390084028244019</real>
-									<real>8.711400032043457</real>
+									<real>8.8639011383056641</real>
+									<real>9.7999992370605469</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -663,8 +663,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>0.40000000596046448</real>
+									<real>0.40000000596046448</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -2533,7 +2533,7 @@
 						<key>value</key>
 						<array>
 							<real>85</real>
-							<real>37.200000762939453</real>
+							<real>34.533332824707031</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2571,7 +2571,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-8</real>
+						<real>-1.3333333730697632</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4081,8 +4081,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>9.503901481628418</real>
-									<real>5.8313994407653809</real>
+									<real>12.503902435302734</real>
+									<real>9.8313999176025391</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -4106,8 +4106,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>0.40000000596046448</real>
+									<real>0.40000000596046448</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -5133,7 +5133,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>8</real>
+						<real>1.3333333730697632</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5467,7 +5467,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.40000000596046448</real>
+			<real>0.066666670143604279</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
