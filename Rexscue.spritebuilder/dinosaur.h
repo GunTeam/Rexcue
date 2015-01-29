@@ -20,7 +20,7 @@
     NSArray *sounds;
     NSArray *evilSounds;
     Boolean soundsOn;
-    //CCNode *_mittens;
+    //CCNode *_mittens, *_hat;
 }
 
 -(void) didLoadFromCCB;
@@ -42,6 +42,9 @@
 -(void) panic;
 -(void) playAttackSound;
 -(void) playHurtSound;
+-(void) putOnMittens;
+-(void) putOnHat;
+-(NSString*) getType;
 
 @property float health;
 @property double speed;
@@ -59,6 +62,9 @@
 @property int direction;
 @property int turnWait;
 @property Boolean hasMittens;
+@property Boolean hasHat;
 @property Boolean isWearingTheirMittens;
+@property Boolean isWearingTheirHat;
+
 
 @end

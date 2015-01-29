@@ -18,7 +18,9 @@
     OALAudioTrack *musicPlayer;
     long numNeedles;
     int mittenPrice, hatPrice, needleUpgradePrice;
-    CCLabelTTF *_numNeedleLabel, *_playMorePrompt;
+    CCLabelTTF *_numNeedleLabel, *_playMorePrompt, *_upgradePrompt, *_needleDescription, *_mittenPriceLabel, *_hatPriceLabel;
+    Boolean mittenSelected, hatSelected;
+    
 }
 
 @end

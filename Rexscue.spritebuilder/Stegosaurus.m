@@ -30,6 +30,24 @@
     sounds = @[@"WhaOh2.mp3", @"MeteorHit.mp3",@"huh.mp3", @"whaaaat.mp3",@"ooooh.mp3"];
     
     [self setHealthLabel];
+    
+    if(self.hasMittens){
+        [self putOnMittens];
+    }
+    else{
+        self.isWearingTheirMittens = false;
+    }
+    
+    if(self.hasHat){
+        [self putOnHat];
+    }
+    else{
+        self.isWearingTheirHat = false;
+    }
+}
+
+-(NSString*) getType{
+    return @"Stegosaurus";
 }
 
 -(void) loseSpikes{

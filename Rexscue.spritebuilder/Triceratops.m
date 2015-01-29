@@ -30,8 +30,25 @@
     self.price = 200;
     
     [self setHealthLabel];
+    
+    if(self.hasMittens){
+        [self putOnMittens];
+    }
+    else{
+        self.isWearingTheirMittens = false;
+    }
+    
+    if(self.hasHat){
+        [self putOnHat];
+    }
+    else{
+        self.isWearingTheirHat = false;
+    }
 
 }
 
+-(NSString*) getType{
+    return @"Triceratops";
+}
 
 @end

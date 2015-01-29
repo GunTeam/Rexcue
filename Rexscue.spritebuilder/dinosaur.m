@@ -39,10 +39,8 @@
     self.price = 200;
     self.killBonus = 100;
     self.isStationary = false;
-    
     self.hasMittens = false;
-    self.isWearingTheirMittens = false;
-
+    
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
@@ -61,8 +59,17 @@
     audioPlayer.effectsVolume = 1.5;
     
     if(self.hasMittens){
-        //_mittens.visible = true;
-        self.isWearingTheirMittens = true;
+        [self putOnMittens];
+    }
+    else{
+        self.isWearingTheirMittens = false;
+    }
+    
+    if(self.hasHat){
+        [self putOnHat];
+    }
+    else{
+        self.isWearingTheirHat = false;
     }
 }
 
@@ -257,6 +264,16 @@
         [audioPlayer playEffect:[evilSounds objectAtIndex:randomSound]];
     }
 
+}
+
+-(void) putOnMittens{
+    //_mittens.visible = true;
+    self.isWearingTheirMittens = true;
+}
+
+-(void) putOnHat{
+    //_hat.visible = true;
+    self.isWearingTheirHat = true;
 }
 
 
