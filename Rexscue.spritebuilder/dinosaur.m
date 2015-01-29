@@ -208,9 +208,9 @@
     
     [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
     _frontMitten.cascadeOpacityEnabled = true;
-    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
+    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:1]];
     _backMitten.cascadeOpacityEnabled = true;
-    [_backMitten runAction:[CCActionFadeOut actionWithDuration:2]];
+    [_backMitten runAction:[CCActionFadeOut actionWithDuration:1]];
 }
 
 -(void) loseHat{

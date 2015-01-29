@@ -13,7 +13,7 @@
 -(void) didLoadFromCCB{
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
     mittenPrice = 100;
-    hatPrice = 200;
+    hatPrice = 20;
     needleUpgradePrice = 300;
     
     [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
