@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>9</integer>
+	<integer>26</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -448,6 +448,21 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
+									<real>0.23333333432674408</real>
+									<key>type</key>
+									<integer>2</integer>
+									<key>value</key>
+									<real>-9.9112358093261719</real>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>rotation</string>
+									<key>time</key>
 									<real>0.5</real>
 									<key>type</key>
 									<integer>2</integer>
@@ -639,7 +654,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-9.9112358093261719</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -670,9 +685,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -972,8 +987,6 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1526,8 +1539,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>7.7333331108093262</real>
-							<real>28.333333969116211</real>
+							<real>11</real>
+							<real>12</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1565,7 +1578,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>42</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1596,9 +1609,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1982,6 +1995,24 @@
 									<array>
 										<real>71</real>
 										<real>34</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>0.23333333432674408</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>68.666664123535156</real>
+										<real>34.466667175292969</real>
 									</array>
 								</dict>
 								<dict>
@@ -2414,8 +2445,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>68.666664123535156</real>
-							<real>34.466667175292969</real>
+							<real>71</real>
+							<real>34</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2453,7 +2484,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>17.825202941894531</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2484,10 +2515,21 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
-							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>blendFunc</string>
+						<key>type</key>
+						<string>Blendmode</string>
+						<key>value</key>
+						<array>
+							<integer>1</integer>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -2496,7 +2538,27 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>10</integer>
+								<key>baseClass</key>
+								<string>CCEffectHue</string>
+								<key>className</key>
+								<string>CCBPEffectHue</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>hue</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>0.0</real>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -3160,8 +3222,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>14.266669273376465</real>
-							<real>51.066665649414062</real>
+							<real>12.999996185302734</real>
+							<real>32</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3199,7 +3261,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>23.333333969116211</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3230,9 +3292,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -3673,6 +3735,21 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
+									<real>0.23333333432674408</real>
+									<key>type</key>
+									<integer>2</integer>
+									<key>value</key>
+									<real>-5.3189206123352051</real>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>rotation</string>
+									<key>time</key>
 									<real>0.5</real>
 									<key>type</key>
 									<integer>2</integer>
@@ -3864,7 +3941,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-5.3189206123352051</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3895,9 +3972,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -4538,8 +4615,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>14</real>
-							<real>20.133333206176758</real>
+							<real>21</real>
+							<real>8</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4577,7 +4654,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>42</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4608,9 +4685,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>8.9003602624870837e-05</real>
-							<real>0.22745068371295929</real>
+							<real>0.52860385179519653</real>
+							<real>4.7047647967701778e-05</real>
+							<real>0.12023130059242249</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -4833,25 +4910,11 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>0</integer>
-			<key>name</key>
-			<string>Phone</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
 			<integer>0</integer>
 			<key>name</key>
-			<string>Tablet</string>
+			<string>Fixed</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
@@ -4879,7 +4942,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.5</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -4951,7 +5014,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.23333333432674408</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
