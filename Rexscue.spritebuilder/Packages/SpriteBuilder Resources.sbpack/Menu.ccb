@@ -588,7 +588,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Effects Off</string>
+							<string>Sounds Off</string>
 							<false/>
 						</array>
 					</dict>
@@ -798,6 +798,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

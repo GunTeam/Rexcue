@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>36</integer>
+	<integer>44</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -179,8 +179,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286.01803588867188</real>
-							<real>302.04714965820312</real>
+							<real>263.20843505859375</real>
+							<real>318.63595581054688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -208,6 +208,8 @@
 						<string>Meteor.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -241,8 +243,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>259.48635864257812</real>
-							<real>202.94993591308594</real>
+							<real>348.6719970703125</real>
+							<real>231.98033142089844</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -303,8 +305,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.599998474121094</real>
-							<real>112.40000152587891</real>
+							<real>63.799999237060547</real>
+							<real>143.50401306152344</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -365,8 +367,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>355.09121704101562</real>
-							<real>292.40408325195312</real>
+							<real>147.69999694824219</real>
+							<real>265.44729614257812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -403,7 +405,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tap to destroy the meteors!</string>
+							<string>Tap to destroy the meteor!</string>
 							<false/>
 						</array>
 					</dict>
@@ -422,7 +424,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>16</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -585,8 +587,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>379.97442626953125</real>
-							<real>188.740478515625</real>
+							<real>160.1416015625</real>
+							<real>178.37248229980469</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -642,7 +644,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>16</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -805,8 +807,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>355.09121704101562</real>
-							<real>95.080955505371094</real>
+							<real>147.73118591308594</real>
+							<real>82.639350891113281</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -862,7 +864,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>16</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1528,8 +1530,6 @@
 						<string>MeteorFlame.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1600,8 +1600,6 @@
 						<string>FireString.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1961,8 +1959,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>193.19999694824219</real>
-							<real>112.40000152587891</real>
+							<real>259.5</real>
+							<real>143.50399780273438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2023,8 +2021,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>341.23138427734375</real>
-							<real>218.12736511230469</real>
+							<real>446.98495483398438</real>
+							<real>245.08418273925781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2085,8 +2083,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>193.17630004882812</real>
-							<real>202.89999389648438</real>
+							<real>259.48321533203125</real>
+							<real>242.29840087890625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2147,8 +2145,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>119.77084350585938</real>
-							<real>202.89999389648438</real>
+							<real>161.24282836914062</real>
+							<real>234.00399780273438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2209,8 +2207,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.562835693359375</real>
-							<real>202.89999389648438</real>
+							<real>63.783634185791016</real>
+							<real>238.15119934082031</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2271,8 +2269,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>119.80000305175781</real>
-							<real>112.40000152587891</real>
+							<real>161.19999694824219</real>
+							<real>145.57760620117188</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2333,8 +2331,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>259.5</real>
-							<real>112.37007904052734</real>
+							<real>348.70001220703125</real>
+							<real>141.40048217773438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2395,8 +2393,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>341.20001220703125</real>
-							<real>127.30368041992188</real>
+							<real>447</real>
+							<real>152.1868896484375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
