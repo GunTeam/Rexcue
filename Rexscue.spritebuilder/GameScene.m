@@ -216,7 +216,7 @@
 -(void) spawnMeteor:(CCTime) dt{
     NSString *ccbFileString = @"Meteor";
     if(backgroundIndex == 2){
-        ccbFileString = @"Meteor";
+        ccbFileString = @"IceMeteor";
     }
     for(int i=0; i<meteorsToSpawnAtOnce; i++){
         Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
