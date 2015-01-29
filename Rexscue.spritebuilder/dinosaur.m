@@ -41,6 +41,8 @@
     self.isStationary = false;
     self.hasMittens = false;
     
+    
+    
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
@@ -58,19 +60,23 @@
     audioPlayer =  [OALSimpleAudio sharedInstance];
     audioPlayer.effectsVolume = 1.5;
     
-    if(self.hasMittens){
-        [self putOnMittens];
-    }
-    else{
-        self.isWearingTheirMittens = false;
-    }
+    //_frontMitten.visible = false;
+    //_backMitten.visible = false;
+    //_hat.visible = false;
     
-    if(self.hasHat){
-        [self putOnHat];
-    }
-    else{
-        self.isWearingTheirHat = false;
-    }
+//    if(self.hasMittens){
+//        [self putOnMittens];
+//    }
+//    else{
+//        self.isWearingTheirMittens = false;
+//    }
+//    
+//    if(self.hasHat){
+//        [self putOnHat];
+//    }
+//    else{
+//        self.isWearingTheirHat = false;
+//    }
 }
 
 -(void) playHurtSound{
@@ -205,7 +211,10 @@
 //    [self playHurtSound];
 //    
 //    [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
-//    _mittens.visible = false;
+//    _frontMitten.cascadeOpacityEnabled = true;
+//    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
+//    _backMitten.cascadeOpacityEnabled = true;
+//    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
 }
 
 -(void) loseHat{
@@ -278,7 +287,8 @@
 }
 
 -(void) putOnMittens{
-    //_mittens.visible = true;
+    //_frontMitten.visible = true;
+    //_backMitten.visible = true;
     self.isWearingTheirMittens = true;
 }
 

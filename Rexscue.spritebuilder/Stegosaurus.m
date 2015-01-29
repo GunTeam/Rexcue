@@ -58,8 +58,6 @@
     [_spikes runAction:[CCActionFadeOut actionWithDuration:2]];
     _spikes1.cascadeOpacityEnabled = true;
     [_spikes1 runAction:[CCActionFadeOut actionWithDuration:2]];
-//    _darkSpikes.visible = false;
-//    _brightSpikes.visible = false;
     self.hasSpikes = false;
     self.health -= MAX_HEALTH/2.;
     [self setHealthLabel];

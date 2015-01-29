@@ -28,11 +28,16 @@
     [_mittenPriceLabel setString:[NSString stringWithFormat:@"Price: %i Needles", mittenPrice]];
     [_hatPriceLabel setString:[NSString stringWithFormat:@"Price: %i Needles", hatPrice]];
   
+    dinotypeToSelector = [NSDictionary dictionaryWithObjectsAndKeys:
+                          _TrexSelector, @"Trex", _PterodactylSelector, @"Pterodactyl",_AllosaurusSelector, @"Allosaurus",_TriceratopsSelector, @"Triceratops",_StegosaurusSelector, @"Stegosaurus", nil];
+    
     ourdinos = @[_stegosaurus,_pterodactyl,_allosaurus,_trex,_triceratops];
     for (dinosaur *dino in ourdinos){
         [dino setIsStationary:true];
         [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
         [dino setHealthInvisible];
+        CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+        select.visible = false;
 //        dino.visible = false;
     }
     _needleButton.visible = false;
@@ -46,6 +51,7 @@
         musicPlayer.numberOfLoops = -1;
         [musicPlayer play];
     }
+    
 }
 -(void) mittenUpgrade{
     if(numNeedles > mittenPrice){
@@ -58,6 +64,16 @@
         
         mittenSelected = true;
         hatSelected = false;
+        
+        for (dinosaur *dino in ourdinos){
+            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+            if(![dino hasMittens]){
+                select.visible = true;
+            }
+            else{
+                select.visible = false;
+            }
+        }
     }
     else{
         _playMorePrompt.visible = true;
@@ -79,6 +95,16 @@
         
         mittenSelected = false;
         hatSelected = true;
+        
+        for (dinosaur *dino in ourdinos){
+            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+            if([dino hasMittens] && ![dino hasHat]){
+                select.visible = true;
+            }
+            else{
+                select.visible = false;
+            }
+        }
     }
     else{
         _playMorePrompt.visible = true;
@@ -149,37 +175,37 @@
 
 -(void) alloUpgrade{
     if(mittenSelected){
-        
+        [self buyMittensForDino:@"Allosaurus"];
     }
     else if(hatSelected){
-        
+        [self buyHatForDino:@"Allosaurus"];
     }
 }
 
 -(void) stegoUpgrade{
     if(mittenSelected){
-        
+        [self buyMittensForDino:@"Stegosaurus"];
     }
     else if(hatSelected){
-        
+        [self buyHatForDino:@"Stegosaurus"];
     }
 }
 
 -(void) trexUpgrade{
     if(mittenSelected){
-        
+        [self buyMittensForDino:@"Trex"];
     }
     else if(hatSelected){
-        
+        [self buyHatForDino:@"Trex"];
     }
 }
 
 -(void) tricUpgrade{
     if(mittenSelected){
-        
+        [self buyMittensForDino:@"Triceratops"];
     }
     else if(hatSelected){
-        
+        [self buyHatForDino:@"Triceratops"];
     }
 }
 

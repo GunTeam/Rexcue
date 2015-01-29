@@ -20,7 +20,7 @@
     NSArray *sounds;
     NSArray *evilSounds;
     Boolean soundsOn;
-    //CCNode *_mittens, *_hat;
+    //CCNode *_frontMitten, *_backMitten, *_hat;
 }
 
 -(void) didLoadFromCCB;
