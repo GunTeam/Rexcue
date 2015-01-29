@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381414601A78841600EF865D /* GamePlay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3814145F1A78841600EF865D /* GamePlay.mp3 */; };
+		382EAC7B1A79E19B003BDFA3 /* GamePlay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 382EAC7A1A79E19B003BDFA3 /* GamePlay.mp3 */; };
 		388AA7BB1A794B4600385619 /* gameOverSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 388AA7BA1A794B4600385619 /* gameOverSong.mp3 */; };
 		38F37BF41A78AA90007C420C /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38F37BF31A78AA90007C420C /* pause.mp3 */; };
 		5B12100C19748281004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
@@ -221,7 +221,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3814145F1A78841600EF865D /* GamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GamePlay.mp3; sourceTree = "<group>"; };
+		382EAC7A1A79E19B003BDFA3 /* GamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GamePlay.mp3; sourceTree = "<group>"; };
 		388AA7BA1A794B4600385619 /* gameOverSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameOverSong.mp3; sourceTree = "<group>"; };
 		38F37BF31A78AA90007C420C /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
@@ -742,7 +742,7 @@
 			children = (
 				388AA7BA1A794B4600385619 /* gameOverSong.mp3 */,
 				38F37BF31A78AA90007C420C /* pause.mp3 */,
-				3814145F1A78841600EF865D /* GamePlay.mp3 */,
+				382EAC7A1A79E19B003BDFA3 /* GamePlay.mp3 */,
 				BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */,
 				BADAB8EF1A776B38008E7339 /* Trex */,
 				BADAB8F31A776BB0008E7339 /* Evil */,
@@ -1053,7 +1053,6 @@
 				BADAB88A1A774F94008E7339 /* ow.mp3 in Resources */,
 				BADAB8731A774F94008E7339 /* ImPanicking.mp3 in Resources */,
 				BADAB8811A774F94008E7339 /* run.mp3 in Resources */,
-				381414601A78841600EF865D /* GamePlay.mp3 in Resources */,
 				BADAB8861A774F94008E7339 /* ohhh.mp3 in Resources */,
 				BADAB8751A774F94008E7339 /* ohhhh.mp3 in Resources */,
 				BADAB8771A774F94008E7339 /* goodJob.mp3 in Resources */,
@@ -1093,6 +1092,7 @@
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				BADAB8821A774F94008E7339 /* aaaah.mp3 in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
+				382EAC7B1A79E19B003BDFA3 /* GamePlay.mp3 in Resources */,
 				BADAB86F1A774F94008E7339 /* owAndStuff.mp3 in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
