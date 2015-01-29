@@ -140,7 +140,7 @@
     
     
     if(newDino.inAir){
-        positionY = (7./10)*screenHeight;
+        positionY = (8./10)*screenHeight;
     }
     newDino.position = CGPointMake(positionX, positionY);
     

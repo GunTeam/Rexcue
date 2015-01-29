@@ -87,13 +87,13 @@
 -(void) toggleSandbox{
     if(self.sandboxMode){
         self.sandboxMode = false;
-        [_toggleSandboxButton setTitle:@"Turn\rSandbox Mode\rOn"];
+        [_toggleSandboxButton setTitle:@"Turn\rEasy On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
         
     }
     else{
         self.sandboxMode = true;
-        [_toggleSandboxButton setTitle:@"Turn\rSandbox Mode\rOff"];
+        [_toggleSandboxButton setTitle:@"Turn\rEasy Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"SandboxMode"];
     }
 }
