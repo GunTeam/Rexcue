@@ -22,17 +22,17 @@
     self.musicOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
     
     if(!self.soundEffectsOn){
-        [_toggleSoundButton setTitle:@"Effects On"];
+        [_toggleSoundButton setTitle:@"Turn\rEffects On"];
     }
     else{
-        [_toggleSoundButton setTitle:@"Effects Off"];
+        [_toggleSoundButton setTitle:@"Turn\rEffects Off"];
     }
     
     if(!self.musicOn){
-        [_toggleMusicButton setTitle:@"Music On"];
+        [_toggleMusicButton setTitle:@"Turn\rMusic On"];
     }
     else{
-        [_toggleMusicButton setTitle:@"Music Off"];
+        [_toggleMusicButton setTitle:@"Turn\rMusic Off"];
     }
     
     [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
@@ -49,12 +49,12 @@
 -(void) toggleSoundEffects{
     if(self.soundEffectsOn){
         self.soundEffectsOn = false;
-        [_toggleSoundButton setTitle:@"Effects On"];
+        [_toggleSoundButton setTitle:@"Turn\rEffects On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"EffectsOn"];
     }
     else{
         self.soundEffectsOn = true;
-        [_toggleSoundButton setTitle:@"Effects Off"];
+        [_toggleSoundButton setTitle:@"Turn\rEffects Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
     }
 }
@@ -63,14 +63,14 @@
     if(self.musicOn){
         [musicPlayer stop];
         self.musicOn = false;
-        [_toggleMusicButton setTitle:@"Music On"];
+        [_toggleMusicButton setTitle:@"Turn\rMusic On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"MusicOn"];
 
     }
     else{
         [musicPlayer play];
         self.musicOn = true;
-        [_toggleMusicButton setTitle:@"Music Off"];
+        [_toggleMusicButton setTitle:@"Turn\rMusic Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
     }
 }
