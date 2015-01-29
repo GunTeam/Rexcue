@@ -406,7 +406,7 @@
 										<key>value</key>
 										<array>
 											<real>96</real>
-											<real>-110.96286010742188</real>
+											<real>-88.866569519042969</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -480,8 +480,6 @@
 										<array/>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -658,6 +656,8 @@
 						<string></string>
 						<key>displayName</key>
 						<string>ProtestScene</string>
+						<key>hidden</key>
+						<true/>
 						<key>memberVarAssignmentName</key>
 						<string>_background5</string>
 						<key>memberVarAssignmentType</key>
@@ -946,8 +946,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>177.49497985839844</real>
-											<real>85.373741149902344</real>
+											<real>209.34548950195312</real>
+											<real>93.336372375488281</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -985,7 +985,7 @@
 										<key>type</key>
 										<string>Degrees</string>
 										<key>value</key>
-										<real>0.0</real>
+										<real>72.000030517578125</real>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -1017,7 +1017,7 @@
 										<key>type</key>
 										<string>Float</string>
 										<key>value</key>
-										<real>0.0</real>
+										<real>0.10000002384185791</real>
 									</dict>
 									<dict>
 										<key>name</key>
@@ -1029,7 +1029,7 @@
 											<real>1</real>
 											<real>1</real>
 											<real>1</real>
-											<real>0.0</real>
+											<real>0.10000002384185791</real>
 										</array>
 									</dict>
 									<dict>
@@ -1049,6 +1049,8 @@
 						<string></string>
 						<key>displayName</key>
 						<string>RoadScene</string>
+						<key>hidden</key>
+						<true/>
 						<key>memberVarAssignmentName</key>
 						<string>_background4</string>
 						<key>memberVarAssignmentType</key>
@@ -1445,6 +1447,8 @@
 						<string></string>
 						<key>displayName</key>
 						<string>CaveManScene</string>
+						<key>hidden</key>
+						<true/>
 						<key>memberVarAssignmentName</key>
 						<string>_background3</string>
 						<key>memberVarAssignmentType</key>
@@ -2128,6 +2132,8 @@
 						<string></string>
 						<key>displayName</key>
 						<string>iceScene</string>
+						<key>hidden</key>
+						<true/>
 						<key>memberVarAssignmentName</key>
 						<string>_background2</string>
 						<key>memberVarAssignmentType</key>
@@ -2586,6 +2592,8 @@
 						<string></string>
 						<key>displayName</key>
 						<string>background</string>
+						<key>hidden</key>
+						<true/>
 						<key>memberVarAssignmentName</key>
 						<string>_background1</string>
 						<key>memberVarAssignmentType</key>
@@ -3644,7 +3652,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>length</key>
 			<real>2</real>
 			<key>name</key>
@@ -3652,7 +3660,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2</real>
+			<real>1.7999999523162842</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
