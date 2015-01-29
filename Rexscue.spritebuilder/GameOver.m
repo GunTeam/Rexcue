@@ -35,8 +35,17 @@
         [musicPlayer play];
     }
     
+    _mainMenuButton.enabled = false;
+    _replayButton.enabled = false;
+    
+    [self scheduleOnce:@selector(activateButtons) delay:1];
 }
 
+
+-(void) activateButtons{
+    _mainMenuButton.enabled = true;
+    _replayButton.enabled = true;
+}
 
 -(void) replayGame{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];

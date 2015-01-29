@@ -12,8 +12,8 @@
 @implementation Upgrades
 -(void) didLoadFromCCB{
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
-    mittenPrice = 100;
-    hatPrice = 200;
+    mittenPrice = 10;
+    hatPrice = 20;
     needleUpgradePrice = 300;
     
     [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
@@ -38,7 +38,7 @@
         [dino setHealthInvisible];
         CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
         select.visible = false;
-//        dino.visible = false;
+        dino.visible = false;
     }
     _needleButton.visible = false;
     _needleDescription.visible = false;
@@ -55,64 +55,90 @@
     
 }
 -(void) mittenUpgrade{
-    if(numNeedles > mittenPrice){
-        _selector.position = _mittenButton.position;
-        _selector.visible = true;
-        for (dinosaur *dino in ourdinos){
-            dino.visible = true;
+    if(!mittenSelected){
+        if(numNeedles > mittenPrice){
+            _selector.position = _mittenButton.position;
+            _selector.visible = true;
+            for (dinosaur *dino in ourdinos){
+                dino.visible = true;
+            }
+            _upgradePrompt.visible = true;
+            
+            mittenSelected = true;
+            hatSelected = false;
+            
+            for (dinosaur *dino in ourdinos){
+                CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+                if(![dino hasMittens]){
+                    select.visible = true;
+                }
+                else{
+                    select.visible = false;
+                }
+            }
         }
-        _upgradePrompt.visible = true;
-        
-        mittenSelected = true;
-        hatSelected = false;
-        
-        for (dinosaur *dino in ourdinos){
-            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
-            if(![dino hasMittens]){
-                select.visible = true;
-            }
-            else{
-                select.visible = false;
-            }
+        else{
+            _playMorePrompt.visible = true;
+            CCAction *animation1 = [CCActionScaleTo actionWithDuration:0.5 scale:1.5];
+            CCAction *animation2 = [CCActionScaleTo actionWithDuration:0.5 scale:1];
+            
+            [_playMorePrompt runAction:[CCActionSequence actionWithArray:@[animation1, animation2]]];
         }
     }
     else{
-        _playMorePrompt.visible = true;
-        CCAction *animation1 = [CCActionScaleTo actionWithDuration:0.5 scale:1.5];
-        CCAction *animation2 = [CCActionScaleTo actionWithDuration:0.5 scale:1];
-        
-        [_playMorePrompt runAction:[CCActionSequence actionWithArray:@[animation1, animation2]]];
+        _selector.visible = false;
+        mittenSelected = false;
+        _upgradePrompt.visible = false;
+        for (dinosaur *dino in ourdinos){
+            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+            select.visible = false;
+            dino.visible = false;
+        }
     }
+
     
 }
 -(void) hatUpgrade{
-    if(numNeedles > hatPrice){
-        _selector.position = _hatButton.position;
-        _selector.visible = true;
-        for (dinosaur *dino in ourdinos){
-            dino.visible = true;
-        }
-        _upgradePrompt.visible = true;
-        
-        mittenSelected = false;
-        hatSelected = true;
-        
-        for (dinosaur *dino in ourdinos){
-            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
-            if([dino hasMittens] && ![dino hasHat]){
-                select.visible = true;
+    if(!hatSelected){
+        if(numNeedles > hatPrice){
+            _selector.position = _hatButton.position;
+            _selector.visible = true;
+            for (dinosaur *dino in ourdinos){
+                dino.visible = true;
             }
-            else{
-                select.visible = false;
+            _upgradePrompt.visible = true;
+            
+            mittenSelected = false;
+            hatSelected = true;
+            
+            for (dinosaur *dino in ourdinos){
+                CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+                if([dino hasMittens] && ![dino hasHat]){
+                    select.visible = true;
+                }
+                else{
+                    select.visible = false;
+                }
             }
         }
+        else{
+            _playMorePrompt.visible = true;
+            CCAction *animation1 = [CCActionScaleTo actionWithDuration:0.5 scale:1.5];
+            CCAction *animation2 = [CCActionScaleTo actionWithDuration:0.5 scale:1];
+            
+            [_playMorePrompt runAction:[CCActionSequence actionWithArray:@[animation1, animation2]]];
+        }
+        
     }
     else{
-        _playMorePrompt.visible = true;
-        CCAction *animation1 = [CCActionScaleTo actionWithDuration:0.5 scale:1.5];
-        CCAction *animation2 = [CCActionScaleTo actionWithDuration:0.5 scale:1];
-        
-        [_playMorePrompt runAction:[CCActionSequence actionWithArray:@[animation1, animation2]]];
+        _selector.visible = false;
+        hatSelected = false;
+        _upgradePrompt.visible = false;
+        for (dinosaur *dino in ourdinos){
+            CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
+            select.visible = false;
+            dino.visible = false;
+        }
     }
 
 }
@@ -151,24 +177,29 @@
 }
 
 -(void) buyHatForDino: (NSString*)dino{
-    NSString *key = [NSString stringWithFormat:@"%@Hat", dino];
-    [[NSUserDefaults standardUserDefaults] setBool:true forKey:key];
-    
-    numNeedles -= hatPrice;
-    [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
-    
-    [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
-    hatSelected = false;
-    _selector.visible = false;
-    
+    dinosaur *thisdino;
     for (dinosaur *whichDino in ourdinos){
         NSString *dinoType = [whichDino getType];
         if([dino isEqualToString:dinoType]){
-            [whichDino putOnHat];
+            thisdino = whichDino;
         }
-        CCParticleSystem *select = [dinotypeToSelector objectForKey: dinoType];
+    }
+    
+    
+    if([thisdino hasMittens]){
+        NSString *key = [NSString stringWithFormat:@"%@Hat", dino];
+        [[NSUserDefaults standardUserDefaults] setBool:true forKey:key];
+        
+        numNeedles -= hatPrice;
+        [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
+        hatSelected = false;
+        
+        CCParticleSystem *select = [dinotypeToSelector objectForKey:[thisdino getType]];
         select.visible = false;
         _upgradePrompt.visible = false;
+
     }
 
 }

@@ -12,6 +12,7 @@
 @interface GameOver : CCNode {
     CCLabelTTF *_bestScoreLabel, *_yourScoreLabel, *_yourNeedlesLabel, *_needlesEarnedLabel;
     OALAudioTrack *musicPlayer;
+    CCButton *_mainMenuButton, *_replayButton;
 }
 
 @property long numNeedles;
