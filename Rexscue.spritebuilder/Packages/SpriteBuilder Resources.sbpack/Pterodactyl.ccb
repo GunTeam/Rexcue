@@ -1868,7 +1868,11 @@
 						<key>value</key>
 						<array>
 							<real>156</real>
+<<<<<<< HEAD
 							<real>6.5333347320556641</real>
+=======
+							<real>-11.06666374206543</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2803,7 +2807,11 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
+<<<<<<< HEAD
 						<real>-5.947655200958252</real>
+=======
+						<real>-0.84966564178466797</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3506,7 +3514,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>91</real>
+=======
+							<real>103</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 							<real>87</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4161,8 +4173,13 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>47.799999237060547</real>
 							<real>162.13333129882812</real>
+=======
+							<real>57.399997711181641</real>
+							<real>163.73333740234375</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -4805,8 +4822,13 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>159</real>
 							<real>177.39999389648438</real>
+=======
+							<real>171</real>
+							<real>170.19999694824219</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5172,7 +5194,11 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
+<<<<<<< HEAD
 			<real>1.4666666984558105</real>
+=======
+			<real>1.0666667222976685</real>
+>>>>>>> 1a7d08d04530803432afeace87a4046807fcce3c
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
