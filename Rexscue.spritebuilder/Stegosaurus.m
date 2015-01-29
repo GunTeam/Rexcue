@@ -58,9 +58,13 @@
     [_spikes runAction:[CCActionFadeOut actionWithDuration:2]];
     _spikes1.cascadeOpacityEnabled = true;
     [_spikes1 runAction:[CCActionFadeOut actionWithDuration:2]];
+    [self scheduleOnce:@selector(invisibleSpikes) delay:2];
     self.hasSpikes = false;
-    self.health -= MAX_HEALTH/2.;
-    [self setHealthLabel];
+}
+
+-(void) invisibleSpikes{
+    _spikes.visible = false;
+    _spikes1.visible = false;
 }
 
 -(void) knockback{
@@ -117,6 +121,9 @@
     [otherDino playAttackSound];
     otherDino.readyToAttack = false;
     
+    self.health -= MAX_HEALTH/2.;
+    [self setHealthLabel];
+    
     if(self.direction == 0 && otherDino.position.x > self.position.x){
         [self knockback];
     }
@@ -130,13 +137,10 @@
         [self knockforward];
     }
     
-    if(self.hasSpikes){
-        [self loseSpikes];
+    if(self.health <= 0){
+        return [self hurt];
     }
-    else{
-        [self die];
-        return true;
-    }
+    
     return false;
 }
 
