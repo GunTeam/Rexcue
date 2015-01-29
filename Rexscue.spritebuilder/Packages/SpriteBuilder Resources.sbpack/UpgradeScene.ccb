@@ -146,6 +146,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -179,8 +181,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>128.47996520996094</real>
-							<real>222.06724548339844</real>
+							<real>130.55355834960938</real>
+							<real>201.33123779296875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -327,9 +329,9 @@
 						<key>value</key>
 						<array>
 							<array>
-								<real>0.029652800410985947</real>
-								<real>0.97604316473007202</real>
-								<real>0.95433348417282104</real>
+								<real>0.0</real>
+								<real>0.89768147468566895</real>
+								<real>0.035120941698551178</real>
 								<real>1</real>
 							</array>
 							<array>
@@ -348,9 +350,9 @@
 						<key>value</key>
 						<array>
 							<array>
-								<real>0.090156413614749908</real>
-								<real>0.42952877283096313</real>
+								<real>0.0</real>
 								<real>1</real>
+								<real>0.071447946131229401</real>
 								<real>0.33000001311302185</real>
 							</array>
 							<array>
@@ -504,7 +506,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Upgrades</string>
+							<string>Welcome </string>
 							<false/>
 						</array>
 					</dict>
@@ -2892,8 +2894,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>44</real>
-							<real>290.2886962890625</real>
+							<real>41.900001525878906</real>
+							<real>279.92071533203125</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2906,7 +2908,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>-0.033648539334535599</real>
+							<real>-0.017373537644743919</real>
 							<real>0.46325838565826416</real>
 						</array>
 					</dict>
@@ -3099,8 +3101,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>44</real>
-							<real>271.62628173828125</real>
+							<real>41.926399230957031</real>
+							<real>257.111083984375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3307,7 +3309,7 @@
 						<key>value</key>
 						<array>
 							<real>44</real>
-							<real>173.959716796875</real>
+							<real>300.44937133789062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3320,8 +3322,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>-0.025942523032426834</real>
-							<real>0.52162700891494751</real>
+							<real>-0.0045071565546095371</real>
+							<real>0.52148085832595825</real>
 						</array>
 					</dict>
 					<dict>
@@ -3339,12 +3341,20 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>-0.031760379672050476</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>string</string>
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Mittens let your dino take another hit!</string>
+							<string>Each article lets your dino take another hit!</string>
 							<false/>
 						</array>
 					</dict>
@@ -3480,215 +3490,6 @@
 						</array>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>28</integer>
-				<key>baseClass</key>
-				<string>CCLabelTTF</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCLabelTTF</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>44</real>
-							<real>84.241928100585938</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>-0.022613463923335075</real>
-							<real>0.45674598217010498</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>string</string>
-						<key>type</key>
-						<string>Text</string>
-						<key>value</key>
-						<array>
-							<string>A hat lets your dino take another hit!</string>
-							<false/>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontName</string>
-						<key>type</key>
-						<string>FontTTF</string>
-						<key>value</key>
-						<string>ccbResources/PatrickHandSC-Regular.ttf</string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontSize</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>15</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>adjustsFontSizeToFit</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>dimensions</string>
-						<key>type</key>
-						<string>Size</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>horizontalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>verticalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>outlineColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>outlineWidth</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowColor</string>
-						<key>type</key>
-						<string>Color4</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowBlurRadius</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>shadowOffset</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -6009,7 +5810,7 @@
 						<key>value</key>
 						<array>
 							<real>137.81117248535156</real>
-							<real>226.21444702148438</real>
+							<real>201.33123779296875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6334,8 +6135,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>130.55357360839844</real>
-							<real>134.97599792480469</real>
+							<real>128.47998046875</real>
+							<real>110.09279632568359</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6989,7 +6790,7 @@
 						<key>value</key>
 						<array>
 							<real>49.184001922607422</real>
-							<real>189.51171875</real>
+							<real>160.48130798339844</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7196,7 +6997,7 @@
 						<key>value</key>
 						<array>
 							<real>49.184001922607422</real>
-							<real>101.38370513916016</real>
+							<real>74.426902770996094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
