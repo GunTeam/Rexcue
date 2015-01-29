@@ -206,12 +206,22 @@
 //    
 //    [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
 //    _mittens.visible = false;
-//    self.health -= MAX_HEALTH/2.;
-//    [self setHealthLabel];
+}
+
+-(void) loseHat{
+    self.isWearingTheirHat =  false;
+    //    [self playHurtSound];
+    //
+    //    [self.animationManager runAnimationsForSequenceNamed:@"HatOff"];
+    //    _hat.visible = false;
 }
 
 -(Boolean) hurt{
-//    if(self.isWearingTheirMittens){
+//  if(self.isWearingTheirHat){
+//      [self loseHat];
+//      return false;
+//  }
+//    else if(self.isWearingTheirMittens){
 //            [self loseMittens];
 //            return false;
 //        }
@@ -219,6 +229,7 @@
 //            [self die];
 //            return true;
 //        }
+
     
     [self die];
     return true;

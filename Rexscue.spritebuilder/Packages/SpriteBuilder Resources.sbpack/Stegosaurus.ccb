@@ -3796,7 +3796,7 @@
 				<key>displayName</key>
 				<string>DarkSpikes</string>
 				<key>memberVarAssignmentName</key>
-				<string>_darkSpikes</string>
+				<string>_spikes1</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -3916,6 +3916,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4961,7 +4963,7 @@
 				<key>displayName</key>
 				<string>BrightSpikes</string>
 				<key>memberVarAssignmentName</key>
-				<string>_brightSpikes</string>
+				<string>_spikes</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>

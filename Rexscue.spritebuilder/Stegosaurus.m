@@ -54,8 +54,12 @@
     [self playHurtSound];
     
     [self.animationManager runAnimationsForSequenceNamed:@"SpikeOff"];
-    _darkSpikes.visible = false;
-    _brightSpikes.visible = false;
+    _spikes.cascadeOpacityEnabled = true;
+    [_spikes runAction:[CCActionFadeOut actionWithDuration:2]];
+    _spikes1.cascadeOpacityEnabled = true;
+    [_spikes1 runAction:[CCActionFadeOut actionWithDuration:2]];
+//    _darkSpikes.visible = false;
+//    _brightSpikes.visible = false;
     self.hasSpikes = false;
     self.health -= MAX_HEALTH/2.;
     [self setHealthLabel];
@@ -83,7 +87,11 @@
 
 
 -(Boolean) hurt{
-//    if(self.isWearingTheirMittens){
+//  if(self.isWearingTheirHat){
+//      [self loseHat];
+//      return false;
+//  }
+//    else if(self.isWearingTheirMittens){
 //        [self loseMittens];
 //        return false;
 //    }
