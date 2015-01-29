@@ -24,13 +24,14 @@
     CGFloat screenWidth,screenHeight;
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
-    int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE, numBackgroundsToFade,meteorsToSpawnAtOnce,backgroundIndex;
+    int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE, numBackgroundsToFade,meteorsToSpawnAtOnce,backgroundIndex, meteorIndex;
     CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;
     CCNode *_background1,*_background2,*_background3,*_background4,*_background5,*_background6;
     NSArray *backgrounds;
+    
 }
 
 -(void) addPointsToScore: (int) points;

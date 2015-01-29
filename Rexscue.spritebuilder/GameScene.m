@@ -14,12 +14,13 @@
 
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
-    SECONDS_TO_LEVEL_UPDATE = 5;
+    SECONDS_TO_LEVEL_UPDATE = 20;
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
     meteorsToSpawnAtOnce = 1;
     backgroundIndex = 1;
+    meteorIndex = 1;
     
     backgrounds = @[_background1,_background2,_background3,_background4,_background5,_background6];
     numBackgroundsToFade = [backgrounds count]-1;
@@ -219,10 +220,16 @@
 
 -(void) spawnMeteor:(CCTime) dt{
     NSString *ccbFileString = @"Meteor";
-    if(backgroundIndex == 2){
+    if(meteorIndex == 2){
         ccbFileString = @"IceMeteor";
     }
-    else if(backgroundIndex == 6){
+    else if(meteorIndex == 4){
+        ccbFileString = @"ElectricMeteor";
+    }
+    else if(meteorIndex == 5){
+        ccbFileString = @"NatureMeteor";
+    }
+    else if(meteorIndex >= 6){
         ccbFileString = @"RainbowMeteor";
     }
     for(int i=0; i<meteorsToSpawnAtOnce; i++){
@@ -339,6 +346,7 @@
 -(void) phaseBackground{
     CCNode *backgroundToFade = [backgrounds objectAtIndex:(backgroundIndex-1)];
     backgroundIndex ++;
+    meteorIndex ++;
     backgroundIndex = MIN(numBackgroundsToFade, backgroundIndex);
     backgroundToFade.cascadeOpacityEnabled = true;
     [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
