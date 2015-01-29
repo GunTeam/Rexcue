@@ -12,11 +12,19 @@
 @implementation GameOver
 
 -(void) didLoadFromCCB{
-    NSInteger highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
-    NSInteger lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
+    long POINTS_PER_NEEDLE = 10000;
     
-    [_bestScoreLabel setString:[NSString stringWithFormat:@"Best: %li", (long)highScore]];
-    [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", (long)lastScore]];
+    long highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    long lastScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"LastScore"];
+    long needlesEarned = lastScore/POINTS_PER_NEEDLE;
+    self.numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
+    long totalNeedles = self.numNeedles + needlesEarned;
+    [[NSUserDefaults standardUserDefaults] setInteger:totalNeedles forKey:@"NumNeedles"];
+
+    [_bestScoreLabel setString:[NSString stringWithFormat:@"Best: %li", highScore]];
+    [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", lastScore]];
+    [_needlesEarnedLabel setString:[NSString stringWithFormat:@"Needles Earned: %li", needlesEarned]];
+    [_yourNeedlesLabel setString:[NSString stringWithFormat:@"Total Needles: %li", totalNeedles]];
     
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
     
@@ -26,6 +34,7 @@
         musicPlayer.numberOfLoops = -1;
         [musicPlayer play];
     }
+    
 }
 
 

@@ -58,7 +58,7 @@
     
     int pointsEarned = (int)(screenHeight-self.position.y)+50;
     
-    CCColor *color = [CCColor colorWithRed:0.0 green: 0 blue:0];
+    CCColor *color = [CCColor colorWithRed:0.0 green: 0.0 blue:0];
     
     NSString *scoreLabel = [NSString stringWithFormat:@"%i",pointsEarned];
     int labelSize = 24;
@@ -66,7 +66,7 @@
     if(!isDemo){
         int multiplier = [gameScene multiplier];
         labelSize = MIN(MAX_LABEL_SIZE, labelSize+multiplier);
-        color = [CCColor colorWithRed:(multiplier/10.)-0.1 green: 0 blue:0];
+        color = [CCColor colorWithRed:0 green: (multiplier/10.)-0.1 blue:0];
         scoreLabel = [NSString stringWithFormat:@"%i\rx%i",pointsEarned,multiplier];
         pointsEarned = multiplier*pointsEarned;
         [gameScene addPointsToScore: pointsEarned];

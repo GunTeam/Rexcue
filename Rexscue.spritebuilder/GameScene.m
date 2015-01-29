@@ -22,7 +22,7 @@
     backgroundIndex = 1;
     
     backgrounds = @[_background1,_background2,_background3,_background4,_background5,_background6];
-    numBackgrounds = [backgrounds count];
+    numBackgroundsToFade = [backgrounds count]-1;
     
     self.multiplier = 1;
     
@@ -210,6 +210,8 @@
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,-(7./8)*(screenHeight))];
     [newDino runAction:mover];
     
+    [newDino playAttackSound];
+    
     [_physicsNode addChild:newDino];
 }
 
@@ -217,6 +219,9 @@
     NSString *ccbFileString = @"Meteor";
     if(backgroundIndex == 2){
         ccbFileString = @"IceMeteor";
+    }
+    else if(backgroundIndex == 6){
+        ccbFileString = @"RainbowMeteor";
     }
     for(int i=0; i<meteorsToSpawnAtOnce; i++){
         Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
@@ -321,7 +326,7 @@
 }
 
 -(void) loseLevel{
-    int highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    long highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
     if(self.score > highScore){
         [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"HighScore"];
     }
@@ -332,7 +337,7 @@
 -(void) phaseBackground{
     CCNode *backgroundToFade = [backgrounds objectAtIndex:(backgroundIndex-1)];
     backgroundIndex ++;
-    backgroundIndex = MIN(numBackgrounds, backgroundIndex);
+    backgroundIndex = MIN(numBackgroundsToFade, backgroundIndex);
     backgroundToFade.cascadeOpacityEnabled = true;
     [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
     NSArray *toRemove = [backgroundToFade children];
@@ -340,6 +345,7 @@
         child.cascadeOpacityEnabled = true;
         [child scheduleOnce:@selector(removeFromParent) delay:2];
     }
+    [backgroundToFade scheduleOnce:@selector(removeFromParent) delay:3];
 }
 
 -(void) update:(CCTime)delta{

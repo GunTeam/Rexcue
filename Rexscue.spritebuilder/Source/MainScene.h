@@ -22,5 +22,6 @@
 
 @property Boolean soundEffectsOn;
 @property Boolean musicOn;
+@property long numNeedles;
 
 @end

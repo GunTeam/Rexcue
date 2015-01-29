@@ -4,7 +4,11 @@
 
 -(void) didLoadFromCCB{
     if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
+        
+        [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"NumNeedles"];
         [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
     }
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
@@ -33,6 +37,8 @@
         musicPlayer.numberOfLoops = -1;
         [musicPlayer play];
     }
+    
+    self.numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
     
     [self spawnClouds];
 }

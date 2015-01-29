@@ -24,7 +24,7 @@
     CGFloat screenWidth,screenHeight;
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
-    int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE, numBackgrounds,meteorsToSpawnAtOnce,backgroundIndex;
+    int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE, numBackgroundsToFade,meteorsToSpawnAtOnce,backgroundIndex;
     CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
