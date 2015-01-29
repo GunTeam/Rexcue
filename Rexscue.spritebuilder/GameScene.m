@@ -15,7 +15,7 @@
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
-    PROBABILITY_OF_ENEMY_SPAWN = 15; //out of 1000
+    PROBABILITY_OF_ENEMY_SPAWN = 100; //out of 1000
     
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
