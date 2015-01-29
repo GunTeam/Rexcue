@@ -13,7 +13,7 @@
 -(void) didLoadFromCCB{
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
     mittenPrice = 100;
-    hatPrice = 20;
+    hatPrice = 200;
     needleUpgradePrice = 300;
     
     [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
@@ -42,6 +42,7 @@
     }
     _needleButton.visible = false;
     _needleDescription.visible = false;
+    _upgradePrompt.visible = false;
     
     _selector.visible = false;
     
@@ -144,6 +145,7 @@
         }
         CCParticleSystem *select = [dinotypeToSelector objectForKey: dinoType];
         select.visible = false;
+        _upgradePrompt.visible = false;
     }
 
 }
@@ -166,6 +168,7 @@
         }
         CCParticleSystem *select = [dinotypeToSelector objectForKey: dinoType];
         select.visible = false;
+        _upgradePrompt.visible = false;
     }
 
 }
