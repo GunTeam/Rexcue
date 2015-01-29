@@ -58,12 +58,12 @@
 -(void) toggleSoundEffects{
     if(self.soundEffectsOn){
         self.soundEffectsOn = false;
-        [_toggleSoundButton setTitle:@"Turn\rEffects On"];
+        [_toggleSoundButton setTitle:@"Turn\rSounds On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"EffectsOn"];
     }
     else{
         self.soundEffectsOn = true;
-        [_toggleSoundButton setTitle:@"Turn\rEffects Off"];
+        [_toggleSoundButton setTitle:@"Turn\rSounds Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
     }
 }
