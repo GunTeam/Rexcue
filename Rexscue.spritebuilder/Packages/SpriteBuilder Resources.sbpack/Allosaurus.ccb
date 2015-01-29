@@ -1773,7 +1773,7 @@
 						<key>displayName</key>
 						<string>pinkMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_mittens</string>
+						<string>_backmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -3982,8 +3982,6 @@
 										<array/>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 								<key>seqExpanded</key>
 								<true/>
 							</dict>
@@ -5387,7 +5385,7 @@
 						<key>displayName</key>
 						<string>pinkMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_mittens</string>
+						<string>_frontmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -5497,6 +5495,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
