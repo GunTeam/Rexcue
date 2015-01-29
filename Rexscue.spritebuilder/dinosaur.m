@@ -218,7 +218,8 @@
     [self playHurtSound];
 
     [self.animationManager runAnimationsForSequenceNamed:@"HatOff"];
-    _hat.visible = false;
+    _hat.cascadeOpacityEnabled = true;
+    [_hat runAction:[CCActionFadeOut actionWithDuration:1]];
 }
 
 -(Boolean) hurt{

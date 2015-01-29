@@ -15,6 +15,8 @@
     [super didLoadFromCCB];
     
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"AllosaurusMittens"];
+    self.hasHat = [[NSUserDefaults standardUserDefaults]boolForKey:@"AllosaurusHat"];
+
     self.levelMultiplier = 1;
     self.isEnemy = false;
     

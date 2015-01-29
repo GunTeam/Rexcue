@@ -15,6 +15,8 @@
     [super didLoadFromCCB];
 
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"TriceratopsMittens"];
+    self.hasHat = [[NSUserDefaults standardUserDefaults]boolForKey:@"TriceratopsHat"];
+
     self.levelMultiplier = 1;
     self.isEnemy = false;
     

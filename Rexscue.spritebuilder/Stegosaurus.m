@@ -15,6 +15,8 @@
     [super didLoadFromCCB];
     
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"StegosaurusMittens"];
+    self.hasHat = [[NSUserDefaults standardUserDefaults]boolForKey:@"StegosaurusHat"];
+    
     self.levelMultiplier = 1;
     self.isEnemy = false;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
@@ -55,10 +57,10 @@
     
     [self.animationManager runAnimationsForSequenceNamed:@"SpikeOff"];
     _spikes.cascadeOpacityEnabled = true;
-    [_spikes runAction:[CCActionFadeOut actionWithDuration:2]];
+    [_spikes runAction:[CCActionFadeOut actionWithDuration:1]];
     _spikes1.cascadeOpacityEnabled = true;
-    [_spikes1 runAction:[CCActionFadeOut actionWithDuration:2]];
-    [self scheduleOnce:@selector(invisibleSpikes) delay:2];
+    [_spikes1 runAction:[CCActionFadeOut actionWithDuration:1]];
+    [self scheduleOnce:@selector(invisibleSpikes) delay:1];
     self.hasSpikes = false;
 }
 

@@ -18,6 +18,7 @@
     self.isEnemy = false;
     
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"PterodactylMittens"];
+    self.hasHat = [[NSUserDefaults standardUserDefaults]boolForKey:@"PterodactylHat"];
     
     //last sound is the panicking sound
     sounds = @[@"uhOh2.mp3", @"MeteorHit2.mp3",@"UhHahh.mp3", @"whyMe.mp3",@"run.mp3"];
