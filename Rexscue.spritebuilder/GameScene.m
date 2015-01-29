@@ -19,6 +19,10 @@
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
     meteorsToSpawnAtOnce = 1;
+    backgroundIndex = 1;
+    
+    backgrounds = @[_background1,_background2,_background3,_background4,_background5,_background6];
+    numBackgrounds = [backgrounds count];
     
     self.multiplier = 1;
     
@@ -210,8 +214,12 @@
 }
 
 -(void) spawnMeteor:(CCTime) dt{
+    NSString *ccbFileString = @"Meteor";
+    if(backgroundIndex == 2){
+        ccbFileString = @"Meteor";
+    }
     for(int i=0; i<meteorsToSpawnAtOnce; i++){
-        Meteor *meteor = (Meteor *)[CCBReader load:@"Meteor"];
+        Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
         meteor.scale = meteorScale;
         meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
         [_physicsNode addChild:meteor];
@@ -321,6 +329,19 @@
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameOver"]];
 }
 
+-(void) phaseBackground{
+    CCNode *backgroundToFade = [backgrounds objectAtIndex:(backgroundIndex-1)];
+    backgroundIndex ++;
+    backgroundIndex = MIN(numBackgrounds, backgroundIndex);
+    backgroundToFade.cascadeOpacityEnabled = true;
+    [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
+    NSArray *toRemove = [backgroundToFade children];
+    for(CCNode *child in toRemove){
+        child.cascadeOpacityEnabled = true;
+        [child scheduleOnce:@selector(removeFromParent) delay:2];
+    }
+}
+
 -(void) update:(CCTime)delta{
     if(numDinos == 0){
         [self loseLevel];
@@ -365,6 +386,7 @@
         level += 1;
         if(level%5 == 0){
             [self spawnEnemyDino];
+            [self phaseBackground];
         }
         
         if(level%4 == 1){
