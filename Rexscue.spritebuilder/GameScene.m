@@ -10,11 +10,11 @@
 
 @implementation GameScene
 
-@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale;
+@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode;
 
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
-    SECONDS_TO_LEVEL_UPDATE = 20;
+    SECONDS_TO_LEVEL_UPDATE = 5;
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
@@ -26,6 +26,7 @@
     numBackgroundsToFade = [backgrounds count]-1;
     
     self.multiplier = 1;
+    self.sandboxMode = [[NSUserDefaults standardUserDefaults]boolForKey:@"SandboxMode"];
     
     ourDinos = [[NSMutableArray alloc] init];
     
@@ -405,17 +406,24 @@
             [self phaseBackground];
         }
         
-        if(level%4 == 1){
-            [self decreaseMeteorSize];
-        }
-        else if(level%4 == 2){
-            [self increaseMeteorSpeed];
-        }
-        else if(level%4 == 3){
-            [self increaseMeteorFrequency];
+        if(!self.sandboxMode){
+            if(level%4 == 1){
+                [self decreaseMeteorSize];
+            }
+            else if(level%4 == 2){
+                [self increaseMeteorSpeed];
+            }
+            else if(level%4 == 3){
+                [self increaseMeteorFrequency];
+            }
+            else{
+                [self increaseMeteorsToSpawnAtOnce];
+            }
         }
         else{
-            [self increaseMeteorsToSpawnAtOnce];
+            if(level%5 == 0){
+                [self increaseMeteorsToSpawnAtOnce];
+            }
         }
         
     }

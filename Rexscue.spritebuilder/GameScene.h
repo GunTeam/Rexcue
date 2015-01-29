@@ -44,6 +44,7 @@
 @property int meteorHittingGroundBonus;
 @property double secondsBetweenMeteors;
 @property Boolean soundEffectsOn;
+@property Boolean sandboxMode;
 @property double meteorScale;
 @property int multiplier;
 
