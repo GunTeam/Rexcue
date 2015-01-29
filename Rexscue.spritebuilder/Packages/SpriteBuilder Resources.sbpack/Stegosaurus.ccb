@@ -3774,7 +3774,7 @@
 						<key>displayName</key>
 						<string>pinkHat</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_hat</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -3884,6 +3884,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>
