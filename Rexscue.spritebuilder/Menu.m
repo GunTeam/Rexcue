@@ -38,10 +38,10 @@
     }
     
     if(!self.sandboxMode){
-        [_toggleSandboxButton setTitle:@"Turn\rEasy\rOn"];
+        [_toggleSandboxButton setTitle:@"Turn\rEasy On"];
     }
     else{
-        [_toggleSandboxButton setTitle:@"Turn\rEasy\rOff"];
+        [_toggleSandboxButton setTitle:@"Turn\rEasy Off"];
     }
     
     [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
