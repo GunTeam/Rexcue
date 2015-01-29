@@ -94,6 +94,9 @@
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         [musicPlayer play];
     }
+    
+    [[CCDirector sharedDirector] resume];
+
 }
 
 

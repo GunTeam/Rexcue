@@ -27,7 +27,6 @@
     [[CCDirector sharedDirector] popScene];
 }
 
-
 -(void) backToMain{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
