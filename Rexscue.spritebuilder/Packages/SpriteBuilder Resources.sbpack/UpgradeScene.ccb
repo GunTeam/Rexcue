@@ -3551,7 +3551,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>A hat makes your dino more likely to spawn!</string>
+							<string>A hat lets your dino take another hit!</string>
 							<false/>
 						</array>
 					</dict>
@@ -3687,6 +3687,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -6625,8 +6627,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
