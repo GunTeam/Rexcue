@@ -69,8 +69,6 @@
 
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
-//    int randomSound = arc4random()%(sounds.count-1);
-//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -79,8 +77,6 @@
 
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
-//    int randomSound = arc4random()%(sounds.count-1);
-//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
@@ -89,24 +85,15 @@
 
 
 -(Boolean) hurt{
-//  if(self.isWearingTheirHat){
-//      [self loseHat];
-//      return false;
-//  }
-//    else if(self.isWearingTheirMittens){
-//        [self loseMittens];
-//        return false;
-//    }
-//    else if(self.hasSpikes){
-//        [self loseSpikes];
-//        return false;
-//    }
-//    else{
-//        [self die];
-//        return true;
-//    }
-
-    if(self.hasSpikes){
+    if(self.isWearingTheirHat){
+        [self loseHat];
+        return false;
+    }
+    else if(self.isWearingTheirMittens){
+        [self loseMittens];
+        return false;
+    }
+    else if(self.hasSpikes){
         [self loseSpikes];
         return false;
     }
@@ -114,6 +101,15 @@
         [self die];
         return true;
     }
+
+//    if(self.hasSpikes){
+//        [self loseSpikes];
+//        return false;
+//    }
+//    else{
+//        [self die];
+//        return true;
+//    }
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{

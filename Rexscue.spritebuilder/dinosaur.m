@@ -60,23 +60,23 @@
     audioPlayer =  [OALSimpleAudio sharedInstance];
     audioPlayer.effectsVolume = 1.5;
     
-    //_frontMitten.visible = false;
-    //_backMitten.visible = false;
-    //_hat.visible = false;
+    _frontMitten.visible = false;
+    _backMitten.visible = false;
+    _hat.visible = false;
     
-//    if(self.hasMittens){
-//        [self putOnMittens];
-//    }
-//    else{
-//        self.isWearingTheirMittens = false;
-//    }
-//    
-//    if(self.hasHat){
-//        [self putOnHat];
-//    }
-//    else{
-//        self.isWearingTheirHat = false;
-//    }
+    if(self.hasMittens){
+        [self putOnMittens];
+    }
+    else{
+        self.isWearingTheirMittens = false;
+    }
+    
+    if(self.hasHat){
+        [self putOnHat];
+    }
+    else{
+        self.isWearingTheirHat = false;
+    }
 }
 
 -(void) playHurtSound{
@@ -126,9 +126,7 @@
 
 -(void) knockback{
     int knockbackAmount = self.contentSize.width;
-//    int randomSound = arc4random()%(sounds.count-1);
-//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
-    
+
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-(0.5)*knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
@@ -136,9 +134,7 @@
 
 -(void) knockforward{
     int knockbackAmount = self.contentSize.width;
-//    int randomSound = arc4random()%(sounds.count-1);
-//    [audioPlayer playEffect:[sounds objectAtIndex:randomSound]];
-//    
+
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp((0.5)*knockbackAmount,0)];
     [self runAction:mover];
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
@@ -208,40 +204,40 @@
 
 -(void) loseMittens{
     self.isWearingTheirMittens =  false;
-//    [self playHurtSound];
-//    
-//    [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
-//    _frontMitten.cascadeOpacityEnabled = true;
-//    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
-//    _backMitten.cascadeOpacityEnabled = true;
-//    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
+    [self playHurtSound];
+    
+    [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
+    _frontMitten.cascadeOpacityEnabled = true;
+    [_frontMitten runAction:[CCActionFadeOut actionWithDuration:2]];
+    _backMitten.cascadeOpacityEnabled = true;
+    [_backMitten runAction:[CCActionFadeOut actionWithDuration:2]];
 }
 
 -(void) loseHat{
     self.isWearingTheirHat =  false;
-    //    [self playHurtSound];
-    //
-    //    [self.animationManager runAnimationsForSequenceNamed:@"HatOff"];
-    //    _hat.visible = false;
+    [self playHurtSound];
+
+    [self.animationManager runAnimationsForSequenceNamed:@"HatOff"];
+    _hat.visible = false;
 }
 
 -(Boolean) hurt{
-//  if(self.isWearingTheirHat){
-//      [self loseHat];
-//      return false;
-//  }
-//    else if(self.isWearingTheirMittens){
-//            [self loseMittens];
-//            return false;
-//        }
-//        else{
-//            [self die];
-//            return true;
-//        }
-
-    
-    [self die];
-    return true;
+    if(self.isWearingTheirHat){
+        [self loseHat];
+        return false;
+    }
+    else if(self.isWearingTheirMittens){
+        [self loseMittens];
+        return false;
+    }
+    else{
+        [self die];
+        return true;
+    }
+//
+//    
+//    [self die];
+//    return true;
 }
 
 -(void) update:(CCTime)delta{
@@ -287,13 +283,13 @@
 }
 
 -(void) putOnMittens{
-    //_frontMitten.visible = true;
-    //_backMitten.visible = true;
+    _frontMitten.visible = true;
+    _backMitten.visible = true;
     self.isWearingTheirMittens = true;
 }
 
 -(void) putOnHat{
-    //_hat.visible = true;
+    _hat.visible = true;
     self.isWearingTheirHat = true;
 }
 

@@ -12,7 +12,7 @@
 @implementation Upgrades
 -(void) didLoadFromCCB{
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
-    mittenPrice = 40;
+    mittenPrice = 100;
     hatPrice = 200;
     needleUpgradePrice = 300;
     
@@ -135,12 +135,15 @@
 
     [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
     mittenSelected = false;
+    _selector.visible = false;
     
     for (dinosaur *whichDino in ourdinos){
         NSString *dinoType = [whichDino getType];
         if([dino isEqualToString:dinoType]){
             [whichDino putOnMittens];
         }
+        CCParticleSystem *select = [dinotypeToSelector objectForKey: dinoType];
+        select.visible = false;
     }
 
 }
@@ -154,12 +157,15 @@
     
     [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
     hatSelected = false;
+    _selector.visible = false;
     
     for (dinosaur *whichDino in ourdinos){
         NSString *dinoType = [whichDino getType];
         if([dino isEqualToString:dinoType]){
             [whichDino putOnHat];
         }
+        CCParticleSystem *select = [dinotypeToSelector objectForKey: dinoType];
+        select.visible = false;
     }
 
 }

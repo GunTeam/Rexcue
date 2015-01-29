@@ -20,7 +20,7 @@
     NSArray *sounds;
     NSArray *evilSounds;
     Boolean soundsOn;
-    //CCNode *_frontMitten, *_backMitten, *_hat;
+    CCNode *_frontMitten, *_backMitten, *_hat;
 }
 
 -(void) didLoadFromCCB;
@@ -44,6 +44,8 @@
 -(void) playHurtSound;
 -(void) putOnMittens;
 -(void) putOnHat;
+-(void) loseHat;
+-(void) loseMittens;
 -(NSString*) getType;
 
 @property float health;
