@@ -14,6 +14,7 @@
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
     
+    self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"TrexMittens"];
     //last sound is the panicking sound
     sounds = @[@"help.mp3", @"owAndStuff.mp3",@"WhaOh.mp3",@"ImPanicking2.mp3"];
     

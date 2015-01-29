@@ -14,6 +14,7 @@
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
 
+    self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"TriceratopsMittens"];
     self.levelMultiplier = 1;
     self.isEnemy = false;
     

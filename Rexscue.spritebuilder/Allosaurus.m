@@ -13,7 +13,8 @@
 
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
-
+    
+    self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"AllosaurusMittens"];
     self.levelMultiplier = 1;
     self.isEnemy = false;
     

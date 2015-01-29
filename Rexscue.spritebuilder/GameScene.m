@@ -301,7 +301,7 @@
     [self addChild:label];
     
     [meteor removeFromParent];
-    Boolean killed = [dinosaur hitByMeteor];
+    Boolean killed = [dinosaur hurt];
     if(killed){
         numDinos -= 1;
         [ourDinos removeObject:dinosaur];

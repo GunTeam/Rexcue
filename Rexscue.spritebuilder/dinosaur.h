@@ -20,6 +20,7 @@
     NSArray *sounds;
     NSArray *evilSounds;
     Boolean soundsOn;
+    //CCNode *_mittens;
 }
 
 -(void) didLoadFromCCB;
@@ -36,7 +37,7 @@
 -(void) setHealthLabel;
 -(void) reverseDinoDirection;
 -(void) setHealthInvisible;
--(Boolean) hitByMeteor;
+-(Boolean) hurt;
 -(void) knockforward;
 -(void) panic;
 -(void) playAttackSound;
@@ -57,5 +58,7 @@
 @property double levelMultiplier;
 @property int direction;
 @property int turnWait;
+@property Boolean hasMittens;
+@property Boolean isWearingTheirMittens;
 
 @end

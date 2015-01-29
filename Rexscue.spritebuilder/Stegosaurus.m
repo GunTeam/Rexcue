@@ -13,7 +13,8 @@
 
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
-
+    
+    self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"StegosaurusMittens"];
     self.levelMultiplier = 1;
     self.isEnemy = false;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
@@ -63,7 +64,20 @@
 }
 
 
--(Boolean) hitByMeteor{
+-(Boolean) hurt{
+//    if(self.isWearingTheirMittens){
+//        [self loseMittens];
+//        return false;
+//    }
+//    else if(self.hasSpikes){
+//        [self loseSpikes];
+//        return false;
+//    }
+//    else{
+//        [self die];
+//        return true;
+//    }
+
     if(self.hasSpikes){
         [self loseSpikes];
         return false;

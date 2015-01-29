@@ -17,6 +17,8 @@
     self.levelMultiplier = 1;
     self.isEnemy = false;
     
+    self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"PterodactylMittens"];
+    
     //last sound is the panicking sound
     sounds = @[@"uhOh2.mp3", @"MeteorHit2.mp3",@"UhHahh.mp3", @"whyMe.mp3",@"run.mp3"];
 

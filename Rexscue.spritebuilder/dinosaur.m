@@ -19,7 +19,7 @@
     
     self.direction = 0;
     self.turnWait = 0;
-    
+
     soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     
     evilSounds = @[@"rawr2.mp3", @"grr.mp3",@"rawr.mp3", @"growl.mp3",@"grrAndStuff.mp3"];
@@ -40,6 +40,9 @@
     self.killBonus = 100;
     self.isStationary = false;
     
+    self.hasMittens = false;
+    self.isWearingTheirMittens = false;
+
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
@@ -56,6 +59,11 @@
     
     audioPlayer =  [OALSimpleAudio sharedInstance];
     audioPlayer.effectsVolume = 1.5;
+    
+    if(self.hasMittens){
+        //_mittens.visible = true;
+        self.isWearingTheirMittens = true;
+    }
 }
 
 -(void) playHurtSound{
@@ -187,7 +195,26 @@
     [self reverseHealthLabel];
 }
 
--(Boolean) hitByMeteor{
+-(void) loseMittens{
+    self.isWearingTheirMittens =  false;
+//    [self playHurtSound];
+//    
+//    [self.animationManager runAnimationsForSequenceNamed:@"MittensOff"];
+//    _mittens.visible = false;
+//    self.health -= MAX_HEALTH/2.;
+//    [self setHealthLabel];
+}
+
+-(Boolean) hurt{
+//    if(self.isWearingTheirMittens){
+//            [self loseMittens];
+//            return false;
+//        }
+//        else{
+//            [self die];
+//            return true;
+//        }
+    
     [self die];
     return true;
 }
