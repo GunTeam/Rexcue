@@ -15,6 +15,8 @@
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
+    PROBABILITY_OF_ENEMY_SPAWN = 15; //out of 1000
+    
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
     meteorScale = 0.5;
@@ -161,8 +163,9 @@
 -(void) spawnEnemyDino{
     
     dinosaur *newDino;
-    int randSpawnFlag = 0;//arc4random()%4;
-    double positionX = 0; //arc4random()%(int)screenWidth;
+    newDino.physicsBody.collisionGroup = @"meteors";
+    int randSpawnFlag = arc4random()%4;
+    double positionX = arc4random()%(int)screenWidth;
     double positionY = screenHeight;
     
     double destinationY = -(7./8)*(screenHeight);
@@ -220,26 +223,34 @@
 }
 
 -(void) spawnMeteor:(CCTime) dt{
-    NSString *ccbFileString = @"Meteor";
-    if(meteorIndex == 2){
-        ccbFileString = @"IceMeteor";
+    int randSpawnFlag = arc4random()%1000;
+    if(randSpawnFlag<= PROBABILITY_OF_ENEMY_SPAWN){
+        for(int i=0; i<meteorsToSpawnAtOnce; i++){
+            [self spawnEnemyDino];
+        }
     }
-    else if(meteorIndex == 4){
-        ccbFileString = @"ElectricMeteor";
-    }
-    else if(meteorIndex == 5){
-        ccbFileString = @"NatureMeteor";
-    }
-    else if(meteorIndex >= 6){
-        ccbFileString = @"RainbowMeteor";
-    }
-    for(int i=0; i<meteorsToSpawnAtOnce; i++){
-        Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
-        meteor.scale = meteorScale;
-        meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
-        [_physicsNode addChild:meteor];
-        [meteor setSpeed: meteorSpeed];
-        [meteor launch];
+    else{
+        NSString *ccbFileString = @"Meteor";
+        if(meteorIndex == 2){
+            ccbFileString = @"IceMeteor";
+        }
+        else if(meteorIndex == 4){
+            ccbFileString = @"ElectricMeteor";
+        }
+        else if(meteorIndex == 5){
+            ccbFileString = @"NatureMeteor";
+        }
+        else if(meteorIndex >= 6){
+            ccbFileString = @"RainbowMeteor";
+        }
+        for(int i=0; i<meteorsToSpawnAtOnce; i++){
+            Meteor *meteor = (Meteor *)[CCBReader load:ccbFileString];
+            meteor.scale = meteorScale;
+            meteor.position = CGPointMake(arc4random()%(int)screenWidth, screenHeight+screenHeight/4);
+            [_physicsNode addChild:meteor];
+            [meteor setSpeed: meteorSpeed];
+            [meteor launch];
+        }
     }
 }
 
@@ -401,6 +412,10 @@
     
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
+        if(level == 2){
+            [self spawnEnemyDino];
+        }
+        
         if(level%5 == 0){
             [self spawnEnemyDino];
             [self phaseBackground];
