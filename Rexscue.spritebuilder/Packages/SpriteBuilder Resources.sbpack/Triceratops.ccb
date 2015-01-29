@@ -618,7 +618,7 @@
 						<key>displayName</key>
 						<string>greenMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_backmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -4061,7 +4061,7 @@
 						<key>displayName</key>
 						<string>greenMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_frontmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -4164,6 +4164,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

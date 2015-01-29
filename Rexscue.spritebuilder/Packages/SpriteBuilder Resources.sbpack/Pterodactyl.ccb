@@ -1147,7 +1147,7 @@
 						<key>displayName</key>
 						<string>BlueMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_mitten</string>
+						<string>_backmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -2469,7 +2469,7 @@
 						<key>displayName</key>
 						<string>BlueMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string>_mitten</string>
+						<string>_frontmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -2579,6 +2579,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 						<key>seqExpanded</key>
 						<true/>
 					</dict>

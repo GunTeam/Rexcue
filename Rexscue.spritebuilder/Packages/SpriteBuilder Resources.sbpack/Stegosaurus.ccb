@@ -313,7 +313,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>124.73332977294922</real>
+							<real>134.26666259765625</real>
 							<real>21</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -823,7 +823,7 @@
 						<key>displayName</key>
 						<string>OrangeMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_backmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -958,8 +958,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>77.666664123535156</real>
-							<real>21.933332443237305</real>
+							<real>86.333335876464844</real>
+							<real>21.066667556762695</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1691,8 +1691,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>110.93333435058594</real>
-							<real>55.866664886474609</real>
+							<real>110.06666564941406</real>
+							<real>54.133335113525391</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1730,7 +1730,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-0.20232661068439484</real>
+						<real>-2.8325722217559814</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2666,8 +2666,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>38.200000762939453</real>
-							<real>44.866664886474609</real>
+							<real>40.799999237060547</real>
+							<real>43.133335113525391</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2705,7 +2705,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-0.55868709087371826</real>
+						<real>-7.8216185569763184</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3796,7 +3796,7 @@
 				<key>displayName</key>
 				<string>DarkSpikes</string>
 				<key>memberVarAssignmentName</key>
-				<string>_spikes1</string>
+				<string>_darkSpikes</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -3821,8 +3821,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>129.93333435058594</real>
-							<real>81.733329772949219</real>
+							<real>129.06666564941406</real>
+							<real>78.266670227050781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3860,7 +3860,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.1361193060874939</real>
+						<real>1.905670166015625</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3916,8 +3916,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4963,7 +4961,7 @@
 				<key>displayName</key>
 				<string>BrightSpikes</string>
 				<key>memberVarAssignmentName</key>
-				<string>_spikes</string>
+				<string>_brightSpikes</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -4988,8 +4986,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>130.06666564941406</real>
-							<real>80.733329772949219</real>
+							<real>130.93333435058594</real>
+							<real>77.266670227050781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5027,7 +5025,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.16911095380783081</real>
+						<real>2.3675532341003418</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5889,8 +5887,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>192.66667175292969</real>
-							<real>41.666667938232422</real>
+							<real>188.33332824707031</real>
+							<real>37.333332061767578</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5928,7 +5926,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.44065207242965698</real>
+						<real>6.16912841796875</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -6399,7 +6397,7 @@
 						<key>displayName</key>
 						<string>OrangeMitten</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>_frontmitten</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
 						<key>properties</key>
@@ -6502,6 +6500,8 @@
 								<array/>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -6534,8 +6534,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>88.199996948242188</real>
-							<real>18.200000762939453</real>
+							<real>77.800003051757812</real>
+							<real>20.799999237060547</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6885,7 +6885,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>137.53334045410156</real>
+							<real>118.46666717529297</real>
 							<real>20</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -7262,7 +7262,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.033333335071802139</real>
+			<real>0.53333336114883423</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
