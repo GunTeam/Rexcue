@@ -15,7 +15,7 @@
 -(void) didLoadFromCCB {
     NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
-    PROBABILITY_OF_ENEMY_SPAWN = 100; //out of 1000
+    PROBABILITY_OF_ENEMY_SPAWN = 0; //out of 1000
     
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
@@ -413,11 +413,11 @@
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
         if(level == 2){
-            [self spawnEnemyDino];
+//            [self spawnEnemyDino];
         }
         
         if(level%5 == 0){
-            [self spawnEnemyDino];
+//            [self spawnEnemyDino];
             [self phaseBackground];
         }
         

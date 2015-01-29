@@ -176,6 +176,8 @@
         CCParticleSystem *select = [dinotypeToSelector objectForKey:[thisdino getType]];
         select.visible = false;
         _upgradePrompt.visible = false;
+        
+        [thisdino putOnMittens];
     }
 
 }
