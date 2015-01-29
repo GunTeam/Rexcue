@@ -1393,8 +1393,6 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -6008,8 +6006,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>129.51676940917969</real>
-							<real>219.99363708496094</real>
+							<real>137.81117248535156</real>
+							<real>226.21444702148438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6033,8 +6031,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.75</real>
+							<real>0.75</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -6057,8 +6055,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>77</real>
+							<real>87</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -6091,7 +6089,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Mitten</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -6103,7 +6101,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/purpleGlove.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6114,7 +6112,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>art/Clothing/purpleGlove.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6138,7 +6136,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/purpleGlove.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6157,7 +6155,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/purpleGlove.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6359,8 +6357,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>2.5</real>
+							<real>2.5</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -6383,8 +6381,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>21.5</real>
+							<real>20.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -6417,7 +6415,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Hat</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -6429,7 +6427,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/blueHat.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6440,7 +6438,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>art/Clothing/blueHat.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6464,7 +6462,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/blueHat.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6483,7 +6481,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Clothing/blueHat.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6627,6 +6625,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
