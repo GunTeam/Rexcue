@@ -23,7 +23,7 @@
         screenHeight = screenHeight/2;
     }
     
-    NSArray *dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
+    dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
     
     for(dinosaur *dino in dinos){
         [dino setHealthInvisible];
@@ -39,6 +39,8 @@
     }
     
     self.numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
+    
+    _smopocalypse.visible = false;
     
     [self spawnClouds];
 }
@@ -69,7 +71,20 @@
 }
 
 
+//-(void) playGame{
+//    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
+//}
+
 -(void) playGame{
+    [self.animationManager runAnimationsForSequenceNamed:@"Apocalypse"];
+    _smopocalypse.visible = true;
+    for(dinosaur *dino in dinos){
+        [dino panic];
+    }
+    [self scheduleOnce:@selector(play) delay:1];
+}
+
+-(void) play{
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
 }
 

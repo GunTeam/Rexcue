@@ -18,6 +18,8 @@
     CCButton *playButton, *_menuButton;
     OALAudioTrack *musicPlayer;
     Cloud *_cloud1, *_cloud2, *_cloud3;
+    CCParticleSystem *_smopocalypse;
+    NSArray *dinos;
 }
 
 @property Boolean soundEffectsOn;
