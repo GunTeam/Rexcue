@@ -67,6 +67,6 @@
 @property Boolean hasHat;
 @property Boolean isWearingTheirMittens;
 @property Boolean isWearingTheirHat;
-
+@property int tapsToKillEnemy;
 
 @end

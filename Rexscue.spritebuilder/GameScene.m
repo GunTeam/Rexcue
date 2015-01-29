@@ -165,7 +165,7 @@
     dinosaur *newDino;
     newDino.physicsBody.collisionGroup = @"meteors";
     int randSpawnFlag = arc4random()%4;
-    double positionX = arc4random()%(int)screenWidth;
+    double positionX = (1.00/2)*screenWidth;//arc4random()%(int)screenWidth;
     double positionY = screenHeight;
     
     double destinationY = -(7./8)*(screenHeight);
@@ -208,8 +208,8 @@
         newDino.scaleX *= -1;
         [newDino reverseHealthLabel];
     }
-    newDino.physicsBody.collisionType = @"evilDino";
-    newDino.physicsBody.collisionGroup = @"evilDinos";
+    newDino.physicsBody.collisionType = @"meteor";
+    newDino.physicsBody.collisionGroup = @"meteors";
     [newDino setIsEnemy:true];
     [newDino setHealthInvisible];
     [newDino setSpeed:0.005];
@@ -218,6 +218,8 @@
     [newDino runAction:mover];
     
     [newDino playAttackSound];
+    
+    [newDino setTapsToKillEnemy:backgroundIndex];
     
     [_physicsNode addChild:newDino];
 }
@@ -419,6 +421,7 @@
         if(level%5 == 0){
 //            [self spawnEnemyDino];
             [self phaseBackground];
+            [self doBoss];
         }
         
         if(!self.sandboxMode){
@@ -452,6 +455,15 @@
     [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[CCDirector sharedDirector] pause];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Paused"]];
+}
+
+-(void) doBoss{
+    [self spawnEnemyDino];
+    //popup
+    //all dinos panic
+    //dino hurts
+    //stop meteors
+    
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{

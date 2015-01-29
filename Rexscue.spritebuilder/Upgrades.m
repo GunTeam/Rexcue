@@ -11,9 +11,10 @@
 
 @implementation Upgrades
 -(void) didLoadFromCCB{
+    
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
-    mittenPrice = 100;
-    hatPrice = 200;
+    mittenPrice = 5;
+    hatPrice = 5;
     needleUpgradePrice = 300;
     
     [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
@@ -54,6 +55,7 @@
     }
     
 }
+
 -(void) mittenUpgrade{
     if(!mittenSelected){
         if(numNeedles > mittenPrice){
@@ -170,8 +172,11 @@
         [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
 
         [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
-        mittenSelected = false;
-        _selector.visible = false;
+        
+        if(numNeedles < mittenPrice){
+            mittenSelected = false;
+            _selector.visible = false;
+        }
         
         CCParticleSystem *select = [dinotypeToSelector objectForKey:[thisdino getType]];
         select.visible = false;
@@ -200,12 +205,17 @@
         [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
         
         [[NSUserDefaults standardUserDefaults] setInteger:numNeedles forKey:@"NumNeedles"];
-        hatSelected = false;
         
         CCParticleSystem *select = [dinotypeToSelector objectForKey:[thisdino getType]];
         select.visible = false;
         _upgradePrompt.visible = false;
-
+        
+        if(numNeedles < hatPrice){
+            hatSelected = false;
+            _selector.visible = false;
+        }
+        
+        [thisdino putOnHat];
     }
 
 }
@@ -259,5 +269,19 @@
     CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:.1];
     [[CCDirector sharedDirector] popSceneWithTransition:transition];
 }
+
+-(void) resetUpgrades{
+    CCLOG(@"RESETTING");
+    for (dinosaur *whichDino in ourdinos){
+        NSString *dinoType = [whichDino getType];
+        NSString *key = [NSString stringWithFormat:@"%@Mittens", dinoType];
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:key];
+        key = [NSString stringWithFormat:@"%@Hat", dinoType];
+        [[NSUserDefaults standardUserDefaults] setBool:false forKey:key];
+    }
+    
+}
+
+
 
 @end

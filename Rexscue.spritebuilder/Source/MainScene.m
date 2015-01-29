@@ -3,6 +3,7 @@
 @implementation MainScene
 
 -(void) didLoadFromCCB{
+    
     if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
         
         [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"NumNeedles"];
@@ -105,6 +106,5 @@
     [[CCDirector sharedDirector] resume];
 
 }
-
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary, tapsToKillEnemy;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
@@ -20,6 +20,8 @@
     self.direction = 0;
     self.turnWait = 0;
 
+    tapsToKillEnemy = 1;
+    
     soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     
     evilSounds = @[@"rawr2.mp3", @"grr.mp3",@"rawr.mp3", @"growl.mp3",@"grrAndStuff.mp3"];
@@ -269,9 +271,16 @@
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
     if(self.isEnemy){
-//        GameScene *gameScene = (GameScene *)self.parent.parent;
-//        [gameScene addPointsToScore: (int)(killBonus) ];
-        [self removeFromParent];
+        if(tapsToKillEnemy == 0){
+            [self die];
+        }
+        else{
+            tapsToKillEnemy -= 1;
+        }
+        
+////        GameScene *gameScene = (GameScene *)self.parent.parent;
+////        [gameScene addPointsToScore: (int)(killBonus) ];
+//        [self removeFromParent];
     }
 }
 
@@ -284,12 +293,14 @@
 }
 
 -(void) putOnMittens{
+    self.hasMittens = true;
     _frontMitten.visible = true;
     _backMitten.visible = true;
     self.isWearingTheirMittens = true;
 }
 
 -(void) putOnHat{
+    self.hasHat = true;
     _hat.visible = true;
     self.isWearingTheirHat = true;
 }
