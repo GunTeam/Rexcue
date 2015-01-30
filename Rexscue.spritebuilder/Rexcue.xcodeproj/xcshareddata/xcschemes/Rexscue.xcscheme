@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
                BuildableName = "Rexscue.app"
-               BlueprintName = "Rexscue iOS"
-               ReferencedContainer = "container:Rexscue.xcodeproj">
+               BlueprintName = "Rexcue iOS"
+               ReferencedContainer = "container:Rexcue.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Rexscue.app"
-            BlueprintName = "Rexscue iOS"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BlueprintName = "Rexcue iOS"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Rexscue.app"
-            BlueprintName = "Rexscue iOS"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BlueprintName = "Rexcue iOS"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B77F1B2D17B978D7009739AE"
             BuildableName = "Rexscue.app"
-            BlueprintName = "Rexscue iOS"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BlueprintName = "Rexcue iOS"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

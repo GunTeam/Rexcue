@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "927F6198196C771E000F43EF"
-               BuildableName = "Rexscue Android.app"
-               BlueprintName = "Rexscue Android"
-               ReferencedContainer = "container:Rexscue.xcodeproj">
+               BuildableName = "Rexcue Android.app"
+               BlueprintName = "Rexcue Android"
+               ReferencedContainer = "container:Rexcue.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "927F6198196C771E000F43EF"
-            BuildableName = "Rexscue Android.app"
-            BlueprintName = "Rexscue Android"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Android.app"
+            BlueprintName = "Rexcue Android"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "927F6198196C771E000F43EF"
-            BuildableName = "Rexscue Android.app"
-            BlueprintName = "Rexscue Android"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Android.app"
+            BlueprintName = "Rexcue Android"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "927F6198196C771E000F43EF"
-            BuildableName = "Rexscue Android.app"
-            BlueprintName = "Rexscue Android"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Android.app"
+            BlueprintName = "Rexcue Android"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

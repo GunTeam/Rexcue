@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7A4035FE19DDEE84007B6E8F"
-               BuildableName = "Rexscue Mac.app"
-               BlueprintName = "Rexscue Mac"
-               ReferencedContainer = "container:Rexscue.xcodeproj">
+               BuildableName = "Rexcue Mac.app"
+               BlueprintName = "Rexcue Mac"
+               ReferencedContainer = "container:Rexcue.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A4035FE19DDEE84007B6E8F"
-            BuildableName = "Rexscue Mac.app"
-            BlueprintName = "Rexscue Mac"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Mac.app"
+            BlueprintName = "Rexcue Mac"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A4035FE19DDEE84007B6E8F"
-            BuildableName = "Rexscue Mac.app"
-            BlueprintName = "Rexscue Mac"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Mac.app"
+            BlueprintName = "Rexcue Mac"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A4035FE19DDEE84007B6E8F"
-            BuildableName = "Rexscue Mac.app"
-            BlueprintName = "Rexscue Mac"
-            ReferencedContainer = "container:Rexscue.xcodeproj">
+            BuildableName = "Rexcue Mac.app"
+            BlueprintName = "Rexcue Mac"
+            ReferencedContainer = "container:Rexcue.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

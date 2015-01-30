@@ -237,7 +237,7 @@
 		5B121033197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/Android/Info.plist; sourceTree = "<group>"; };
 		5B121034197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/iOS/Info.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
-		7A4035FF19DDEE84007B6E8F /* Rexscue Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rexscue Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4035FF19DDEE84007B6E8F /* Rexcue Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rexcue Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A40360219DDEE84007B6E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/Mac/Info.plist; sourceTree = "<group>"; };
 		7A40360319DDEE84007B6E8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/Platforms/Mac/main.m; sourceTree = "<group>"; };
 		7A40360519DDEE84007B6E8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/Platforms/Mac/AppDelegate.h; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		7AFCD5DB19E9BD9F00BCCCDA /* cocos2d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cocos2d.h; path = "Source/libs/cocos2d-iphone/cocos2d/cocos2d.h"; sourceTree = "<group>"; };
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		927F61BF196C771E000F43EF /* Rexscue Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rexscue Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		927F61BF196C771E000F43EF /* Rexcue Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rexcue Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		B73789861807631A0076A88C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = Source/Prefix.pch; sourceTree = SOURCE_ROOT; };
 		B7378992180767190076A88C /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Source/MainScene.h; sourceTree = "<group>"; };
 		B7378993180767190076A88C /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Source/MainScene.m; sourceTree = "<group>"; };
-		B77F1B2E17B978D7009739AE /* Rexscue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rexscue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77F1B2E17B978D7009739AE /* Rexcue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rexcue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77F1B3117B978D7009739AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B77F1B3317B978D7009739AE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B77F1B3517B978D7009739AE /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -630,10 +630,10 @@
 		B77F1B2F17B978D7009739AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B77F1B2E17B978D7009739AE /* Rexscue.app */,
-				927F61BF196C771E000F43EF /* Rexscue Android.app */,
+				B77F1B2E17B978D7009739AE /* Rexcue.app */,
+				927F61BF196C771E000F43EF /* Rexcue Android.app */,
 				5B121021197484A3004C1E1D /* Rexscue Java.jar */,
-				7A4035FF19DDEE84007B6E8F /* Rexscue Mac.app */,
+				7A4035FF19DDEE84007B6E8F /* Rexcue Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -846,9 +846,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B121020197484A3004C1E1D /* Rexscue Java */ = {
+		5B121020197484A3004C1E1D /* Rexcue Java */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B121022197484A3004C1E1D /* Build configuration list for PBXNativeTarget "Rexscue Java" */;
+			buildConfigurationList = 5B121022197484A3004C1E1D /* Build configuration list for PBXNativeTarget "Rexcue Java" */;
 			buildPhases = (
 				5B121027197484D2004C1E1D /* Sources */,
 				5B121028197484D5004C1E1D /* Frameworks */,
@@ -858,14 +858,14 @@
 			dependencies = (
 				7A97910619E62E4C001FFC4D /* PBXTargetDependency */,
 			);
-			name = "Rexscue Java";
+			name = "Rexcue Java";
 			productName = "Rexscue Java";
 			productReference = 5B121021197484A3004C1E1D /* Rexscue Java.jar */;
 			productType = "com.apportable.java.product-type.library";
 		};
-		7A4035FE19DDEE84007B6E8F /* Rexscue Mac */ = {
+		7A4035FE19DDEE84007B6E8F /* Rexcue Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "Rexscue Mac" */;
+			buildConfigurationList = 7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "Rexcue Mac" */;
 			buildPhases = (
 				7A4035FB19DDEE84007B6E8F /* Sources */,
 				7A4035FC19DDEE84007B6E8F /* Frameworks */,
@@ -876,14 +876,14 @@
 			dependencies = (
 				7A97911619E631A1001FFC4D /* PBXTargetDependency */,
 			);
-			name = "Rexscue Mac";
+			name = "Rexcue Mac";
 			productName = "Rexscue Mac";
-			productReference = 7A4035FF19DDEE84007B6E8F /* Rexscue Mac.app */;
+			productReference = 7A4035FF19DDEE84007B6E8F /* Rexcue Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		927F6198196C771E000F43EF /* Rexscue Android */ = {
+		927F6198196C771E000F43EF /* Rexcue Android */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "Rexscue Android" */;
+			buildConfigurationList = 927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "Rexcue Android" */;
 			buildPhases = (
 				927F619B196C771E000F43EF /* Run Script */,
 				927F619C196C771E000F43EF /* Sources */,
@@ -897,14 +897,14 @@
 				7A97912019E63219001FFC4D /* PBXTargetDependency */,
 				5B121032197485D1004C1E1D /* PBXTargetDependency */,
 			);
-			name = "Rexscue Android";
+			name = "Rexcue Android";
 			productName = Example;
-			productReference = 927F61BF196C771E000F43EF /* Rexscue Android.app */;
+			productReference = 927F61BF196C771E000F43EF /* Rexcue Android.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B77F1B2D17B978D7009739AE /* Rexscue iOS */ = {
+		B77F1B2D17B978D7009739AE /* Rexcue iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Rexscue iOS" */;
+			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Rexcue iOS" */;
 			buildPhases = (
 				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
@@ -917,9 +917,9 @@
 			dependencies = (
 				7A97911019E6319A001FFC4D /* PBXTargetDependency */,
 			);
-			name = "Rexscue iOS";
+			name = "Rexcue iOS";
 			productName = Example;
-			productReference = B77F1B2E17B978D7009739AE /* Rexscue.app */;
+			productReference = B77F1B2E17B978D7009739AE /* Rexcue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -944,7 +944,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Rexscue" */;
+			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Rexcue" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -963,10 +963,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				B77F1B2D17B978D7009739AE /* Rexscue iOS */,
-				927F6198196C771E000F43EF /* Rexscue Android */,
-				5B121020197484A3004C1E1D /* Rexscue Java */,
-				7A4035FE19DDEE84007B6E8F /* Rexscue Mac */,
+				B77F1B2D17B978D7009739AE /* Rexcue iOS */,
+				927F6198196C771E000F43EF /* Rexcue Android */,
+				5B121020197484A3004C1E1D /* Rexcue Java */,
+				7A4035FE19DDEE84007B6E8F /* Rexcue Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -1211,7 +1211,7 @@
 /* Begin PBXTargetDependency section */
 		5B121032197485D1004C1E1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5B121020197484A3004C1E1D /* Rexscue Java */;
+			target = 5B121020197484A3004C1E1D /* Rexcue Java */;
 			targetProxy = 5B121031197485D1004C1E1D /* PBXContainerItemProxy */;
 		};
 		7A97910619E62E4C001FFC4D /* PBXTargetDependency */ = {
@@ -1273,7 +1273,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Java";
 				SDKROOT = sbandroid;
 			};
 			name = Debug;
@@ -1305,7 +1305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				MACOSX_DEPLOYMENT_TARGET = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Java";
 				SDKROOT = sbandroid;
 			};
 			name = Release;
@@ -1350,7 +1350,7 @@
 					"-lz",
 				);
 				PRODUCT_MODULE_NAME = Rexscue;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Mac";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1394,7 +1394,7 @@
 					"-lz",
 				);
 				PRODUCT_MODULE_NAME = Rexscue;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Mac";
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 			};
@@ -1441,7 +1441,7 @@
 					"-landroid",
 				);
 				PRODUCT_MODULE_NAME = Rexscue;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Android";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = sbandroid;
 				WRAPPER_EXTENSION = app;
@@ -1488,7 +1488,7 @@
 					"-landroid",
 				);
 				PRODUCT_MODULE_NAME = Rexscue;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Rexcue Android";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = sbandroid;
 				VALIDATE_PRODUCT = YES;
@@ -1588,7 +1588,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = Rexscue;
+				PRODUCT_NAME = Rexcue;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1622,7 +1622,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = Rexscue;
+				PRODUCT_NAME = Rexcue;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
@@ -1633,7 +1633,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B121022197484A3004C1E1D /* Build configuration list for PBXNativeTarget "Rexscue Java" */ = {
+		5B121022197484A3004C1E1D /* Build configuration list for PBXNativeTarget "Rexcue Java" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B121023197484A3004C1E1D /* Debug */,
@@ -1642,7 +1642,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "Rexscue Mac" */ = {
+		7A40361E19DDEE84007B6E8F /* Build configuration list for PBXNativeTarget "Rexcue Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A40361919DDEE84007B6E8F /* Debug */,
@@ -1651,7 +1651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "Rexscue Android" */ = {
+		927F61BC196C771E000F43EF /* Build configuration list for PBXNativeTarget "Rexcue Android" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				927F61BD196C771E000F43EF /* Debug */,
@@ -1660,7 +1660,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Rexscue" */ = {
+		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "Rexcue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDC17B978D8009739AE /* Debug */,
@@ -1669,7 +1669,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Rexscue iOS" */ = {
+		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "Rexcue iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDF17B978D8009739AE /* Debug */,
