@@ -11,6 +11,7 @@
 
 @implementation Upgrades
 -(void) didLoadFromCCB{
+
     
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
     mittenPrice = 5;
