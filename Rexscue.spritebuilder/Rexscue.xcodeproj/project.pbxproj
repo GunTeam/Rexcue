@@ -225,7 +225,7 @@
 /* Begin PBXFileReference section */
 		388AA7BA1A794B4600385619 /* gameOverSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameOverSong.mp3; sourceTree = "<group>"; };
 		38B2334C1A79ECD70084542A /* Upgrades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Upgrades.h; sourceTree = "<group>"; };
-		38B2334D1A79ECD70084542A /* Upgrades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Upgrades.m; sourceTree = "<group>"; };
+		38B2334D1A79ECD70084542A /* Upgrades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Upgrades.m; sourceTree = "<group>"; };
 		38B233571A7A02CC0084542A /* GamePlay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GamePlay.mp3; sourceTree = "<group>"; };
 		38F37BF31A78AA90007C420C /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pause.mp3; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
