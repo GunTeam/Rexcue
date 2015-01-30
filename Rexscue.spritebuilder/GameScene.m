@@ -15,7 +15,7 @@
 -(void) didLoadFromCCB {
     playTutorial = [[NSUserDefaults standardUserDefaults] boolForKey:@"playTutorial"];
     
-    NUM_STARTING_DINOS = 5;
+    NUM_STARTING_DINOS = 6;
     SECONDS_TO_LEVEL_UPDATE = 5;
     PROBABILITY_OF_ENEMY_SPAWN = -1; //out of 1000
     
