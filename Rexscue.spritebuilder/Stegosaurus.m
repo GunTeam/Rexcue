@@ -105,7 +105,6 @@
     otherDino.readyToAttack = false;
     
     self.health -= MAX_HEALTH/2.;
-    [self setHealthLabel];
     
     if(self.direction == 0 && otherDino.position.x > self.position.x){
         [self knockback];

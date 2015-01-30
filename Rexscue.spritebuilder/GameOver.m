@@ -20,12 +20,13 @@
     self.numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
     long totalNeedles = self.numNeedles + needlesEarned;
     [[NSUserDefaults standardUserDefaults] setInteger:totalNeedles forKey:@"NumNeedles"];
-
+    long level =[[NSUserDefaults standardUserDefaults]integerForKey:@"LastLevel"];
+    
     [_bestScoreLabel setString:[NSString stringWithFormat:@"Best: %li", highScore]];
     [_yourScoreLabel setString:[NSString stringWithFormat:@"Your Score: %li", lastScore]];
     [_needlesEarnedLabel setString:[NSString stringWithFormat:@"Needles Earned: %li", needlesEarned]];
     [_yourNeedlesLabel setString:[NSString stringWithFormat:@"Total Needles: %li", totalNeedles]];
-    
+    [_levelLabel setString:[NSString stringWithFormat:@"Level: %li", level]];
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
     [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"playTutorial"];
 

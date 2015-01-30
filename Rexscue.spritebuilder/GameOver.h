@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @interface GameOver : CCNode {
-    CCLabelTTF *_bestScoreLabel, *_yourScoreLabel, *_yourNeedlesLabel, *_needlesEarnedLabel;
+    CCLabelTTF *_bestScoreLabel, *_yourScoreLabel, *_yourNeedlesLabel, *_needlesEarnedLabel, *_levelLabel;
     OALAudioTrack *musicPlayer;
     CCButton *_mainMenuButton, *_replayButton;
 }

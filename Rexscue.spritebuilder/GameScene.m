@@ -404,6 +404,8 @@
         [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"HighScore"];
     }
     [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
+    [[NSUserDefaults standardUserDefaults]setInteger:self.level forKey:@"LastLevel"];
+
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameOver"]];
 }
 
