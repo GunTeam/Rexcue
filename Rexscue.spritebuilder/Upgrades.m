@@ -14,8 +14,8 @@
 
     
     numNeedles = [[NSUserDefaults standardUserDefaults] integerForKey:@"NumNeedles"];
-    mittenPrice = 5;
-    hatPrice = 5;
+    mittenPrice = 100;
+    hatPrice = 200;
     needleUpgradePrice = 300;
     
     [_numNeedleLabel setString:[NSString stringWithFormat:@"Total Needles: %li", numNeedles]];
