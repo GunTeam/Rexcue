@@ -10,6 +10,7 @@
         [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
+        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
     }
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
