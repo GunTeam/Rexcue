@@ -56,7 +56,7 @@
     explosion.position = self.position;
     GameScene *gameScene = (GameScene *)self.parent.parent;
     
-    int pointsEarned = (int)(screenHeight-self.position.y)+50;
+    int pointsEarned = (int)(screenHeight+self.position.y)+50;
     
     CCColor *color = [CCColor colorWithRed:0.0 green: 0.0 blue:0];
     
