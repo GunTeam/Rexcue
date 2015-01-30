@@ -22,6 +22,7 @@
     self.soundEffectsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     self.musicOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
     self.sandboxMode = [[NSUserDefaults standardUserDefaults]boolForKey:@"SandboxMode"];
+    self.tutorial = [[NSUserDefaults standardUserDefaults]boolForKey:@"playTutorial"];
     
     if(!self.soundEffectsOn){
         [_toggleSoundButton setTitle:@"Turn\rEffects On"];
@@ -43,6 +44,14 @@
     else{
         [_toggleSandboxButton setTitle:@"Turn\rEasy Off"];
     }
+    
+    if(!self.tutorial){
+        [_toggleTutorialButton setTitle:@"Turn\rTutorial On"];
+    }
+    else{
+        [_toggleTutorialButton setTitle:@"Turn\rTutorial Off"];
+    }
+    
     
     [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
     
@@ -99,15 +108,15 @@
 }
 
 -(void) toggleTutorial{
-    if(self.sandboxMode){
-        self.sandboxMode = false;
-        [_toggleTutorialButton setTitle:@"Turn\rEasy On"];
+    if(self.tutorial){
+        self.tutorial = false;
+        [_toggleTutorialButton setTitle:@"Turn\rTutorial On"];
         [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"playTutorial"];
         
     }
     else{
-        self.sandboxMode = true;
-        [_toggleTutorialButton setTitle:@"Turn\rEasy Off"];
+        self.tutorial = true;
+        [_toggleTutorialButton setTitle:@"Turn\rTutorial Off"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
     }
 }

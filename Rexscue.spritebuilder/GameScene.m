@@ -81,8 +81,8 @@
     
     _tapPrompt.visible = false;
     
-    [self createDemoEnemy];
     if(playTutorial){
+        [self createDemoEnemy];
         [self runTutorial];
     }
     else{

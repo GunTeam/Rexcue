@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @interface Menu : CCNode {
-    CCButton *_toggleMusicButton, *_toggleSoundButton, *_toggleSandboxButton;
+    CCButton *_toggleMusicButton, *_toggleSoundButton, *_toggleSandboxButton, *_toggleTutorialButton;
     CCLabelTTF *_highScoreLabel;
     OALAudioTrack *musicPlayer;
 
@@ -19,5 +19,7 @@
 @property Boolean soundEffectsOn;
 @property Boolean musicOn;
 @property Boolean sandboxMode;
+@property Boolean tutorial;
+
 
 @end
