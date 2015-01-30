@@ -146,7 +146,7 @@
 }
 
 -(void) startEnemyDemo{
-    [_tapPrompt setString:@"Tap the evil dino to kill the good dinos!"];
+    [_tapPrompt setString:@"Tap the evil dino to save the good dinos!"];
     
     [evilDemo setIsEnemy:true];
     [evilDemo setHealthInvisible];
