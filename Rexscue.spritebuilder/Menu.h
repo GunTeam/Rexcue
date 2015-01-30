@@ -11,7 +11,7 @@
 
 @interface Menu : CCNode {
     CCButton *_toggleMusicButton, *_toggleSoundButton, *_toggleSandboxButton, *_toggleTutorialButton;
-    CCLabelTTF *_highScoreLabel;
+    CCLabelTTF *_highScoreLabel, *_bestLevelLabel, *_meteorsDestroyedLabel, *_dinosLostLabel;
     OALAudioTrack *musicPlayer;
 
 }

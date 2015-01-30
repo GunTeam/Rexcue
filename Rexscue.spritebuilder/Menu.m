@@ -24,6 +24,49 @@
     self.sandboxMode = [[NSUserDefaults standardUserDefaults]boolForKey:@"SandboxMode"];
     self.tutorial = [[NSUserDefaults standardUserDefaults]boolForKey:@"playTutorial"];
     
+    [self resetLabels];
+    
+    musicPlayer = [OALAudioTrack track];
+    [musicPlayer preloadFile:@"titleScreen.mp3"];
+    musicPlayer.numberOfLoops = -1;
+    
+    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
+    [_bestLevelLabel setString:[NSString stringWithFormat:@"Best Level: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"BestLevel"]]];
+    [_dinosLostLabel setString:[NSString stringWithFormat:@"Dinos Lost: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"DinosLost"]]];
+    [_meteorsDestroyedLabel setString:[NSString stringWithFormat:@"Meteors Destroyed: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"MeteorsDestroyed"]]];
+    
+}
+
+-(void) toggleSoundEffects{
+    self.soundEffectsOn = !self.soundEffectsOn;
+    [[NSUserDefaults standardUserDefaults]setBool:self.soundEffectsOn forKey:@"EffectsOn"];
+    [self resetLabels];
+}
+
+-(void) toggleMusic{
+    self.musicOn = !self.musicOn;
+    [[NSUserDefaults standardUserDefaults]setBool:self.musicOn forKey:@"MusicOn"];
+    [self resetLabels];
+}
+
+-(void) toggleSandbox{
+    self.sandboxMode = !self.sandboxMode;
+    [[NSUserDefaults standardUserDefaults]setBool:self.sandboxMode forKey:@"SandboxMode"];
+    [self resetLabels];
+}
+
+-(void) toggleTutorial{
+    self.tutorial = !self.tutorial;
+    [[NSUserDefaults standardUserDefaults]setBool:self.tutorial forKey:@"playTutorial"];
+    [self resetLabels];
+}
+
+-(void) goBack{
+    CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:.1];
+    [[CCDirector sharedDirector] popSceneWithTransition:transition];
+}
+
+-(void) resetLabels{
     if(!self.soundEffectsOn){
         [_toggleSoundButton setTitle:@"Turn\rEffects On"];
     }
@@ -32,10 +75,12 @@
     }
     
     if(!self.musicOn){
+        [musicPlayer stop];
         [_toggleMusicButton setTitle:@"Turn\rMusic On"];
     }
     else{
         [_toggleMusicButton setTitle:@"Turn\rMusic Off"];
+        [musicPlayer play];
     }
     
     if(!self.sandboxMode){
@@ -51,79 +96,6 @@
     else{
         [_toggleTutorialButton setTitle:@"Turn\rTutorial Off"];
     }
-    
-    
-    [_highScoreLabel setString:[NSString stringWithFormat:@"High Score: %li", (long)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"]]];
-    
-    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
-        musicPlayer = [OALAudioTrack track];
-        [musicPlayer preloadFile:@"titleScreen.mp3"];
-        musicPlayer.numberOfLoops = -1;
-        [musicPlayer play];
-    }
-    
-}
-
--(void) toggleSoundEffects{
-    if(self.soundEffectsOn){
-        self.soundEffectsOn = false;
-        [_toggleSoundButton setTitle:@"Turn\rSounds On"];
-        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"EffectsOn"];
-    }
-    else{
-        self.soundEffectsOn = true;
-        [_toggleSoundButton setTitle:@"Turn\rSounds Off"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
-    }
-}
-
--(void) toggleMusic{
-    if(self.musicOn){
-        [musicPlayer stop];
-        self.musicOn = false;
-        [_toggleMusicButton setTitle:@"Turn\rMusic On"];
-        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"MusicOn"];
-
-    }
-    else{
-        [musicPlayer play];
-        self.musicOn = true;
-        [_toggleMusicButton setTitle:@"Turn\rMusic Off"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
-    }
-}
-
--(void) toggleSandbox{
-    if(self.sandboxMode){
-        self.sandboxMode = false;
-        [_toggleSandboxButton setTitle:@"Turn\rEasy On"];
-        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
-        
-    }
-    else{
-        self.sandboxMode = true;
-        [_toggleSandboxButton setTitle:@"Turn\rEasy Off"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"SandboxMode"];
-    }
-}
-
--(void) toggleTutorial{
-    if(self.tutorial){
-        self.tutorial = false;
-        [_toggleTutorialButton setTitle:@"Turn\rTutorial On"];
-        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"playTutorial"];
-        
-    }
-    else{
-        self.tutorial = true;
-        [_toggleTutorialButton setTitle:@"Turn\rTutorial Off"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
-    }
-}
-
--(void) goBack{
-    CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:.1];
-    [[CCDirector sharedDirector] popSceneWithTransition:transition];
 }
 
 

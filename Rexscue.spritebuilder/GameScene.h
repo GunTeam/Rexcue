@@ -37,6 +37,7 @@
 }
 
 -(void) addPointsToScore: (int) points;
+-(void) addPointsToScore: (int) points fromMeteor: (CCNode*) meteor;
 -(void) demoDestroyed;
 
 @property int score;
@@ -51,5 +52,6 @@
 @property Boolean sandboxMode;
 @property double meteorScale;
 @property int multiplier;
+@property int meteorsDestroyed;
 
 @end

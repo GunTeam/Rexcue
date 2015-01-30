@@ -69,7 +69,7 @@
         color = [CCColor colorWithRed:0 green: (multiplier/10.)-0.1 blue:0];
         scoreLabel = [NSString stringWithFormat:@"%i\rx%i",pointsEarned,multiplier];
         pointsEarned = multiplier*pointsEarned;
-        [gameScene addPointsToScore: pointsEarned];
+        [gameScene addPointsToScore: pointsEarned fromMeteor:self];
         [gameScene setMultiplier:(multiplier+1)];
     }
     else{

@@ -1,16 +1,12 @@
 #import "MainScene.h"
 
 @implementation MainScene
+@synthesize musicOn, soundEffectsOn;
 
 -(void) didLoadFromCCB{
     
     if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
-        [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"NumNeedles"];
-        [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
-        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
-        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
+        [self resetSettingsToDefault];
     }
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
@@ -32,7 +28,9 @@
         [dino setIsStationary:true];
     }
     
-    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+    musicOn =[[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"];
+    
+    if(musicOn){
         musicPlayer = [OALAudioTrack track];
         [musicPlayer preloadFile:@"titleScreen.mp3"];
         musicPlayer.numberOfLoops = -1;
@@ -78,11 +76,6 @@
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Tutorial"]];
 }
 
-
-//-(void) playGame{
-//    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
-//}
-
 -(void) playGame{
     [self.animationManager runAnimationsForSequenceNamed:@"Apocalypse"];
     _smopocalypse.visible = true;
@@ -99,12 +92,24 @@
 -(void) onEnter{
     [super onEnter];
     
-    if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
+    if(musicOn){
         [musicPlayer play];
     }
     
     [[CCDirector sharedDirector] resume];
 
+}
+
+-(void) resetSettingsToDefault{
+    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
+    [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"NumNeedles"];
+    [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
+    [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"BestLevel"];
+    [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"MeteorsDestroyed"];
+    [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"DinosLost"];
+    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];
+    [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
+    [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
 }
 
 @end

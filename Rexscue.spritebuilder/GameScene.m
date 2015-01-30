@@ -10,7 +10,7 @@
 
 @implementation GameScene
 
-@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode, playTutorial;
+@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode, playTutorial, meteorsDestroyed;
 
 -(void) didLoadFromCCB {
     playTutorial = [[NSUserDefaults standardUserDefaults] boolForKey:@"playTutorial"];
@@ -25,6 +25,7 @@
     meteorsToSpawnAtOnce = 1;
     backgroundIndex = 1;
     meteorIndex = 1;
+    meteorsDestroyed = 0;
     
     backgrounds = @[_background1,_background2,_background3,_background4,_background5,_background6];
     numBackgroundsToFade = [backgrounds count]-1;
@@ -318,6 +319,15 @@
     [_scoreLabel setString:scoreString];
 }
 
+
+-(void) addPointsToScore: (int) points fromMeteor: (Meteor*) meteor{
+    self.score += points;
+    NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
+    [_scoreLabel setString:scoreString];
+    meteorsDestroyed += 1;
+}
+
+
 -(void) setLevelLabel{
     NSString *levelString = [NSString stringWithFormat:@"Level: %d", (self.level)];
     [_levelLabel setString:levelString];
@@ -378,6 +388,8 @@
     if(killed){
         numDinos -= 1;
         [ourDinos removeObject:dinosaur];
+        long dinosKilled =[[NSUserDefaults standardUserDefaults]integerForKey:@"DinosLost"]+1;
+        [[NSUserDefaults standardUserDefaults]setInteger:dinosKilled forKey:@"DinosLost"];
     }
 
     return NO;
@@ -394,15 +406,27 @@
     if(killed){
         numDinos -= 1;
         [ourDinos removeObject:dinosaur];
+        long dinosKilled =[[NSUserDefaults standardUserDefaults]integerForKey:@"DinosLost"]+1;
+        [[NSUserDefaults standardUserDefaults]setInteger:dinosKilled forKey:@"DinosLost"];
+
     }
     return NO;
 }
 
 -(void) loseLevel{
     long highScore = [[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"];
+    long bestLevel = [[NSUserDefaults standardUserDefaults]integerForKey:@"BestLevel"];
+    long pastMeteors = [[NSUserDefaults standardUserDefaults]integerForKey:@"MeteorsDestroyed"];
+    long totalMeteors = pastMeteors + meteorsDestroyed;
+    [[NSUserDefaults standardUserDefaults]setInteger:totalMeteors forKey:@"PastMeteors"];
+
     if(self.score > highScore){
         [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"HighScore"];
     }
+    if(self.level > bestLevel){
+        [[NSUserDefaults standardUserDefaults]setInteger:self.level forKey:@"BestLevel"];
+    }
+    
     [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[NSUserDefaults standardUserDefaults]setInteger:self.level forKey:@"LastLevel"];
 
