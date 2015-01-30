@@ -334,8 +334,6 @@
 						<string>ccbResources/ccbParticleFire.png</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -5784,25 +5782,11 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>0</integer>
-			<key>name</key>
-			<string>Phone</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
 			<integer>0</integer>
 			<key>name</key>
-			<string>Tablet</string>
+			<string>Fixed</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
@@ -5858,7 +5842,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
