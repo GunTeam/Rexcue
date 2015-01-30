@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "ObjectAL.h"
+#import "Explosion.h"
+#import "Smoke.h"
 
 @interface dinosaur : CCSprite {
     int ATTACK_THRESHOLD;
@@ -21,6 +23,7 @@
     NSArray *evilSounds;
     Boolean soundsOn;
     CCNode *_frontMitten, *_backMitten, *_hat;
+    CCParticleSystem *_enemyParticles;
 }
 
 -(void) didLoadFromCCB;

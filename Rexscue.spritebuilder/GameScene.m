@@ -13,9 +13,9 @@
 @synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode;
 
 -(void) didLoadFromCCB {
-    NUM_STARTING_DINOS = 6;
+    NUM_STARTING_DINOS = 5;
     SECONDS_TO_LEVEL_UPDATE = 5;
-    PROBABILITY_OF_ENEMY_SPAWN = 0; //out of 1000
+    PROBABILITY_OF_ENEMY_SPAWN = -1; //out of 1000
     
     secondsBetweenMeteors = 2;
     meteorHittingGroundBonus = 100;
@@ -58,8 +58,6 @@
     
     self.score = 0;
     
-    [self spawnClouds];
-    
     for(int i=0; i<NUM_STARTING_DINOS; i++){
         [self addRandomDino];
     }
@@ -83,31 +81,6 @@
     
     [self schedule:@selector(updateBySecond) interval:1];
 }
-
--(void) spawnClouds{
-    for(int i =1; i<4; i++){
-        int upperBound = screenHeight;
-        int lowerBound = (3./4)*screenHeight;
-        int positionY = lowerBound + arc4random() % (int)(upperBound - lowerBound);
-        
-        int positionX = arc4random()%2;
-        int direction = positionX;
-        positionX *= screenWidth;
-        
-        NSString *cloudFile = [NSString stringWithFormat:@"DarkCloud%i",i];
-        Cloud *cloud = (Cloud*)[CCBReader load:cloudFile];
-        
-        cloud.opacity = 0.2;
-        
-        [cloud setPosition:ccp(positionX,positionY)];
-        cloud.direction = direction;
-        cloud.speed = (arc4random()%3+1)/150.0;
-        cloud.scale = 2;
-        [_physicsNode addChild: cloud];
-    }
-    
-}
-
 
 -(void) addRandomDino{
     
@@ -214,12 +187,14 @@
     [newDino setHealthInvisible];
     [newDino setSpeed:0.005];
     
-    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:2 position:ccp(0,destinationY)];
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:4 position:ccp(0,destinationY)];
     [newDino runAction:mover];
     
     [newDino playAttackSound];
     
-    [newDino setTapsToKillEnemy:backgroundIndex];
+//    [newDino setTapsToKillEnemy:backgroundIndex];
+    
+    [newDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
     
     [_physicsNode addChild:newDino];
 }
@@ -272,12 +247,10 @@
     [_levelLabel setString:levelString];
 }
 
--(void) setMultiplierLabel{
-//    CCColor *color = [CCColor colorWithRed:(self.multiplier/10.)-0.1 green: 0 blue:0];
-//
-//    NSString *multiplierString = [NSString stringWithFormat:@"x%d", (self.multiplier)];
-//    [_multiplierLabel setString:multiplierString];
-//    _multiplierLabel.color = color;
+-(void) panicDinos{
+    for(dinosaur *dino in ourDinos) {
+        [dino panic];
+    }
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair meteor:(Meteor *)meteor ground:(CCNodeColor *)ground{
@@ -293,9 +266,7 @@
     
     [self addChild:smoke];
     
-    for(dinosaur *dino in ourDinos) {
-        [dino panic];
-    }
+    [self panicDinos];
     
     return NO;
 }
@@ -397,8 +368,8 @@
 }
 
 -(void) decreaseMeteorSize{
-    if(meteorScale > 0.04){
-        meteorScale -= 0.04;
+    if(meteorScale > 0.02){
+        meteorScale -= 0.02;
     }
     else if(meteorScale > 0.002){
         meteorScale -= 0.002;
@@ -414,14 +385,11 @@
     
     if(timeElapsed%SECONDS_TO_LEVEL_UPDATE == 0){
         level += 1;
-        if(level == 2){
-//            [self spawnEnemyDino];
-        }
-        
+
         if(level%5 == 0){
-//            [self spawnEnemyDino];
+            [self spawnEnemyDino];
             [self phaseBackground];
-            [self doBoss];
+//            [self doBoss];
         }
         
         if(!self.sandboxMode){
@@ -458,12 +426,23 @@
 }
 
 -(void) doBoss{
+    [self unschedule:@selector(spawnMeteor:)];
+
     [self spawnEnemyDino];
-    //popup
-    //all dinos panic
-    //dino hurts
-    //stop meteors
+    [self panicDinos];
     
+    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"EVIL DINO BOSS!"]fontName:@"PatrickHandSC-Regular" fontSize:100];
+    label.color = [CCColor colorWithRed:0.0 green: 0.0 blue:0];
+    label.position = ccp(screenHeight/2., screenWidth/2.);
+    [self addChild:label];
+    
+    [self scheduleOnce:@selector(restart) delay:3];
+
+}
+
+-(void) restart{
+    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
+
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{

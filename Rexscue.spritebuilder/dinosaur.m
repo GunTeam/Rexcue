@@ -271,16 +271,23 @@
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
     if(self.isEnemy){
-        if(tapsToKillEnemy == 0){
-            [self die];
+        if(tapsToKillEnemy <= 0){
+            Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
+            smoke.position = self.position;
+            smoke.color = _enemyParticles.color;
+            [self.parent addChild:smoke];
+            self.isDead = true;
+            self.physicsBody.collisionMask = @[];
+            [self.animationManager runAnimationsForSequenceNamed:@"Explode"];
+            [self scheduleOnce:@selector(removeFromParent) delay:1];
+            self.userInteractionEnabled = false;
         }
         else{
+            Explosion *explosion = (Explosion*)[CCBReader load:@"Explosion"];
+            explosion.position = self.position;
+            [self.parent addChild:explosion];
             tapsToKillEnemy -= 1;
         }
-        
-////        GameScene *gameScene = (GameScene *)self.parent.parent;
-////        [gameScene addPointsToScore: (int)(killBonus) ];
-//        [self removeFromParent];
     }
 }
 
