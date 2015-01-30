@@ -25,7 +25,7 @@
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
     int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE,PROBABILITY_OF_ENEMY_SPAWN, numBackgroundsToFade,meteorsToSpawnAtOnce,backgroundIndex, meteorIndex;
-    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel, *_tapPrompt;
+    CCLabelTTF *_scoreLabel, *_levelLabel, *_tapPrompt;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;

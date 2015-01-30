@@ -52,7 +52,6 @@
     }
     
     _physicsNode.collisionDelegate = self;
-//    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
@@ -67,10 +66,8 @@
     numDinos = NUM_STARTING_DINOS;
     level = 0;
     
-    [self setTimeLabel];
     [self setLevelLabel];
     [self addPointsToScore:0];
-//    [self spawnEnemyDino];
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
@@ -149,7 +146,6 @@
     [_tapPrompt setString:@"Tap the evil dino to save the good dinos!"];
     
     [evilDemo setIsEnemy:true];
-    [evilDemo setHealthInvisible];
     [evilDemo setIsStationary:true];
 
     double destinationY = -(7./8)*(screenHeight);
@@ -215,7 +211,6 @@
     
     if(directionFlag ==1){
         newDino.scaleX *= -1;
-        [newDino reverseHealthLabel];
     }
     
     [_physicsNode addChild:newDino];
@@ -269,20 +264,16 @@
     
     if(directionFlag ==1){
         newDino.scaleX *= -1;
-        [newDino reverseHealthLabel];
     }
     newDino.physicsBody.collisionType = @"meteor";
     newDino.physicsBody.collisionGroup = @"meteors";
     [newDino setIsEnemy:true];
-    [newDino setHealthInvisible];
     [newDino setSpeed:0.005];
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:4 position:ccp(0,destinationY)];
     [newDino runAction:mover];
     
     [newDino playAttackSound];
-    
-//    [newDino setTapsToKillEnemy:backgroundIndex];
     
     [newDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
     
@@ -325,11 +316,6 @@
     self.score += points;
     NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
     [_scoreLabel setString:scoreString];
-}
-
--(void) setTimeLabel{
-    NSString *timeString = [NSString stringWithFormat:@"Time: %d", (self.timeElapsed)];
-    [_timeLabel setString:timeString];
 }
 
 -(void) setLevelLabel{
@@ -442,7 +428,7 @@
     }
     if(playTutorial){
         if(![[self children] containsObject:evilDemo]){
-            _tapPrompt.visible = false;
+            [_tapPrompt removeFromParent];
             playTutorial = false;
             [self scheduleOnce:@selector(startGame) delay:1];
         }
@@ -489,7 +475,6 @@
         if(level%5 == 0){
             [self spawnEnemyDino];
             [self phaseBackground];
-//            [self doBoss];
         }
         
         if(!self.sandboxMode){
@@ -514,7 +499,6 @@
         
     }
     
-    [self setTimeLabel];
     [self setLevelLabel];
 }
 
@@ -523,26 +507,6 @@
     [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"LastScore"];
     [[CCDirector sharedDirector] pause];
     [[CCDirector sharedDirector] pushScene:[CCBReader loadAsScene:@"Paused"]];
-}
-
--(void) doBoss{
-    [self unschedule:@selector(spawnMeteor:)];
-
-    [self spawnEnemyDino];
-    [self panicDinos];
-    
-    DisappearingLabel *label = [DisappearingLabel labelWithString:[NSString stringWithFormat:@"EVIL DINO BOSS!"]fontName:@"PatrickHandSC-Regular" fontSize:100];
-    label.color = [CCColor colorWithRed:0.0 green: 0.0 blue:0];
-    label.position = ccp(screenHeight/2., screenWidth/2.);
-    [self addChild:label];
-    
-    [self scheduleOnce:@selector(restart) delay:3];
-
-}
-
--(void) restart{
-    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
-
 }
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{

@@ -37,7 +37,6 @@
     for (dinosaur *dino in ourdinos){
         [dino setIsStationary:true];
         [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
-        [dino setHealthInvisible];
         CCParticleSystem *select = [dinotypeToSelector objectForKey: [dino getType]];
         select.visible = false;
         dino.visible = false;

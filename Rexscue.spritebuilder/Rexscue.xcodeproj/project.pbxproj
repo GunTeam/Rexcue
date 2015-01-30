@@ -105,7 +105,6 @@
 		BA5776831A744BDD00173263 /* Allosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5776781A744BDD00173263 /* Allosaurus.m */; };
 		BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5C28E71A7609BB0062AE0F /* Explosion.m */; };
 		BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5C28EB1A761A4A0062AE0F /* Cloud.m */; };
-		BA6EAD901A7B14400090F71B /* Prompt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6EAD8F1A7B14400090F71B /* Prompt.m */; };
 		BA724C611A742C6B00AECA48 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C601A742C6A00AECA48 /* GameScene.m */; };
 		BA724C871A74313100AECA48 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C861A74313100AECA48 /* Meteor.m */; };
 		BABC0B371A760240008FA3D2 /* Smoke.m in Sources */ = {isa = PBXBuildFile; fileRef = BABC0B361A760240008FA3D2 /* Smoke.m */; };
@@ -145,7 +144,6 @@
 		BADAB8F81A784796008E7339 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8F71A784796008E7339 /* GameOver.m */; };
 		BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAB8FA1A784BC9008E7339 /* Menu.m */; };
 		BADAB8FF1A787D86008E7339 /* titleScreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */; };
-		BAF136301A789B950030ECCB /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF1362F1A789B950030ECCB /* Tutorial.m */; };
 		BAF136341A78A3B80030ECCB /* Paused.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF136331A78A3B80030ECCB /* Paused.m */; };
 /* End PBXBuildFile section */
 
@@ -306,8 +304,6 @@
 		BA5C28E71A7609BB0062AE0F /* Explosion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explosion.m; sourceTree = "<group>"; };
 		BA5C28EA1A761A4A0062AE0F /* Cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloud.h; sourceTree = "<group>"; };
 		BA5C28EB1A761A4A0062AE0F /* Cloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cloud.m; sourceTree = "<group>"; };
-		BA6EAD8E1A7B14400090F71B /* Prompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prompt.h; sourceTree = "<group>"; };
-		BA6EAD8F1A7B14400090F71B /* Prompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prompt.m; sourceTree = "<group>"; };
 		BA724C5F1A742C6A00AECA48 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA724C601A742C6A00AECA48 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		BA724C851A74313100AECA48 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
@@ -353,8 +349,6 @@
 		BADAB8F91A784BC9008E7339 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		BADAB8FA1A784BC9008E7339 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		BADAB8FE1A787D86008E7339 /* titleScreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titleScreen.mp3; sourceTree = "<group>"; };
-		BAF1362E1A789B950030ECCB /* Tutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
-		BAF1362F1A789B950030ECCB /* Tutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tutorial.m; sourceTree = "<group>"; };
 		BAF136321A78A3B80030ECCB /* Paused.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paused.h; sourceTree = "<group>"; };
 		BAF136331A78A3B80030ECCB /* Paused.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paused.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
@@ -698,8 +692,6 @@
 				BA724C601A742C6A00AECA48 /* GameScene.m */,
 				BADAB8F61A784796008E7339 /* GameOver.h */,
 				BADAB8F71A784796008E7339 /* GameOver.m */,
-				BAF1362E1A789B950030ECCB /* Tutorial.h */,
-				BAF1362F1A789B950030ECCB /* Tutorial.m */,
 				BAF136321A78A3B80030ECCB /* Paused.h */,
 				BAF136331A78A3B80030ECCB /* Paused.m */,
 				38B2334C1A79ECD70084542A /* Upgrades.h */,
@@ -721,8 +713,6 @@
 				BA5C28EB1A761A4A0062AE0F /* Cloud.m */,
 				BA023D9C1A76C239002F718F /* DisappearingLabel.h */,
 				BA023D9D1A76C239002F718F /* DisappearingLabel.m */,
-				BA6EAD8E1A7B14400090F71B /* Prompt.h */,
-				BA6EAD8F1A7B14400090F71B /* Prompt.m */,
 				BA724C841A74310D00AECA48 /* Dinos */,
 			);
 			name = Sprites;
@@ -1200,7 +1190,6 @@
 				BA5C28E81A7609BB0062AE0F /* Explosion.m in Sources */,
 				BA724C611A742C6B00AECA48 /* GameScene.m in Sources */,
 				BA5776801A744BDD00173263 /* Stegosaurus.m in Sources */,
-				BA6EAD901A7B14400090F71B /* Prompt.m in Sources */,
 				BA5C28EC1A761A4A0062AE0F /* Cloud.m in Sources */,
 				BA5776821A744BDD00173263 /* Triceratops.m in Sources */,
 				38B2334E1A79ECD70084542A /* Upgrades.m in Sources */,
@@ -1210,7 +1199,6 @@
 				BABC0B371A760240008FA3D2 /* Smoke.m in Sources */,
 				BA5776811A744BDD00173263 /* TRex.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
-				BAF136301A789B950030ECCB /* Tutorial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

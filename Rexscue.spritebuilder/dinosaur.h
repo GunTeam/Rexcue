@@ -13,10 +13,7 @@
 #import "Smoke.h"
 
 @interface dinosaur : CCSprite {
-    int ATTACK_THRESHOLD;
-    int KNOCKBACK_THRESHOLD;
     int MAX_HEALTH; //maximum health
-    CCLabelTTF *_healthLabel;
     CGFloat screenWidth,screenHeight;
     OALSimpleAudio *audioPlayer;
     NSArray *sounds;
@@ -57,14 +54,11 @@
 @property Boolean inAir;
 @property Boolean readyToAttack;
 @property Boolean isEnemy;
-@property Boolean isDemo;
 @property Boolean isStationary;
 @property Boolean isDead;
 @property int attackCounter;
 @property int killBonus;
 @property int afterAttackDelay; //how many frames the dino waits between attacks
-@property int price;
-@property double levelMultiplier;
 @property int direction;
 @property int turnWait;
 @property Boolean hasMittens;

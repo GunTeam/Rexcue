@@ -10,7 +10,7 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary, tapsToKillEnemy,isDemo;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, direction, turnWait,isStationary, tapsToKillEnemy;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
@@ -21,37 +21,27 @@
     self.turnWait = 0;
 
     tapsToKillEnemy = 1;
-    isDemo = false;
     
     soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     
     evilSounds = @[@"rawr2.mp3", @"grr.mp3",@"rawr.mp3", @"growl.mp3",@"grrAndStuff.mp3"];
     
-    self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
-    KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
-    _healthLabel.string = [NSString stringWithFormat:@"%f", self.health];
     self.attack = 50;
     self.speed = 0.01; //default
-    ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
     self.attackCounter = 0;
-    self.price = 200;
     self.killBonus = 100;
     self.isStationary = false;
     self.hasMittens = false;
-    
-    
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
     screenWidth = screenSize.width;
     screenHeight = screenSize.height;
-    
-    [self setHealthInvisible];
     
     //adjust for ipad sizing:
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -89,38 +79,12 @@
     }
 }
 
--(void) setHealthLabel{
-    _healthLabel.string = [NSString stringWithFormat:@"%d", (int)(self.health+0.5)];
-}
-
--(void) setHealthInvisible{
-    _healthLabel.visible = false;
-}
-
--(void) changeLevelMultiplier: (double) newMultiplier{
-    self.levelMultiplier = newMultiplier;
-    self.health *= levelMultiplier;
-    self.speed *= levelMultiplier;
-    self.attack *= levelMultiplier;
-    self.attackCounter *= levelMultiplier;
-    self.killBonus *= levelMultiplier;
-    [self setHealthLabel];
-}
-
 -(void) moveDinoForward{
     self.position = ccp( self.position.x + 100*self.speed, self.position.y );
 }
 
 -(void) moveDinoBackward{
     self.position = ccp( self.position.x - 100*self.speed, self.position.y );
-}
-
--(Boolean) collidesWith:(dinosaur *)otherDino{
-    int distanceAway = (1./2)*self.contentSize.width + (1./2)*otherDino.contentSize.width;
-    if( abs(otherDino.position.x - self.position.x) <= (ATTACK_THRESHOLD+distanceAway)){
-        return true;
-    }
-    return false;
 }
 
 -(void) attackDino:(dinosaur *)enemyDino{
@@ -152,8 +116,6 @@
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
     [self runAction:mover];
-//    self.cascadeOpacityEnabled = true;
-//    [self runAction:[CCActionFadeOut actionWithDuration:2]];
     [self scheduleOnce:@selector(removeFromParent) delay:2];
 }
 
@@ -162,9 +124,7 @@
     [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
     otherDino.readyToAttack = false;
     self.health -= otherDino.attack;
-    [self setHealthLabel];
-    
-    
+
     if(direction == 0 && otherDino.position.x > self.position.x){
         [self knockback];
     }
@@ -184,14 +144,6 @@
     return false;
 }
 
--(Boolean) isEnemyNest{
-    return false;
-}
-
--(void) reverseHealthLabel{
-    _healthLabel.scaleX = -1;
-}
-
 -(void) panic{
     if(soundsOn){
         [audioPlayer playEffect:[sounds objectAtIndex:sounds.count-1]];
@@ -199,11 +151,6 @@
     [self.animationManager runAnimationsForSequenceNamed:@"Panic"];
 }
 
--(void) reverseDinoDirection{
-    self.direction = (self.direction+1)%2;
-//    self.scaleX *= -1;
-    [self reverseHealthLabel];
-}
 
 -(void) loseMittens{
     self.isWearingTheirMittens =  false;
@@ -238,10 +185,6 @@
         [self die];
         return true;
     }
-//
-//    
-//    [self die];
-//    return true;
 }
 
 -(void) update:(CCTime)delta{
@@ -272,9 +215,6 @@
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
     if(self.isEnemy){
-        if(isDemo){
-            
-        }
         if(tapsToKillEnemy <= 0){
             Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
             smoke.position = self.position;
@@ -285,6 +225,16 @@
             [self.animationManager runAnimationsForSequenceNamed:@"Explode"];
             [self scheduleOnce:@selector(removeFromParent) delay:1];
             self.userInteractionEnabled = false;
+            if(soundsOn){
+                int effect = arc4random() % 3;
+                if (effect == 0) {
+                    [audioPlayer playEffect:@"grrrreat.mp3"];
+                } else if (effect == 1){
+                    [audioPlayer playEffect:@"goodJob.mp3"];
+                } else if (effect == 2){
+                    [audioPlayer playEffect:@"nice.mp3"];
+                }
+            }
         }
         else{
             Explosion *explosion = (Explosion*)[CCBReader load:@"Explosion"];
@@ -314,6 +264,10 @@
     self.hasHat = true;
     _hat.visible = true;
     self.isWearingTheirHat = true;
+}
+
+-(NSString*) getType{
+    return @"Generic Dinosaur";
 }
 
 

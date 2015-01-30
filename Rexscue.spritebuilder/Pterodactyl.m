@@ -14,7 +14,6 @@
 -(void) didLoadFromCCB{
     [super didLoadFromCCB];
     
-    self.levelMultiplier = 1;
     self.isEnemy = false;
     
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"PterodactylMittens"];
@@ -23,15 +22,10 @@
     //last sound is the panicking sound
     sounds = @[@"uhOh2.mp3", @"MeteorHit2.mp3",@"UhHahh.mp3", @"whyMe.mp3",@"run.mp3"];
 
-    KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     self.speed = 0.01; //default
     self.inAir =true; //default
-    ATTACK_THRESHOLD = 0; //number of pix between this dino and its attack target. ptero attacks right over it
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
-    self.price = 200;
-    
-    [self setHealthLabel];
     
     if(self.hasMittens){
         [self putOnMittens];

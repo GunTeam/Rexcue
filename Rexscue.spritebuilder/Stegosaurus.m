@@ -17,21 +17,15 @@
     self.hasMittens = [[NSUserDefaults standardUserDefaults]boolForKey:@"StegosaurusMittens"];
     self.hasHat = [[NSUserDefaults standardUserDefaults]boolForKey:@"StegosaurusHat"];
     
-    self.levelMultiplier = 1;
     self.isEnemy = false;
-    KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     self.speed = 0.02; //default
-    ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
     self.attackCounter = 0;
-    self.price = 200;
     self.hasSpikes = true;
     
     //last sound is the panicking sound
     sounds = @[@"WhaOh2.mp3", @"MeteorHit.mp3",@"huh.mp3", @"whaaaat.mp3",@"ooooh.mp3"];
-    
-    [self setHealthLabel];
     
     if(self.hasMittens){
         [self putOnMittens];
@@ -103,15 +97,6 @@
         [self die];
         return true;
     }
-
-//    if(self.hasSpikes){
-//        [self loseSpikes];
-//        return false;
-//    }
-//    else{
-//        [self die];
-//        return true;
-//    }
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{

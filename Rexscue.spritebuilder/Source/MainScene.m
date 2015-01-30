@@ -27,7 +27,6 @@
     dinos = @[_stego, _ptero, _trex,_trice,_allosaurus];
     
     for(dinosaur *dino in dinos){
-        [dino setHealthInvisible];
         [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
         [dino setIsStationary:true];
     }
