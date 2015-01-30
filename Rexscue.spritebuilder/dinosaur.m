@@ -10,7 +10,7 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary, tapsToKillEnemy;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier, direction, turnWait,isStationary, tapsToKillEnemy,isDemo;
 
 -(void) didLoadFromCCB{
     self.physicsBody.collisionType = @"dinosaur";
@@ -21,6 +21,7 @@
     self.turnWait = 0;
 
     tapsToKillEnemy = 1;
+    isDemo = false;
     
     soundsOn = [[NSUserDefaults standardUserDefaults]boolForKey:@"EffectsOn"];
     
@@ -271,6 +272,9 @@
 
 -(void) touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
     if(self.isEnemy){
+        if(isDemo){
+            
+        }
         if(tapsToKillEnemy <= 0){
             Smoke *smoke = (Smoke*)[CCBReader load:@"Smoke"];
             smoke.position = self.position;

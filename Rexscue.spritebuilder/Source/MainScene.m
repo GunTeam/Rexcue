@@ -5,7 +5,7 @@
 -(void) didLoadFromCCB{
     
     if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
-        
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
         [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"NumNeedles"];
         [[NSUserDefaults standardUserDefaults]setInteger:0 forKey:@"HighScore"];
         [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"EffectsOn"];

@@ -27,7 +27,8 @@
     [_yourNeedlesLabel setString:[NSString stringWithFormat:@"Total Needles: %li", totalNeedles]];
     
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"ReturningUser"];
-    
+    [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"playTutorial"];
+
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
         [musicPlayer preloadFile:@"gameOverSong.mp3"];

@@ -72,6 +72,9 @@
         [gameScene addPointsToScore: pointsEarned];
         [gameScene setMultiplier:(multiplier+1)];
     }
+    else{
+        [gameScene demoDestroyed];
+    }
     
     [self removeFromParent];
     [gameScene addChild:explosion];

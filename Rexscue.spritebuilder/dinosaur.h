@@ -57,6 +57,7 @@
 @property Boolean inAir;
 @property Boolean readyToAttack;
 @property Boolean isEnemy;
+@property Boolean isDemo;
 @property Boolean isStationary;
 @property Boolean isDead;
 @property int attackCounter;

@@ -10,9 +10,11 @@
 
 @implementation GameScene
 
-@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode;
+@synthesize score, meteorSpeed, timeElapsed, numDinos, level, secondsBetweenMeteors, meteorHittingGroundBonus, meteorScale, sandboxMode, playTutorial;
 
 -(void) didLoadFromCCB {
+    playTutorial = [[NSUserDefaults standardUserDefaults] boolForKey:@"playTutorial"];
+    
     NUM_STARTING_DINOS = 5;
     SECONDS_TO_LEVEL_UPDATE = 5;
     PROBABILITY_OF_ENEMY_SPAWN = -1; //out of 1000
@@ -54,8 +56,6 @@
     
     _ground.physicsBody.collisionType = @"ground";
     
-    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
-    
     self.score = 0;
     
     for(int i=0; i<NUM_STARTING_DINOS; i++){
@@ -79,7 +79,97 @@
         [musicPlayer play];
     }
     
+    _tapPrompt.visible = false;
+    
+    [self createDemoEnemy];
+    if(playTutorial){
+        [self runTutorial];
+    }
+    else{
+        [_tutorialMeteor removeFromParent];
+        [_tapPrompt removeFromParent];
+        [self startGame];
+    }
+}
+
+-(void) runTutorial{
+
+    for(dinosaur *dino in ourDinos){
+        [dino setIsStationary:true];
+        [dino.animationManager runAnimationsForSequenceNamed:@"Waving"];
+    }
+    
+    Meteor *demoMeteor = (Meteor *)_tutorialMeteor;
+    
+    [demoMeteor setIsDemo:true];
+    demoMeteor.physicsBody.collisionGroup = @"dinosaurs";
+    _tapPrompt.visible = true;
+
+    [demoMeteor setSpeed: meteorSpeed];
+    [demoMeteor launch];
+
+}
+
+-(void) demoDestroyed{
+    
+    [self startEnemyDemo];
+}
+
+-(void) createDemoEnemy{
+    int randSpawnFlag = arc4random()%4;
+    switch (randSpawnFlag)
+    {
+        case 0:
+            evilDemo = (Allosaurus*)[CCBReader load:@"EvilAllosaurus"];
+            break;
+        case 1:
+            evilDemo = (TRex*)[CCBReader load:@"EvilTRex"];
+            break;
+        case 2:
+            evilDemo = (Stegosaurus*)[CCBReader load:@"EvilStegosaurus"];
+            //            positionY = screenHeight/9;
+            break;
+        case 3:
+            evilDemo = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
+            break;
+        default:
+            break;
+            
+    }
+    double positionX = (1.00/2)*screenWidth;//arc4random()%(int)screenWidth;
+    double positionY =  screenHeight+(1./4)*screenHeight;;
+    
+    evilDemo.scale = 0.6;
+    evilDemo.position = CGPointMake(positionX, positionY);
+    [evilDemo setIsStationary:true];
+    [self addChild:evilDemo];
+}
+
+-(void) startEnemyDemo{
+    [_tapPrompt setString:@"Tap the evil dino to kill the good dinos!"];
+    
+    [evilDemo setIsEnemy:true];
+    [evilDemo setHealthInvisible];
+    [evilDemo setIsStationary:true];
+
+    double destinationY = -(7./8)*(screenHeight);
+    
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:4 position:ccp(0,destinationY)];
+    [evilDemo runAction:mover];
+    
+    [evilDemo playAttackSound];
+    
+    [evilDemo.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+    
+}
+
+-(void) startGame{
+    [self schedule:@selector(spawnMeteor:) interval:secondsBetweenMeteors];
     [self schedule:@selector(updateBySecond) interval:1];
+    for(dinosaur *dino in ourDinos){
+        [dino setIsStationary:false];
+        [dino.animationManager runAnimationsForSequenceNamed:@"Walking"];
+    }
 }
 
 -(void) addRandomDino{
@@ -139,7 +229,7 @@
     newDino.physicsBody.collisionGroup = @"meteors";
     int randSpawnFlag = arc4random()%4;
     double positionX = (1.00/2)*screenWidth;//arc4random()%(int)screenWidth;
-    double positionY = screenHeight;
+    double positionY = screenHeight+(1./4)*screenHeight;
     
     double destinationY = -(7./8)*(screenHeight);
     
@@ -268,6 +358,9 @@
     
     [self panicDinos];
     
+    if([meteor isDemo]){
+        [self demoDestroyed];
+    }
     return NO;
 }
 
@@ -347,7 +440,14 @@
     if(numDinos == 0){
         [self loseLevel];
     }
-//    [self setMultiplierLabel];
+    if(playTutorial){
+        if(![[self children] containsObject:evilDemo]){
+            _tapPrompt.visible = false;
+            playTutorial = false;
+            [self scheduleOnce:@selector(startGame) delay:1];
+        }
+    }
+
 }
 
 -(void) increaseMeteorFrequency{

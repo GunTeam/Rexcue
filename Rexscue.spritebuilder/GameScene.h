@@ -25,16 +25,19 @@
     CCPhysicsNode *_physicsNode;
     CCNodeColor *_ground;
     int NUM_STARTING_DINOS, SECONDS_TO_LEVEL_UPDATE,PROBABILITY_OF_ENEMY_SPAWN, numBackgroundsToFade,meteorsToSpawnAtOnce,backgroundIndex, meteorIndex;
-    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel;
+    CCLabelTTF *_scoreLabel, *_levelLabel, *_timeLabel, *_tapPrompt;
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;
     CCNode *_background1,*_background2,*_background3,*_background4,*_background5,*_background6;
     NSArray *backgrounds;
-    
+    CCNode *_tutorialMeteor;
+    dinosaur *evilDemo;
+
 }
 
 -(void) addPointsToScore: (int) points;
+-(void) demoDestroyed;
 
 @property int score;
 @property int meteorSpeed;
@@ -44,6 +47,7 @@
 @property int meteorHittingGroundBonus;
 @property double secondsBetweenMeteors;
 @property Boolean soundEffectsOn;
+@property Boolean playTutorial;
 @property Boolean sandboxMode;
 @property double meteorScale;
 @property int multiplier;

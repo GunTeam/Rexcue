@@ -98,6 +98,20 @@
     }
 }
 
+-(void) toggleTutorial{
+    if(self.sandboxMode){
+        self.sandboxMode = false;
+        [_toggleTutorialButton setTitle:@"Turn\rEasy On"];
+        [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"playTutorial"];
+        
+    }
+    else{
+        self.sandboxMode = true;
+        [_toggleTutorialButton setTitle:@"Turn\rEasy Off"];
+        [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"playTutorial"];
+    }
+}
+
 -(void) goBack{
     CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionLeft duration:.1];
     [[CCDirector sharedDirector] popSceneWithTransition:transition];
