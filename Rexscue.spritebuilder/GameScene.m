@@ -418,7 +418,7 @@
     long bestLevel = [[NSUserDefaults standardUserDefaults]integerForKey:@"BestLevel"];
     long pastMeteors = [[NSUserDefaults standardUserDefaults]integerForKey:@"MeteorsDestroyed"];
     long totalMeteors = pastMeteors + meteorsDestroyed;
-    [[NSUserDefaults standardUserDefaults]setInteger:totalMeteors forKey:@"PastMeteors"];
+    [[NSUserDefaults standardUserDefaults]setInteger:totalMeteors forKey:@"MeteorsDestroyed"];
 
     if(self.score > highScore){
         [[NSUserDefaults standardUserDefaults]setInteger:self.score forKey:@"HighScore"];
