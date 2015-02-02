@@ -135,7 +135,7 @@
             
     }
     double positionX = (1.00/2)*screenWidth;//arc4random()%(int)screenWidth;
-    double positionY =  screenHeight+(1./4)*screenHeight;;
+    double positionY =  screenHeight+(1./3)*screenHeight;;
     
     evilDemo.scale = 0.6;
     evilDemo.position = CGPointMake(positionX, positionY);
