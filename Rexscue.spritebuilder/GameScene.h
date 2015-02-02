@@ -19,6 +19,7 @@
 #import "Smoke.h"
 #import "Explosion.h"
 #import "ObjectAL.h"
+#import "Background.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;
@@ -29,10 +30,11 @@
     CCParticleSystem *_volcanoSmoke;
     NSMutableArray *ourDinos;
     OALAudioTrack *musicPlayer;
-    CCNode *_background1,*_background2,*_background3,*_background4,*_background5,*_background6;
+    CCNode *_background1;//,*_background3,*_background4,*_background5,*_background6;
     NSArray *backgrounds;
     CCNode *_tutorialMeteor;
     dinosaur *evilDemo;
+    CCSprite *backgroundToFade;
 
 }
 

@@ -16,7 +16,7 @@
     playTutorial = [[NSUserDefaults standardUserDefaults] boolForKey:@"playTutorial"];
     
     NUM_STARTING_DINOS = 6;
-    SECONDS_TO_LEVEL_UPDATE = 5;
+    SECONDS_TO_LEVEL_UPDATE = 1;
     PROBABILITY_OF_ENEMY_SPAWN = -1; //out of 1000
     
     secondsBetweenMeteors = 2;
@@ -27,8 +27,12 @@
     meteorIndex = 1;
     meteorsDestroyed = 0;
     
-    backgrounds = @[_background1,_background2,_background3,_background4,_background5,_background6];
+    backgroundToFade = (Background*)[CCBReader load:@"NormalScene"];
+    
+    backgrounds = @[@"NormalScene", @"IceScene",@"CavemanScene",@"RoadScene",@"ProtestScene",@"CityScene"];
     numBackgroundsToFade = [backgrounds count]-1;
+    
+    [self addChild:backgroundToFade z:-1];
     
     self.multiplier = 1;
     self.sandboxMode = [[NSUserDefaults standardUserDefaults]boolForKey:@"SandboxMode"];
@@ -66,6 +70,8 @@
     timeElapsed = 0;
     numDinos = NUM_STARTING_DINOS;
     level = 0;
+    
+    _ground.visible = false;
     
     [self setLevelLabel];
     [self addPointsToScore:0];
@@ -315,14 +321,14 @@
 
 -(void) addPointsToScore: (int) points{
     self.score += points;
-    NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
+    NSString *scoreString = [NSString stringWithFormat:@"%d", (self.score)];
     [_scoreLabel setString:scoreString];
 }
 
 
 -(void) addPointsToScore: (int) points fromMeteor: (Meteor*) meteor{
     self.score += points;
-    NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
+    NSString *scoreString = [NSString stringWithFormat:@"%d", (self.score)];
     [_scoreLabel setString:scoreString];
     meteorsDestroyed += 1;
 }
@@ -434,18 +440,32 @@
 }
 
 -(void) phaseBackground{
-    CCNode *backgroundToFade = [backgrounds objectAtIndex:(backgroundIndex-1)];
     backgroundIndex ++;
     meteorIndex ++;
     backgroundIndex = MIN(numBackgroundsToFade, backgroundIndex);
     backgroundToFade.cascadeOpacityEnabled = true;
     [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
-    NSArray *toRemove = [backgroundToFade children];
-    for(CCNode *child in toRemove){
-        child.cascadeOpacityEnabled = true;
-        [child scheduleOnce:@selector(removeFromParent) delay:2];
-    }
+    
+    
+//    NSArray *toRemove = [backgroundToFade children];
+//    for(CCNode *child in toRemove){
+//        child.cascadeOpacityEnabled = true;
+//        [child scheduleOnce:@selector(removeFromParent) delay:2];
+//    }
     [backgroundToFade scheduleOnce:@selector(removeFromParent) delay:3];
+    
+    NSString *backgroundAdd = [backgrounds objectAtIndex:(backgroundIndex-1)];
+    CCSprite *backgroundToAdd =(Background*)[CCBReader load:backgroundAdd];
+    
+    backgroundToAdd.opacity = 0.0;
+    
+    [self addChild:backgroundToAdd z:-1];
+    CCAction *fadeIn = [CCActionFadeIn actionWithDuration:2];
+    
+    [backgroundToAdd runAction:fadeIn];
+    
+    backgroundToFade = backgroundToAdd;
+
 }
 
 -(void) update:(CCTime)delta{
