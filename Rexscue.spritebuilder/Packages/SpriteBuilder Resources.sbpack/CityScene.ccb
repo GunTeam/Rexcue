@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -109,8 +109,6 @@
 						<string></string>
 						<key>displayName</key>
 						<string>volcano</string>
-						<key>hidden</key>
-						<true/>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -128,8 +126,8 @@
 							<dict>
 								<key>baseValue</key>
 								<array>
-									<real>94</real>
-									<real>107.01401519775391</real>
+									<real>90.121864318847656</real>
+									<real>-116.57652282714844</real>
 								</array>
 								<key>name</key>
 								<string>position</string>
@@ -137,8 +135,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>96</real>
-									<real>110</real>
+									<real>90.121864318847656</real>
+									<real>-116.57652282714844</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -224,8 +222,6 @@
 						<string></string>
 						<key>displayName</key>
 						<string>Smoke</string>
-						<key>hidden</key>
-						<true/>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -378,8 +374,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -515,7 +509,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>10</real>
 			<key>name</key>
@@ -523,13 +517,49 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1.3999999761581421</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
 			<real>128</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>isExpanded</key>
+				<false/>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>autoPlay</key>
+			<false/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>12</integer>
+			</dict>
+			<key>chainedSequenceId</key>
+			<integer>-1</integer>
+			<key>length</key>
+			<real>10</real>
+			<key>name</key>
+			<string>Normal</string>
+			<key>offset</key>
+			<real>0.0</real>
+			<key>position</key>
+			<real>1.1333333253860474</real>
+			<key>resolution</key>
+			<real>30</real>
+			<key>scale</key>
+			<real>128</real>
+			<key>sequenceId</key>
+			<integer>1</integer>
 			<key>soundChannel</key>
 			<dict>
 				<key>isExpanded</key>

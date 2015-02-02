@@ -30,7 +30,7 @@
     backgroundToFade = (Background*)[CCBReader load:@"NormalScene"];
     
     backgrounds = @[@"NormalScene", @"IceScene",@"CavemanScene",@"RoadScene",@"ProtestScene",@"CityScene"];
-    numBackgroundsToFade = [backgrounds count]-1;
+    numBackgroundsToFade = [backgrounds count];
     
     [self addChild:backgroundToFade z:-1];
     
