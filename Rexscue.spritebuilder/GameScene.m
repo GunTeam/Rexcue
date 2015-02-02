@@ -16,7 +16,7 @@
     playTutorial = [[NSUserDefaults standardUserDefaults] boolForKey:@"playTutorial"];
     
     NUM_STARTING_DINOS = 6;
-    SECONDS_TO_LEVEL_UPDATE = 1;
+    SECONDS_TO_LEVEL_UPDATE = 5;
     PROBABILITY_OF_ENEMY_SPAWN = -1; //out of 1000
     
     secondsBetweenMeteors = 2;
@@ -57,6 +57,7 @@
     }
     
     _physicsNode.collisionDelegate = self;
+//    _physicsNode.debugDraw = true;
     
     _ground.physicsBody.collisionType = @"ground";
     
@@ -444,25 +445,21 @@
     meteorIndex ++;
     backgroundIndex = MIN(numBackgroundsToFade, backgroundIndex);
     backgroundToFade.cascadeOpacityEnabled = true;
-    [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
-    
-    
-//    NSArray *toRemove = [backgroundToFade children];
-//    for(CCNode *child in toRemove){
-//        child.cascadeOpacityEnabled = true;
-//        [child scheduleOnce:@selector(removeFromParent) delay:2];
-//    }
-    [backgroundToFade scheduleOnce:@selector(removeFromParent) delay:3];
-    
+
     NSString *backgroundAdd = [backgrounds objectAtIndex:(backgroundIndex-1)];
     CCSprite *backgroundToAdd =(Background*)[CCBReader load:backgroundAdd];
     
-    backgroundToAdd.opacity = 0.0;
+    backgroundToAdd.cascadeOpacityEnabled = true;
+    [self addChild:backgroundToAdd z:-(backgroundIndex)];
+
+    [backgroundToFade runAction:[CCActionFadeOut actionWithDuration:2]];
+    [backgroundToFade scheduleOnce:@selector(removeFromParent) delay:3];
+
+//    CCAction *fadeIn = [CCActionFadeIn actionWithDuration:2];
+//    
+//    [backgroundToAdd runAction:fadeIn];
+//    [self scheduleOnce:@selector(addChild:backgroundToAdd z:-1) delay:2];
     
-    [self addChild:backgroundToAdd z:-1];
-    CCAction *fadeIn = [CCActionFadeIn actionWithDuration:2];
-    
-    [backgroundToAdd runAction:fadeIn];
     
     backgroundToFade = backgroundToAdd;
 
