@@ -5529,8 +5529,6 @@
 								<string>Meteor.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -5875,7 +5873,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>462.53057861328125</real>
+							<real>436.79998779296875</real>
 							<real>335</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -5889,7 +5887,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
+							<real>0.0</real>
 							<real>0.5</real>
 						</array>
 					</dict>
@@ -6095,8 +6093,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>73.523139953613281</real>
-							<real>335</real>
+							<real>436.81793212890625</real>
+							<real>310.11679077148438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -6109,7 +6107,7 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
+							<real>0.0</real>
 							<real>0.5</real>
 						</array>
 					</dict>
@@ -6315,11 +6313,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>280.76519775390625</real>
-							<real>330.02337646484375</real>
+							<real>0.10572387278079987</real>
+							<real>0.85295587778091431</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -6340,8 +6338,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.81674486398696899</real>
+							<real>0.81674486398696899</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -6411,6 +6409,19 @@
 						<array>
 							<string></string>
 							<string>art/pause sign.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundColor|Normal</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.37843823432922363</real>
+							<real>0.37843823432922363</real>
+							<real>0.37843823432922363</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
