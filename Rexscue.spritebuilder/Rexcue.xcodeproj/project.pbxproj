@@ -101,6 +101,8 @@
 		BA6EADB01A7B370E0090F71B /* DefaultFile.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6EADAA1A7B370E0090F71B /* DefaultFile.png */; };
 		BA724C611A742C6B00AECA48 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C601A742C6A00AECA48 /* GameScene.m */; };
 		BA724C871A74313100AECA48 /* Meteor.m in Sources */ = {isa = PBXBuildFile; fileRef = BA724C861A74313100AECA48 /* Meteor.m */; };
+		BA9727911A81B78500C1CDEA /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA97278F1A81B78500C1CDEA /* GameKitHelper.m */; };
+		BAA3AD0A1A81BEE40024A85E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3AD091A81BEE40024A85E /* GameKit.framework */; };
 		BABC0B371A760240008FA3D2 /* Smoke.m in Sources */ = {isa = PBXBuildFile; fileRef = BABC0B361A760240008FA3D2 /* Smoke.m */; };
 		BADAB86F1A774F94008E7339 /* owAndStuff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB84C1A774F94008E7339 /* owAndStuff.mp3 */; };
 		BADAB8701A774F94008E7339 /* grrAndStuff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BADAB84D1A774F94008E7339 /* grrAndStuff.mp3 */; };
@@ -305,6 +307,9 @@
 		BA724C601A742C6A00AECA48 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		BA724C851A74313100AECA48 /* Meteor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meteor.h; sourceTree = "<group>"; };
 		BA724C861A74313100AECA48 /* Meteor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meteor.m; sourceTree = "<group>"; };
+		BA97278E1A81B78500C1CDEA /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		BA97278F1A81B78500C1CDEA /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
+		BAA3AD091A81BEE40024A85E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		BABC0B351A760240008FA3D2 /* Smoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smoke.h; sourceTree = "<group>"; };
 		BABC0B361A760240008FA3D2 /* Smoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smoke.m; sourceTree = "<group>"; };
 		BABC9CE51A76FF66006D59AF /* PatrickHandSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PatrickHandSC-Regular.ttf"; path = "../../PatrickHandSC-Regular.ttf"; sourceTree = "<group>"; };
@@ -401,6 +406,7 @@
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
+				BAA3AD0A1A81BEE40024A85E /* GameKit.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -636,6 +642,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAA3AD091A81BEE40024A85E /* GameKit.framework */,
 				7A59493C19E37FB200F65F90 /* libz.dylib */,
 				7A59493A19E37F9300F65F90 /* OpenGL.framework */,
 				7A4036F419DE3FA8007B6E8F /* AppKit.framework */,
@@ -697,6 +704,8 @@
 				BAF136331A78A3B80030ECCB /* Paused.m */,
 				38B2334C1A79ECD70084542A /* Upgrades.h */,
 				38B2334D1A79ECD70084542A /* Upgrades.m */,
+				BA97278E1A81B78500C1CDEA /* GameKitHelper.h */,
+				BA97278F1A81B78500C1CDEA /* GameKitHelper.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -932,10 +941,10 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = GZNS8GQYRG;
+						DevelopmentTeam = XTLAH4X5UL;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -1180,6 +1189,7 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BADAB8FB1A784BC9008E7339 /* Menu.m in Sources */,
+				BA9727911A81B78500C1CDEA /* GameKitHelper.m in Sources */,
 				BAEDCD391A802CB2009120AA /* Background.m in Sources */,
 				BA5776831A744BDD00173263 /* Allosaurus.m in Sources */,
 				BA023D9E1A76C239002F718F /* DisappearingLabel.m in Sources */,

@@ -41,6 +41,8 @@
     _replayButton.enabled = false;
     
     [self scheduleOnce:@selector(activateButtons) delay:1];
+    
+    [[GameKitHelper sharedGameKitHelper] submitScore:(int64_t)highScore category:@"HighScores"];
 }
 
 

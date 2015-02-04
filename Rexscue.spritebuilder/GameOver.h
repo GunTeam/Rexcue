@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameKitHelper.h"
 
 @interface GameOver : CCNode {
     CCLabelTTF *_bestScoreLabel, *_yourScoreLabel, *_yourNeedlesLabel, *_needlesEarnedLabel, *_levelLabel;

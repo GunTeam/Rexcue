@@ -3,7 +3,15 @@
 @implementation MainScene
 @synthesize musicOn, soundEffectsOn;
 
+-(id) init{
+    self = [super init];
+    [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
+    return self;
+}
+
 -(void) didLoadFromCCB{
+    
+    [self reportToGameCenter];
     
     if(![[NSUserDefaults standardUserDefaults]boolForKey:@"ReturningUser"]){
         [self resetSettingsToDefault];
@@ -43,6 +51,31 @@
     
     [self spawnClouds];
 }
+
+-(void) ToHighscores{
+    if([[GameKitHelper sharedGameKitHelper]userAuthenticated] == TRUE)
+    {
+        GKGameCenterViewController * leaderboardController = [[GKGameCenterViewController alloc] init];
+        
+        if (leaderboardController != NULL) {
+            leaderboardController.gameCenterDelegate = self;
+            
+            [[CCDirector sharedDirector] presentViewController:leaderboardController animated:YES completion:nil];
+        }
+    }
+    else
+    {
+        UIAlertView * alertView = [[UIAlertView alloc]initWithTitle:@"Authentication failed" message:@"Game Center cannot be accessed. Please make sure you have logged in." delegate:self cancelButtonTitle:@"" otherButtonTitles:nil, nil];
+        
+        [alertView show];
+    }
+    
+}
+
+-(void) gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 -(void) menu{
     CCTransition *transition = [CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:.1];
@@ -111,5 +144,39 @@
     [[NSUserDefaults standardUserDefaults]setBool:true forKey:@"MusicOn"];
     [[NSUserDefaults standardUserDefaults]setBool:false forKey:@"SandboxMode"];
 }
+
+-(void) reportToGameCenter{
+    //leaderboard reporting
+    [[GameKitHelper sharedGameKitHelper] submitScore:(int64_t)[[NSUserDefaults standardUserDefaults]integerForKey:@"HighScore"] category:@"HighScores"];
+    
+    [[GameKitHelper sharedGameKitHelper] submitScore:(int64_t)[[NSUserDefaults standardUserDefaults]integerForKey:@"MeteorsDestroyed"] category:@"MeteorsDestroyed"];
+    
+    [[GameKitHelper sharedGameKitHelper] submitScore:(int64_t)[[NSUserDefaults standardUserDefaults]integerForKey:@"BestLevel"] category:@"Level"];
+    
+    //end leaderboard reporting
+    
+    //achievement reporting
+    GKAchievement *oneK = [[GKAchievement alloc] initWithIdentifier:@"oneK"];
+    GKAchievement *tenK = [[GKAchievement alloc] initWithIdentifier:@"tenK"];
+    GKAchievement *hundredK = [[GKAchievement alloc] initWithIdentifier:@"hundredK"];
+    
+    int meteors = (int)[[NSUserDefaults standardUserDefaults]integerForKey:@"MeteorsDestroyed"];
+    oneK.percentComplete = meteors/10.;
+    oneK.showsCompletionBanner = true;
+    tenK.percentComplete = meteors/100.;
+    tenK.showsCompletionBanner = true;
+    hundredK.percentComplete = meteors/1000.;
+    hundredK.showsCompletionBanner = true;
+
+    [GKAchievement reportAchievements:@[oneK,tenK,hundredK] withCompletionHandler:^(NSError *error)
+     {
+         if (error != nil)
+         {
+             NSLog(@"Error in reporting achievements: %@", error);
+         }
+     }];
+    //end achievement reporting
+}
+
 
 @end
