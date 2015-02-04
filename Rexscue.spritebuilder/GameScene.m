@@ -75,7 +75,9 @@
     _ground.visible = false;
     
     [self setLevelLabel];
-    [self addPointsToScore:0];
+    NSString *scoreString = [NSString stringWithFormat:@"Score: %d", (self.score)];
+    [_scoreLabel setString:scoreString];
+
     
     if([[NSUserDefaults standardUserDefaults]boolForKey:@"MusicOn"]){
         musicPlayer = [OALAudioTrack track];
